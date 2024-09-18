@@ -1,0 +1,5 @@
+#!/usr/bin/sh
+ram=$(free -m | awk 'NR==2{printf "%.1fG", $3/1024 }')
+
+echo "<span background=\"#88c0d0\"><span size=\"small\" rise=\"2pt\">$ram</span>  </span><span background=\"#88c0d0\" foreground=\"#2e3440\" size=\"x-large\"></span>"
+
