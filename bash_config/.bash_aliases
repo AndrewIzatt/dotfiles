@@ -1,4 +1,4 @@
-alias vim="nvim"
+# alias vim="nvim"
 
 # apt packages
 alias aptup="sudo apt update && sudo apt upgrade"
@@ -21,6 +21,7 @@ alias .5="cd ../../../../.."
 # Coding
 alias rc="nvim ~/.bashrc"
 alias zrc="nvim ~/.zshrc"
+alias vrc="vim ~/.vimrc"
 alias fishrc="nvim ~/.config/fish/config.fish"
 alias aled="nvim ~/bash_config/.bash_aliases"
 alias cdc="nvim ~/Documents/Coding"

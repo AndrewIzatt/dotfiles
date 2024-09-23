@@ -292,7 +292,7 @@
 #: underline and the mouse cursor becomes a hand over them. Even if
 #: this option is disabled, URLs are still clickable.
 
-# url_excluded_characters
+# url_excluded_characters 
 
 #: Additional characters to be disallowed from URLs, when detecting
 #: URLs under the mouse cursor. By default, all characters legal in
@@ -466,7 +466,7 @@
 
 #: Terminal bell {{{
 
-enable_audio_bell no
+# enable_audio_bell yes
 
 #: Enable/disable the audio bell. Useful in environments that require
 #: silence.
@@ -933,7 +933,7 @@ enable_audio_bell no
 #: details. Changing this option by reloading the config is not
 #: supported.
 
-# env
+# env 
 
 #: Specify environment variables to set in all child processes. Note
 #: that environment variables are expanded recursively, so if you
@@ -1476,7 +1476,7 @@ include current-theme.conf
 # END_KITTY_THEME
 
 # BEGIN_KITTY_FONTS
-font_family      family="RobotoMono Nerd Font"
+font_family      family="JetBrainsMono Nerd Font"
 bold_font        auto
 italic_font      auto
 bold_italic_font auto
