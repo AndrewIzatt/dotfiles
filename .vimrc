@@ -31,16 +31,40 @@ set wildmenu
 "   - Hit tab to :find by partial match
 "   - Use * to make it fuzzy filename* or *filename
 
-"   THINGS TO CONSIDER
+"   THINGS TO CONSIDER:
 "   - :b lets you autocomplete any open buffer
 
-"   KEYREMAPS
+"   KEYREMAPS:
 "   'For simplicity, use :imap but careful Vimmers are in the habit of using :inoremap which does not attempt to interpret the result of the mapping (with the :imap command, the result is scanned to see whether it contains another mapping).'
 "   https://vim.fandom.com/wiki/Avoid_the_escape_key
 inoremap jk <Esc>
 
-"   AUTOCOMMANDS
-" Put a line under current line when in insert mode
+"   AUTOCOMPLETE:
+"   (^ means CTRL key)
+"   The good stuff is documented in |ins-complete|
+"   HIGHLIGHTS:
+"   - ^x^n for JUST this file
+"   - ^x^f for filenames (works with our path trick!)
+"   - ^x^] for tags only
+"   - ^n for anything specified by the 'complete' option
+"   NOW WE CAN:
+
+"   AUTOCOMMANDS:
+"   Put a line under current line when in insert mode
 "   autocmd InsertEnter * set cursorline
 "   autocmd InsertLeave * set nocursorline
 "   autocmd InsertEnter,InsertLeave * set cul!
+
+"   TAG JUMPING:
+"   Create the 'tags' file (may need to install ctags first)
+command! MakeTags !ctags -R .
+
+"   NOW WE CAN:
+"   - Use ^] to jump to tag under cursor
+"   - Use g^] for ambiguous tags
+"   - Use ^t to jump back up the tag stack
+"
+"   THINGS TO CONSIDER:
+"   - This doesn't help if you want a visual list of tags
+
+
