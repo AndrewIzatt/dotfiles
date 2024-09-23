@@ -98,7 +98,13 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=grey,underline'
+# https://github.com/zsh-users/zsh-autosuggestions?tab=readme-ov-file
+# :Set ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE to configure the style that the suggestion is shown with. The default is fg=8,
+# which will set the foreground color to color 8 from the 256-color palette. If your terminal only supports 8 colors,
+# you will need to use a number between 0 and 7."
+# For list of numbers 0-255:
+# https://upload.wikimedia.org/wikipedia/commons/1/15/Xterm_256color_chart.svg
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=241'
 bindkey '^ ' autosuggest-accept
 # export MANPATH="/usr/local/man:$MANPATH"
 #
