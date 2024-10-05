@@ -1,10 +1,15 @@
 # alias vim="nvim"
 
 # apt packages
+alias nalaup="sudo nala update && sudo nala upgrade"
 alias aptup="sudo apt update && sudo apt upgrade"
+alias nalaupd="sudo nala update"
 alias aptupd="sudo apt update"
+alias nalaupg="sudo nala upgrade"
 alias aptupg="sudo apt upgrade"
+alias nalain="sudo nala install"
 alias aptin="sudo apt install"
+alias nalarm="sudo apt remove"
 alias aptrm="sudo apt remove"
 
 #cd aliases
@@ -58,7 +63,7 @@ alias va="source ./venv/bin/activate"
 alias cd_scripts="cd ~/Documents/scripts"
 
 # Restart Services
-alias restart_sound="pulseaudio -D"
+# alias restart_sound="pulseaudio -D"
 alias restart_bluetooth="sudo systemctl restart bluetooth.service"
 
 # Reboot/Restart Computer
@@ -66,7 +71,7 @@ alias reboot="sudo reboot"
 alias suspend="sudo systemctl suspend"
 
 # Service Status
-alias get_pulseaudio="pulseaudio --check" # Should have nothing
+# alias get_pulseaudio="pulseaudio --check" # Should have nothing
 alias get_bluetooth="sudo systemctl status bluetooth.service"
 
 # change ls to exa aliases
@@ -78,8 +83,8 @@ alias l.='eza -ah | egrep "^\."' # Only returns hidden files
 
 # Colorize grep output (good for log files)
 alias grep="grep --color=auto"
-alias egrep="egrep --color=auto"
-alias frep="fgrep --color=auto"
+alias egrep="grep -E --color=auto"
+alias frep="grep -F --color=auto"
 
 
 # Print my public IP address
