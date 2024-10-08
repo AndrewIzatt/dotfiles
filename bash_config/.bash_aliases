@@ -84,7 +84,7 @@ alias l.='eza -ah | egrep "^\."' # Only returns hidden files
 # Colorize grep output (good for log files)
 alias grep="grep --color=auto"
 alias egrep="grep -E --color=auto"
-alias frep="grep -F --color=auto"
+alias fgrep="grep -F --color=auto"
 
 
 # Print my public IP address
@@ -132,6 +132,6 @@ alias fritz="~/appimages/fritzing-1.0.1-l1653-8d480a18-qt6.AppImage"
 alias signal="flatpak run org.signal.Signal"
 
 #MySQL
-alias mysql="mysql -u root -h localhost -p"
+alias mysql="mysqlsh -u root -h localhost"
 
 
