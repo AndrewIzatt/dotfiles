@@ -82,9 +82,9 @@ alias lt="eza -aTh --color=always --group-directories-first" # tree format
 alias l.='eza -ah | egrep "^\."' # Only returns hidden files
 
 # Colorize grep output (good for log files)
-alias grep="grep --color=auto"
-alias egrep="grep -E --color=auto"
-alias fgrep="grep -F --color=auto"
+alias grep="grep -i --color=auto"
+alias egrep="grep -iE --color=auto"
+alias fgrep="grep -iF --color=auto"
 
 
 # Print my public IP address
