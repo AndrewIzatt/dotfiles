@@ -107,6 +107,7 @@ alias stat="git status" # 'status is protected name so using stat instead'
 alias tag="git tag"
 alias newtag="git tag -a"
 alias remote="git remote"
+alias reset="git reset --hard"
 
 # use different browser for testing websites (haven't tried)
 alias ff="firefox"
