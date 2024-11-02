@@ -16,6 +16,7 @@ return {
     -- enable mason and configure icons
     mason.setup({
       ui = {
+        check_outdated_packages_on_open = true,
         icons = {
           package_installed = "✓",
           package_pending = "➜",
