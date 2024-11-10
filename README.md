@@ -20,7 +20,7 @@ apt stow
 
 ## Installation
 
-First, check out the dotfiels in your $HOME directory using git
+First, check out the dotfiles in your $HOME directory using git
 
 ```
 $ git clone git@github.com:AndrewIzatt/dotfiles.git
@@ -32,6 +32,19 @@ then use GNU Stow to create symlinks
 ```
 $ stow .
 ```
+
+If you add new files after previously stowing:
+
+```
+$ stow -D .
+```
+
+to unstow the symlinks and then repeat:
+
+```
+$ stow .
+```
+to restow the files and recreate the symlinks.
 
 ## More help
 
