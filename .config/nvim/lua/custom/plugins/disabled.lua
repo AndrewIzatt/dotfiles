@@ -13,10 +13,15 @@ return {
   { "rmagatti/auto-session", enabled = true },
   -- bufferline.lua
   { "akinsho/bufferline.nvim", enabled = true },
+  -- Colorschemes Don't forget to change lualine
+  -- and bufferline if necessary
   -- colorscheme_flow.lua
-  { "0xstepit/flow.nvim", enabled = true },
+  { "0xstepit/flow.nvim", enabled = false },
   -- colorscheme_tokyonight.lua
-  { "folke/tokyonight.nvim", enabled = false },
+  { "folke/tokyonight.nvim", enabled = true },
+  -- colorscheme_vscode.lua
+  { "Mofiqul/vscode.nvim", enabled = false },
+
   -- copilot-cmp.lua
   { "zbirenbaum/copilot-cmp", enabled = true },
   -- copilot.lua
