@@ -1,0 +1,65 @@
+" These are settings that are enabled by default in Neovim
+" To make Vim more like Neovim
+" " learn about any option with :h '<option name>' ex. :h 'autoindent'
+
+"   enter the current millenium
+set nocompatible
+
+" Set dark background
+set background=dark
+
+" needed for certain colorschemes
+" set termguicolors
+
+set history=10000
+
+" Turn syntax highlighting on
+syntax enable
+
+" Indent according to previous line
+set autoindent
+
+" Enable type file detection. Vim will be able to try to detect the type of file in use.
+filetype on
+
+" Enable plugins and load plugin for the detected file type.
+filetype plugin on 
+
+" Load an indent file for the detected file type.
+filetype indent on
+
+" Backspace behaves as you expect
+" allow backspace on indent, end of line or insert mode start position
+set backspace=indent,eol,start
+
+" highlight search hits
+" Not sure if set ignorecase above makes incsearch default
+" While searching though a file incrementally highlight matching characters as you type.
+set incsearch
+set hlsearch
+
+" Turn syntax highlighting on
+syntax enable
+
+" Switch between buffers without having to save first.
+set hidden
+
+" faster redrawing/scrolling
+" Always set by default by NVIM
+set ttyfast
+
+" Enable mouse for normal, visual, insert modes
+set mouse=nvi
+
+" Only redraw when necessary.
+" according to docs, only meant to be set temporarily
+"set lazyredraw
+
+set nolangremap
+
+set laststatus=2
+
+set ruler
+
+set display=lastline
+
