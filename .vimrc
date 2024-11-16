@@ -5,13 +5,17 @@
 " See :nvim-defaults
 colorscheme slate
 
+"Turns off highlighting automatically after 4 seconds
+"See usr_05.txt in Neovimdocs
+packadd nohlsearch
+
 if !has('nvim')
     source ~/.vim/.vimrc_vimonly
 endif
 
 " Set shift width to 4 spaces.
 " >> indents by 4 spaces.
-set shiftwidth=4
+set shiftwidth=4        
 
 " >> indents to next multiple of 'shiftwidth'.
 set shiftround
@@ -160,7 +164,7 @@ xmap jk <Esc>
 
 "By also including the following lines in your .vimrc, one may have netrw
 "immediately activate when using [g]vim without any filenames, showing the
-"current directory:
+"current directory
 " Augroup VimStartup:
 augroup VimStartup
   au!
