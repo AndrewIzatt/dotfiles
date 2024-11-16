@@ -87,6 +87,7 @@ set path+=**
 "things to consider:
 "- :b lets you autocomplete any open buffer
 
+set cindent
 
 "NETRW OPTIONS:
 " from: https://vonheikemen.github.io/devlog/tools/using-netrw-vim-builtin-file-explorer/
@@ -123,8 +124,9 @@ nnoremap \ ;
 "see whether it contains another mapping).'
 "https://vim.fandom.com/wiki/Avoid_the_escape_key
 inoremap jk <Esc>
-
 nnoremap <leader>ee :Lexplore %:p:h<CR>
+" Map jk to escape in visual mode 
+xmap jk <Esc> 
 
 "AUTOCOMPLETE:
 "(^ means CTRL key)
