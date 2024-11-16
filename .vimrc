@@ -1,7 +1,10 @@
-" learn about any option with :h '<option name>' ex. :h 'autoindent'
+"OPTIONS:
+"learn about any option with :h '<option name>' ex. :h 'autoindent'
 "   enter the current millenium
 " If I run vim, I have separate settings that Neovim already has on by default
 " See :nvim-defaults
+colorscheme slate
+
 if !has('nvim')
     source ~/.vim/.vimrc_vimonly
 endif
@@ -74,22 +77,54 @@ set noswapfile
 
 "Search down into subfolders
 "Provides tab-completion for all file-related tasks
-"set path+=**
+set path+=**
 
-"Display all matching files when we tab complete
-"set wildmenu
-
-"NOW WE CAN: 
+"with path+=** and wildmenu set (by default in nvim, in .vimrc_vimonly)
+"now we can: 
 "- Hit tab to :find by partial match
 "- Use * to make it fuzzy filename* or *filename
 
-"THINGS TO CONSIDER:
+"things to consider:
 "- :b lets you autocomplete any open buffer
 
+
+"NETRW OPTIONS:
+" from: https://vonheikemen.github.io/devlog/tools/using-netrw-vim-builtin-file-explorer/
+"hide the banner. To show temporarily, use `I` inside Netrw
+let g:netrw_banner = 0
+
+" change copy command to enable recursive copy of directories
+let g:netrw_localcopydircmd = "cp -r"
+
+let g:netrw_preview=1
+let g:netrw_alto=1
+
+"The |g:netrw_browse_split| option, which is zero by default, may be used to
+"cause the opening of files to be done in a new window or tab instead of the
+"default.  When the option is one or two, the splitting will be taken
+"horizontally or vertically, respectively.  When the option is set to three, a
+"<cr> will cause the file to appear in a new tab.
+let g:netrw_browse_split=3
+
+"Keep current directory and the browsing directory synced. This help you avoid
+"the move files error
+let g:netrw_keepdir=0
+
 "KEYREMAPS:
-"'For simplicity, use :imap but careful Vimmers are in the habit of using :inoremap which does not attempt to interpret the result of the mapping (with the :imap command, the result is scanned to see whether it contains another mapping).'
+let mapleader = ";"
+nnoremap \ ;
+"n = normalmode
+"i = insertmode
+"
+"'For simplicity, use :[i/n]map but careful Vimmers
+"are in the habit of using :[i/n]noremap which does 
+"not attempt to interpret the result of the mapping :
+"(with the :imap command, the result is scanned to 
+"see whether it contains another mapping).'
 "https://vim.fandom.com/wiki/Avoid_the_escape_key
 inoremap jk <Esc>
+
+nnoremap <leader>ee :Lexplore %:p:h<CR>
 
 "AUTOCOMPLETE:
 "(^ means CTRL key)
@@ -120,3 +155,12 @@ inoremap jk <Esc>
 
 "THINGS TO CONSIDER:
 "- This doesn't help if you want a visual list of tags
+
+"By also including the following lines in your .vimrc, one may have netrw
+"immediately activate when using [g]vim without any filenames, showing the
+"current directory:
+" Augroup VimStartup:
+augroup VimStartup
+  au!
+  au VimEnter * if expand("%") == "" | e . | endif
+augroup END
