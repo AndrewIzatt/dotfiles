@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =0
+let g:netrw_dirhist_0='/home/orca'
+let g:netrw_dirhist_9='/home/orca/dotfiles'
+let g:netrw_dirhist_8='/home/workbuntu'
+let g:netrw_dirhist_7='/home/workbuntu/.vim'
+let g:netrw_dirhist_6='/home/workbuntu/local'
+let g:netrw_dirhist_5='/home/workbuntu/dotfiles/vim/.vim'
+let g:netrw_dirhist_4='/home/workbuntu/local'
+let g:netrw_dirhist_3='/home/workbuntu/.local'
+let g:netrw_dirhist_2='/home/workbuntu'
+let g:netrw_dirhist_1='/home/workbuntu/local'

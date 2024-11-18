@@ -91,7 +91,18 @@ set path+=**
 "things to consider:
 "- :b lets you autocomplete any open buffer
 
-set cindent
+"Unnecessary since filetype indent on by default in Neovim and my .vimrc_vimonly and more robust
+"set cindent
+"
+" Allows arrow keys to work in normal and insert mode
+" See usr_05.txt
+set whichwrap=b,s,<,>,[,]
+
+" Every tab will be displayed as ">---" and trailing whites space as "-"
+" See usr_05.txt
+set listchars=tab:>-,trail:-
+"Increases message window at bottom of vim to 2
+set cmdheight=2
 
 "NETRW OPTIONS:
 " from: https://vonheikemen.github.io/devlog/tools/using-netrw-vim-builtin-file-explorer/
@@ -116,8 +127,17 @@ let g:netrw_browse_split=3
 let g:netrw_keepdir=0
 
 "KEYREMAPS:
-let mapleader = ";"
-nnoremap \ ;
+" Set the timeout length for mapped sequences (in milliseconds)
+" Controls the time Vim waits for a mapped sequence to complete
+" Default 1000ms
+set timeoutlen=300
+" set the timeout length for key codes (in milliseconds)
+" Controls the tiem Vim waits for key codes to complete. The default is -1
+" which means no timeout. 
+" Changed from 50
+set ttimeoutlen=10
+let mapleader = "/"
+"nnoremap \ ;
 "n = normalmode
 "i = insertmode
 "
@@ -127,10 +147,29 @@ nnoremap \ ;
 "(with the :imap command, the result is scanned to 
 "see whether it contains another mapping).'
 "https://vim.fandom.com/wiki/Avoid_the_escape_key
+" remap <Esc> key in insert mode
 inoremap jk <Esc>
-nnoremap <leader>ee :Lexplore %:p:h<CR>
 " Map jk to escape in visual mode 
 xmap jk <Esc> 
+"Run Netrw in Vertical split mode
+nnoremap <leader>ee :Lexplore %:p:h<CR>
+" maps <leader>n to :next to navigate multiple files
+nnoremap <leader>n :next<CR>
+" maps <leader>p to :prev to navigate multiple files
+nnoremap<leader>p :prev<CR>
+" maps <leader>wn to :wnext to save and move next to navigate multiple files
+nnoremap <leader>wn :wnext<CR>
+" maps <leader>wp to :wprev to save and move next to navigate multiple files
+nnoremap <leader>wp :wprev<CR>
+" maps <Leader>cn to :cnext command
+nnoremap <leader>cn :cnext<CR>
+" maps <Leader>cp to :cprev command
+nnoremap <leader>cp :cprev<CR>
+
+"Navigating tabs
+nnoremap <leader>tn gt
+noremap <leader>tp gT
+noremap <leader>tx :tabc<CR>
 
 "AUTOCOMPLETE:
 "(^ means CTRL key)
