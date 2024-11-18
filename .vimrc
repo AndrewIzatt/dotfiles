@@ -7,15 +7,12 @@ colorscheme slate
 
 "Turns off highlighting automatically after 4 seconds
 "See usr_05.txt in Neovimdocs
-packadd nohlsearch
-
-if !has('nvim')
-    source ~/.vim/.vimrc_vimonly
-endif
+"packadd nohlsearch
+"Not currently working across installations
 
 " Set shift width to 4 spaces.
 " >> indents by 4 spaces.
-set shiftwidth=4        
+set shiftwidth=4
 
 " >> indents to next multiple of 'shiftwidth'.
 set shiftround
@@ -100,6 +97,7 @@ set whichwrap=b,s,<,>,[,]
 
 " Every tab will be displayed as ">---" and trailing whites space as "-"
 " See usr_05.txt
+set list
 set listchars=tab:>-,trail:-
 "Increases message window at bottom of vim to 2
 set cmdheight=2
@@ -136,7 +134,7 @@ set timeoutlen=300
 " which means no timeout. 
 " Changed from 50
 set ttimeoutlen=10
-let mapleader = "/"
+let mapleader = " "
 "nnoremap \ ;
 "n = normalmode
 "i = insertmode
@@ -149,8 +147,8 @@ let mapleader = "/"
 "https://vim.fandom.com/wiki/Avoid_the_escape_key
 " remap <Esc> key in insert mode
 inoremap jk <Esc>
-" Map jk to escape in visual mode 
-xmap jk <Esc> 
+" Map jk to escape in visual mode
+xmap jk <Esc>
 "Run Netrw in Vertical split mode
 nnoremap <leader>ee :Lexplore %:p:h<CR>
 " maps <leader>n to :next to navigate multiple files
@@ -167,9 +165,48 @@ nnoremap <leader>cn :cnext<CR>
 nnoremap <leader>cp :cprev<CR>
 
 "Navigating tabs
-nnoremap <leader>tn gt
-noremap <leader>tp gT
-noremap <leader>tx :tabc<CR>
+"Open a new tab (o for open)
+nnoremap <leader>to <cmd>tabnew<CR>
+" Go to next tab
+nnoremap <leader>tn <cmd>tabn<CR>
+" Go to previous tab
+nnoremap <leader>tp <cmd>tabp<CR>
+" Close current tab
+nnoremap <leader>tx <cmd>tabc<CR>
+" move current buffer to new tab
+nnoremap <leader>tf <cmd>tabnew %<CR>
+
+"Navigating window splits
+"split vertically
+nnoremap <leader>wv <C-w>v
+" split horizontally
+nnoremap <leader>wh <C-w>s
+" makes splits equal size
+nnoremap <leader>we <C-w>=
+" make horizontal split maximum size
+nnoremap <leader>w_ <C-w>_
+" make vertical split maximum size
+nnoremap <leader>w<Bar> <C-w><Bar>
+" Resize horizontal split (up) by 10 lines (use = to not have to hit shift) (=
+" is <leader>se
+nnoremap <leader>w= 10<C-w>+
+" Resize horizontal split (down) by 10 lines
+nnoremap <leader>w- 10<C-w>-
+" Resize vertical split (right) by 10 lines
+" Give vertical split more space on the right by 10 lines
+nnoremap <leader>w. 10<C-w>>
+" Give vertical split more space on the left by 10 lines
+" <lt> is `<` character
+nnoremap <leader>w, 10<C-w><lt>
+"close a window
+nnoremap <leader>wx <cmd>close<CR>
+
+"Clear search highlighting
+nnoremap <leader>nh :nohl<CR>
+
+" Move selected line up and down in Visual Mode
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '>-2<CR>gv=gv
 
 "AUTOCOMPLETE:
 "(^ means CTRL key)
