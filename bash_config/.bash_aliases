@@ -26,7 +26,8 @@ alias .5="cd ../../../../.."
 # Coding
 alias rc="nvim ~/.bashrc"
 alias zrc="nvim ~/.zshrc"
-alias vrc="vim ~/.vimrc"
+alias vrc="nvim ~/.vimrc"
+alias nvrc="nvim ~/.config/nvim/init.vim"
 alias fishrc="nvim ~/.config/fish/config.fish"
 alias aled="nvim ~/bash_config/.bash_aliases"
 alias cdc="nvim ~/Documents/Coding"
@@ -95,6 +96,8 @@ alias va="source ./venv/bin/activate"
 
 # Run custom scripts
 alias cd_scripts="cd ~/Documents/scripts"
+alias cd_nvim="cd ~/.config/nvim"
+alias cd_vim="cd ~/vim"
 
 # Restart Services
 # alias restart_sound="pulseaudio -D"

@@ -118,7 +118,7 @@ let g:netrw_alto=1
 "default.  When the option is one or two, the splitting will be taken
 "horizontally or vertically, respectively.  When the option is set to three, a
 "<cr> will cause the file to appear in a new tab.
-let g:netrw_browse_split=3
+"let g:netrw_browse_split=3
 
 "Keep current directory and the browsing directory synced. This help you avoid
 "the move files error
@@ -150,7 +150,9 @@ inoremap jk <Esc>
 " Map jk to escape in visual mode
 xmap jk <Esc>
 "Run Netrw in Vertical split mode
-nnoremap <leader>ee :Lexplore %:p:h<CR>
+"nnoremap <leader>ee :Lexplore %:p:h<CR>
+"Run Netrw in same window
+nnoremap <leader>ee :Explore<CR>
 " maps <leader>n to :next to navigate multiple files
 nnoremap <leader>n :next<CR>
 " maps <leader>p to :prev to navigate multiple files
