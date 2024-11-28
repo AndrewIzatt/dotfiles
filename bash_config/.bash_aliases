@@ -30,7 +30,6 @@ alias vrc="nvim ~/.vimrc"
 alias nvrc="nvim ~/.config/nvim/init.vim"
 alias fishrc="nvim ~/.config/fish/config.fish"
 alias aled="nvim ~/bash_config/.bash_aliases"
-alias cdc="nvim ~/Documents/Coding"
 alias nand="nvim ~/Documents/Coding/nand2tetris/"
 alias nvimconf="nvim ~/.config/nvim/"
 alias i3stat="nvim ~/.i3status.conf"
@@ -48,7 +47,23 @@ alias tls="tmux ls"
 alias tas="tmux attach -t"
 # Create a new named session. Type `tns foo`
 # to create a session named "foo"
-alias tns="tmux new-session -s"
+# alias tns="tmux new-session -s"
+# Creates a new session and automatically names it after current directory
+# The way it works is by utilizing the –A flag for the new-session command. The –A flag
+# makes new-session behave like attach-session, if the specified session name already
+# exists. From there, instead of hard-coding in a session name (which wouldn’t be very useful),
+# we use the shell’s $() command substitution feature, which evaluates the commands
+# specified within the parentheses before the main/containing command is run. The returned
+# value from the subshell commands is what is used for the session name.
+
+# To get the folder name, we use the basename command and pass it the current
+# working directory name ($PWD). So if $PWD returned /Users/markmcdonnell, the basename
+# for that path would be markmcdonnell.
+# Finally, we pipe (|) the folder name through to the translate (tr) command, which
+# converts any dots (.) into hyphens, to ensure the session name is valid. This avoids issues
+# wherein the folder name is x.y.z, by converting it int
+alias tns='tmux new-session -As $(basename $PWD | tr . -)'
+
 # Kill a named session. Type `tks foo`
 # to kill session "foo"
 alias tks="tmux kill-session -t"
@@ -112,6 +127,8 @@ alias va="source ./venv/bin/activate"
 alias cd_scripts="cd ~/Documents/scripts"
 alias cd_nvim="cd ~/.config/nvim"
 alias cd_vim="cd ~/vim"
+alias cdc="cd ~/Documents/Coding"
+alias cddot="cd ~/dotfiles"
 
 # Restart Services
 # alias restart_sound="pulseaudio -D"
@@ -186,5 +203,3 @@ alias signal="flatpak run org.signal.Signal"
 
 #MySQL
 alias mysql="mysqlsh -u root -h localhost"
-
-
