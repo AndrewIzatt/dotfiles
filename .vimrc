@@ -100,7 +100,8 @@ set whichwrap=b,s,<,>,[,]
 set list
 set listchars=tab:>-,trail:-
 "Increases message window at bottom of vim to 2
-set cmdheight=2
+"Default 1
+set cmdheight=1
 
 "NETRW OPTIONS:
 " from: https://vonheikemen.github.io/devlog/tools/using-netrw-vim-builtin-file-explorer/
