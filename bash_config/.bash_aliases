@@ -68,6 +68,9 @@ alias tns='tmux new-session -As $(basename $PWD | tr . -)'
 # to kill session "foo"
 alias tks="tmux kill-session -t"
 
+# See ch. 3 of Tmux Taster by Mark McDonnell
+alias tkall='tmux ls | cut -d : -f 1 | xargs -I {} tmux kill-session -t {}'
+
 # Neovim config and plugins
 alias nvrc="nvim ~/.config/nvim/init.vim"
 alias commands_nvim="nvim ~/.config/nvim/lua/commands.lua"
