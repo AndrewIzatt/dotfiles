@@ -39,8 +39,22 @@ alias roficonf="nvim ~/.config/rofi/config.rasi"
 alias polyconf="nvim ~/.config/polybar/config"
 alias polylaunch="nvim ~/.config/polybar/launch.sh"
 
+# Tmux Aliases
+alias tconf="nvim ~/.tmux.conf"
+# Returns a list of all active tmux sessions
+alias tls="tmux ls"
+# Attach to a named session. Type `tas foo`
+# to attach to a session named "foo"
+alias tas="tmux attach -t"
+# Create a new named session. Type `tns foo`
+# to create a session named "foo"
+alias tns="tmux new-session -s"
+# Kill a named session. Type `tks foo`
+# to kill session "foo"
+alias tks="tmux kill-session -t"
+
 # Neovim config and plugins
-alias init_nvim="nvim ~/.config/nvim/init.lua"
+alias nvrc="nvim ~/.config/nvim/init.vim"
 alias commands_nvim="nvim ~/.config/nvim/lua/commands.lua"
 alias keymaps_nvim="nvim ~/.config/nvim/lua/keymaps.lua"
 alias options_nvim="nvim ~/.config/nvim/lua/options.lua"
