@@ -1,9 +1,9 @@
 source ~/.vimrc
 " -- Settings shared between vim and neovim in .vimrc
-" require("options")
-" require("keymaps")
-" require("commands")
-" require("custom.lazy")
+lua require("options")
+lua require("keymaps")
+lua require("commands")
+lua require("custom.lazy")
 
 " Old Lua form
 " if vim.fn.hostname() ~= "silvermachine" then
@@ -11,5 +11,6 @@ source ~/.vimrc
 " else
 "   vim.g.node_host_prog = "/usr/local/bin/neovim-node-host"
 " end
-autocmd TextYankPost * lua vim.highlight.on_yank({higroup='Visual', timeout=300})
+"In commmands file above
+"autocmd TextYankPost * lua vim.highlight.on_yank({higroup='Visual', timeout=300})
 "autocmd TextYankPost * silent! lua vim.hl.on_yank {higroup='Visual', timeout=300}

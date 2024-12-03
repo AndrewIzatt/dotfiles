@@ -1,6 +1,6 @@
 -- vim.cmd("let g:netrw_liststyle = 3") -- activate tree style in netrw
 --
--- local opt = vim.opt -- for conciseness
+local opt = vim.opt -- for conciseness
 --
 -- -- any option here can be learned about by :h <name of option>
 --

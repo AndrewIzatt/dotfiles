@@ -1,6 +1,6 @@
-vim.g.mapleader = " "
+-- vim.g.mapleader = " "
 --
--- local keymap = vim.keymap -- for conciseness
+local keymap = vim.keymap -- for conciseness
 --
 -- -- Escape insert mode
 -- keymap.set("i", "jk", "<Esc>", { desc = "Exit insert mode with jk" })
@@ -27,3 +27,13 @@ vim.g.mapleader = " "
 -- -- Visual Maps
 -- keymap.set("v", "J", ":m '>+1<CR>gv=gv") -- Move selected line up in Visual Mode
 -- keymap.set("v", "K", ":m '>-2<CR>gv=gv") -- Move selected line down in Visual Mode
+
+-- Neovim only Abbreviations
+-- Neovim init.vim
+keymap.set('ca', 'nvrc', '~/.config/nvim/init.vim')
+-- keymaps.lua
+keymap.set('ca', 'nkm', '~/.config/nvim/lua/keymaps.lua')
+-- commands.lua
+keymap.set('ca', 'ncm', '~/.config/nvim/lua/commands.lua')
+-- change disabled.lua
+keymap.set('ca', 'ndis', '~/.config/nvim/lua/custom/plugins/disabled.lua')

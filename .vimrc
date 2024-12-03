@@ -103,6 +103,9 @@ set listchars=tab:>-,trail:-
 "Default 1
 set cmdheight=1
 
+" source of dictionary words (apt install spell if error on Ubuntu/Debian)
+set dictionary+=/usr/share/dict/words
+
 "NETRW OPTIONS:
 " from: https://vonheikemen.github.io/devlog/tools/using-netrw-vim-builtin-file-explorer/
 "hide the banner. To show temporarily, use `I` inside Netrw
@@ -150,13 +153,15 @@ let mapleader = " "
 inoremap jk <Esc>
 " Map jk to escape in visual mode
 xmap jk <Esc>
+
 "Run Netrw in Vertical split mode
 "nnoremap <leader>ee :Lexplore %:p:h<CR>
 "Run Netrw in same window
 nnoremap <leader>ee :Explore<CR>
-" maps <leader>n to :next to navigate multiple files
+
+" maps <leader>n to :next to navigate multiple files in args
 nnoremap <leader>n :next<CR>
-" maps <leader>p to :prev to navigate multiple files
+" maps <leader>p to :prev to navigate multiple files in args
 nnoremap<leader>p :prev<CR>
 " maps <leader>wn to :wnext to save and move next to navigate multiple files
 nnoremap <leader>wn :wnext<CR>
@@ -181,28 +186,28 @@ nnoremap <leader>tf <cmd>tabnew %<CR>
 
 "Navigating window splits
 "split vertically
-nnoremap <leader>wv <C-w>v
+"nnoremap <leader>wv <C-w>v
 " split horizontally
-nnoremap <leader>wh <C-w>s
+"nnoremap <leader>wh <C-w>s
 " makes splits equal size
-nnoremap <leader>we <C-w>=
+"nnoremap <leader>we <C-w>=
 " make horizontal split maximum size
-nnoremap <leader>w_ <C-w>_
+"nnoremap <leader>w_ <C-w>_
 " make vertical split maximum size
-nnoremap <leader>w<Bar> <C-w><Bar>
-" Resize horizontal split (up) by 10 lines (use = to not have to hit shift) (=
+"nnoremap <leader>w<Bar> <C-w><Bar>
+" Resize horizontal split (up) by 5 lines (use = to not have to hit shift) (=
 " is <leader>se
-nnoremap <leader>w= 10<C-w>+
-" Resize horizontal split (down) by 10 lines
-nnoremap <leader>w- 10<C-w>-
+nnoremap <C-w>+ 5<C-w>+
+" Resize horizontal split (down) by 5 lines
+nnoremap <C-w>- 5<C-w>-
 " Resize vertical split (right) by 10 lines
-" Give vertical split more space on the right by 10 lines
-nnoremap <leader>w. 10<C-w>>
-" Give vertical split more space on the left by 10 lines
+" Give vertical split more space on the right by 5 lines
+nnoremap <C-w>> 5<C-w>>
+" Give vertical split more space on the left by 5 lines
 " <lt> is `<` character
-nnoremap <leader>w, 10<C-w><lt>
+nnoremap <C><lt> 5<C-w><lt>
 "close a window
-nnoremap <leader>wx <cmd>close<CR>
+nnoremap <C-w>x <cmd>close<CR>
 
 "Clear search highlighting
 nnoremap <leader>nh :nohl<CR>
@@ -210,6 +215,31 @@ nnoremap <leader>nh :nohl<CR>
 " Move selected line up and down in Visual Mode
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '>-2<CR>gv=gv
+
+" INSERT MODE
+" Navigating ins-completion (see :help 'ins-completion'
+"Omni (intellisense) complete
+"inoremap <C-M> <C-X><C-O>
+" autocomplete with tag names
+"inoremap <C-]> <C-X><C-]>
+" autocomplete with file names
+"inoremap <C-F> <C-X><C-F>
+"autocomplete with macrodefinitions
+"inoremap <C-D> <C-X><C-D>
+"autocomplete with whole lines
+"inoremap <C-L> <C-X><C-L>
+"autocomplete with dictionary words
+"11/28/24 - For now not remapping this
+"as it's a way to insert digraphs by default
+"inoremap <C-K> <C-X><C-K>
+"autocomplete with Vim commands
+"inoremap <C-V> <C-X><C-V>
+"autocomplete with current and included files
+"inoremap <C-I> <C-X><C-I>
+"autocomplete with words from thesaurus
+"11/28/24 - For now not remapping this
+"<C-T> in insert mode indents
+"inoremap <C-T> <C-X><C-T>
 
 "AUTOCOMPLETE:
 "(^ means CTRL key)
@@ -225,9 +255,6 @@ vnoremap K :m '>-2<CR>gv=gv
 "autocmd InsertEnter * set cursorline
 "autocmd InsertLeave * set nocursorline
 "autocmd InsertEnter,InsertLeave * set cul!
-
-"Highlight on yank
-" autocmd TextYankPost * silent! lua vim.highlight.on_yank {higroup='Visual', timeout=300}
 
 "TAG JUMPING:
 "Create the 'tags' file (may need to install ctags first)
@@ -249,3 +276,9 @@ augroup VimStartup
   au!
   au VimEnter * if expand("%") == "" | e . | endif
 augroup END
+
+iabbrev teh the
+iabbrev hte the
+iabbrev het the
+iabbrev bbb Better Business Bureau
+cabbrev vrc ~/.vimrc
