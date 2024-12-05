@@ -3,7 +3,7 @@ source ~/.vimrc
 lua require("options")
 lua require("keymaps")
 lua require("commands")
-lua require("custom.lazy")
+lua require("config.lazy")
 
 " Old Lua form
 " if vim.fn.hostname() ~= "silvermachine" then

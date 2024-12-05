@@ -1,5 +1,5 @@
 " To toggle LSP debugging
-lua vim.lsp.set_log_level("debug")
+"lua vim.lsp.set_log_level("debug")
 "OPTIONS:
 "learn about any option with :h '<option name>' ex. :h 'autoindent'
 "   enter the current millenium
@@ -173,6 +173,12 @@ nnoremap <leader>wp :wprev<CR>
 nnoremap <leader>cn :cnext<CR>
 " maps <Leader>cp to :cprev command
 nnoremap <leader>cp :cprev<CR>
+
+" navigate buffers
+"Tab to go to next buffer
+nnoremap  <silent>   <tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bnext<CR>
+"Shift-Tab to go to previous buffer
+nnoremap  <silent> <s-tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bprevious<CR>
 
 "Navigating tabs
 "Open a new tab (o for open)
