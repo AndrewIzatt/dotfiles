@@ -15,7 +15,7 @@ return {
                     "angularls",
                     "lua_ls",
                     "ruff"
-                }
+                },
             })
         end
     },
@@ -23,9 +23,31 @@ return {
         "neovim/nvim-lspconfig",
         config = function()
             local lspconfig = require("lspconfig")
+            lspconfig.bashls.setup({})
+            lspconfig.cmake.setup({})
             lspconfig.emmet_ls.setup({})
-            lspconfig.lua_ls.setup({})
+            -- vscode-eslint-language-server provides an EslintFixAll command that can be used to format a document on save:
+            lspconfig.eslint.setup({
+                on_attach = function(client, bufnr)
+                    vim.api.nvim_create_autocmd("BufWritePre", {
+                        buffer = bufnr,
+                        command = "EslintFixAll",
+                    })
+                end,
+            })
+            lspconfig.lua_ls.setup({
+                settings = {
+                    Lua = {
+                        diagnostics = {
+                            -- eliminate `Undefined global "vim" error
+                            globals = { "vim" }
+                        }
+                    }
+                }
+            })
             lspconfig.ruff.setup({})
+            lspconfig.sqlls.setup {}
+            lspconfig.vimls.setup({})
             vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
             -- Global mappings.
             -- See `:help vim.diagnostic.*` for documentation on any of the below functions

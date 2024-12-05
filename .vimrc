@@ -1,3 +1,5 @@
+" To toggle LSP debugging
+lua vim.lsp.set_log_level("debug")
 "OPTIONS:
 "learn about any option with :h '<option name>' ex. :h 'autoindent'
 "   enter the current millenium
