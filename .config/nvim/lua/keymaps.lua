@@ -37,3 +37,6 @@ keymap.set('ca', 'nkm', '~/.config/nvim/lua/keymaps.lua')
 keymap.set('ca', 'ncm', '~/.config/nvim/lua/commands.lua')
 -- change disabled.lua
 keymap.set('ca', 'ndis', '~/.config/nvim/lua/custom/plugins/disabled.lua')
+-- run current line in Lua code
+-- keymap.set("n", "<space>x", ":.lua<CR>")
+-- keymap.set("v", "<space>x", ":lua<CR>")

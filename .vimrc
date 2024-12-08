@@ -62,7 +62,6 @@ set virtualedit=block
 " Do not wrap lines. Allow long lines to extend as far as the line goes.
 set nowrap
 
-" (I still don't really know what this does)
 " Show matching words during a search
 "set showmatch
 
@@ -100,12 +99,12 @@ set whichwrap=b,s,<,>,[,]
 " Every tab will be displayed as ">---" and trailing whites space as "-"
 " See usr_05.txt
 set list
-set listchars=tab:>-,trail:-
+set listchars=tab:>-<,trail:-
 "Increases message window at bottom of vim to 2
 "Default 1
 set cmdheight=1
-
 " source of dictionary words (apt install spell if error on Ubuntu/Debian)
+" for ins-completion
 set dictionary+=/usr/share/dict/words
 
 "NETRW OPTIONS:
@@ -139,7 +138,7 @@ set timeoutlen=300
 " Controls the tiem Vim waits for key codes to complete. The default is -1
 " which means no timeout. 
 " Changed from 50
-set ttimeoutlen=10
+set ttimeoutlen=50
 let mapleader = " "
 "nnoremap \ ;
 "n = normalmode
@@ -219,6 +218,8 @@ nnoremap <C-w>x <cmd>close<CR>
 
 "Clear search highlighting
 nnoremap <leader>nh :nohl<CR>
+
+noremap <leader><leader>x <cmd>source %<CR>
 
 " Move selected line up and down in Visual Mode
 vnoremap J :m '>+1<CR>gv=gv
