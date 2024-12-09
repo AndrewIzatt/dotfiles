@@ -37,6 +37,7 @@ alias i3conf="nvim ~/.config/i3/config"
 alias roficonf="nvim ~/.config/rofi/config.rasi"
 alias polyconf="nvim ~/.config/polybar/config"
 alias polylaunch="nvim ~/.config/polybar/launch.sh"
+alias kittyconf="nvim ~/.config/kitty/kitty.conf"
 
 # Tmux Aliases
 alias tconf="nvim ~/tmux/.tmux.conf"
