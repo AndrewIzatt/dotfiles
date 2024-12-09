@@ -39,7 +39,7 @@ alias polyconf="nvim ~/.config/polybar/config"
 alias polylaunch="nvim ~/.config/polybar/launch.sh"
 
 # Tmux Aliases
-alias tconf="nvim ~/.tmux.conf"
+alias tconf="nvim ~/tmux/.tmux.conf"
 # Returns a list of all active tmux sessions
 alias tls="tmux ls"
 # Attach to a named session. Type `tas foo`

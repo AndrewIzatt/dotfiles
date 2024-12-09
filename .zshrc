@@ -146,3 +146,6 @@ source ~/bash_config/.functions
 
 
 fastfetch
+
+# Created by `pipx` on 2024-12-08 23:59:18
+export PATH="$PATH:/home/gnarwal/.local/bin"
