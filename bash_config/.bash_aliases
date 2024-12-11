@@ -37,7 +37,10 @@ alias i3conf="nvim ~/.config/i3/config"
 alias roficonf="nvim ~/.config/rofi/config.rasi"
 alias polyconf="nvim ~/.config/polybar/config"
 alias polylaunch="nvim ~/.config/polybar/launch.sh"
+
+# Kitty aliases
 alias kittyconf="nvim ~/.config/kitty/kitty.conf"
+alias kittyup="curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin"
 
 # Tmux Aliases
 alias tconf="nvim ~/tmux/.tmux.conf"
