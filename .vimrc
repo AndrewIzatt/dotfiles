@@ -133,9 +133,9 @@ let g:netrw_keepdir=0
 " Set the timeout length for mapped sequences (in milliseconds)
 " Controls the time Vim waits for a mapped sequence to complete
 " Default 1000ms
-set timeoutlen=300
+set timeoutlen=500
 " set the timeout length for key codes (in milliseconds)
-" Controls the tiem Vim waits for key codes to complete. The default is -1
+" Controls the time Vim waits for key codes to complete. The default is -1
 " which means no timeout. 
 " Changed from 50
 set ttimeoutlen=50
@@ -172,7 +172,6 @@ nnoremap <leader>wp :wprev<CR>
 nnoremap <leader>cn :cnext<CR>
 " maps <Leader>cp to :cprev command
 nnoremap <leader>cp :cprev<CR>
-
 " navigate buffers
 "Tab to go to next buffer
 nnoremap  <silent>   <tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bnext<CR>
@@ -209,17 +208,17 @@ nnoremap <C-w>+ 5<C-w>+
 nnoremap <C-w>- 5<C-w>-
 " Resize vertical split (right) by 10 lines
 " Give vertical split more space on the right by 5 lines
-nnoremap <C-w>> 5<C-w>>
+nnoremap <C-w>> 15<C-w>>
 " Give vertical split more space on the left by 5 lines
 " <lt> is `<` character
-nnoremap <C><lt> 5<C-w><lt>
+nnoremap <C-w><lt> 15<C-w><lt>
 "close a window
 nnoremap <C-w>x <cmd>close<CR>
 
 "Clear search highlighting
 nnoremap <leader>nh :nohl<CR>
 
-noremap <leader><leader>x <cmd>source %<CR>
+nnoremap <leader><leader>r <cmd>source %<CR>
 
 " Move selected line up and down in Visual Mode
 vnoremap J :m '>+1<CR>gv=gv
@@ -289,5 +288,5 @@ augroup END
 iabbrev teh the
 iabbrev hte the
 iabbrev het the
-iabbrev bbb Better Business Bureau
+iabbrev ahve have
 cabbrev vrc ~/.vimrc

@@ -2,6 +2,9 @@
 # If you come from bash you might have to change your $PATH.
 # PATH stuff
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
+#
+# Created by `pipx` on 2024-12-08 23:59:18
+export PATH="$PATH:/home/gnarwal/.local/bin"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -16,6 +19,8 @@ export NVIM_APPNAME="nvim"
 # export NVIM_APPNAME="nvim.orig"
 # export NVIM_APPNAME="nvim-custom"
 # switch to Kickstart Configuration
+
+export MYSQLSH_PROMPT_THEME=/path/to/your/prompt.json
 
 alias nvim-mod='NVIM_APPNAME="kickmod" nvim'
 
@@ -146,6 +151,3 @@ source ~/bash_config/.functions
 
 
 fastfetch
-
-# Created by `pipx` on 2024-12-08 23:59:18
-export PATH="$PATH:/home/gnarwal/.local/bin"
