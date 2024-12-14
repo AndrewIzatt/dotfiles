@@ -20,7 +20,12 @@ export NVIM_APPNAME="nvim"
 # export NVIM_APPNAME="nvim-custom"
 # switch to Kickstart Configuration
 
-export MYSQLSH_PROMPT_THEME=/path/to/your/prompt.json
+export MYSQLSH_PROMPT_THEME=~/.mysqlsh/prompt.json
+# export MYSQLSH_PROMPT_THEME=/usr/share/mysqlsh/prompt/prompt_256inv.json
+# export MYSQLSH_PROMPT_THEME=/usr/share/mysqlsh/prompt/prompt_256pl.json
+# export MYSQLSH_PROMPT_THEME=/usr/share/mysqlsh/prompt/prompt_256pl+aw.json
+# export MYSQLSH_PROMPT_THEME=/usr/share/mysqlsh/prompt/prompt_dbl_256.json
+# export MYSQLSH_PROMPT_THEME=/usr/share/mysqlsh/prompt/prompt_dbl_256pl.json
 
 alias nvim-mod='NVIM_APPNAME="kickmod" nvim'
 

@@ -28,3 +28,4 @@ if [ -d "$HOME/.local/bin" ] ; then
 fi
 # source aliases
 source ~/bash_config/.bash_aliases
+. "$HOME/.cargo/env"

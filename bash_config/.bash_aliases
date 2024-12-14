@@ -75,6 +75,8 @@ alias tks="tmux kill-session -t"
 # See ch. 3 of Tmux Taster by Mark McDonnell
 alias tkall='tmux ls | cut -d : -f 1 | xargs -I {} tmux kill-session -t {}'
 
+alias yazi="~/repos/yazi/target/release/yazi"
+
 # Neovim config and plugins
 alias nvrc="nvim ~/.config/nvim/init.vim"
 alias commands_nvim="nvim ~/.config/nvim/lua/commands.lua"
