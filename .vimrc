@@ -107,6 +107,8 @@ set cmdheight=1
 " for ins-completion
 set dictionary+=/usr/share/dict/words
 
+set clipboard+=unnamedplus
+
 "NETRW OPTIONS:
 " from: https://vonheikemen.github.io/devlog/tools/using-netrw-vim-builtin-file-explorer/
 "hide the banner. To show temporarily, use `I` inside Netrw
