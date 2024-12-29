@@ -42,6 +42,10 @@ alias polylaunch="nvim ~/.config/polybar/launch.sh"
 alias kittyconf="nvim ~/.config/kitty/kitty.conf"
 alias kittyup="curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin"
 
+# Ghostty aliases
+alias ghostconf="nvim ~/.config/ghostty/config"
+alias ghosttheme="ghostty +list-themes"
+
 # Tmux Aliases
 alias tconf="nvim ~/tmux/.tmux.conf"
 # Returns a list of all active tmux sessions
@@ -133,6 +137,8 @@ alias python="python3"
 # Create python virtual envs in current directory
 alias ve="python -m virtualenv ./venv"
 alias va="source ./venv/bin/activate"
+alias venv="python -m venv venv/"
+alias activate="source venv/bin/activate"
 
 # Run custom scripts
 alias cd_scripts="cd ~/Documents/scripts"
