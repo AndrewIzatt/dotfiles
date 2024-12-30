@@ -1,0 +1,451 @@
+2024-12-13 16:19:48: Info: mysqlsh   Ver 8.4.3 for Linux on x86_64 - for MySQL 8.4.3 (MySQL Community Server (GPL)) - build 16905018 - commit_id 5390350953be90239ac6aada0952478288bfd3dd - product_id ubuntu22.04-x86-64bit deb
+2024-12-13 16:19:48: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-12-13 16:19:48: Info: Setting Python home to '/usr/lib/mysqlsh'
+2024-12-13 16:19:48: Info: Loading startup files...
+2024-12-13 16:19:48: Info: Loading plugins...
+2024-12-13 16:19:48: Info: Pager has been set to 'less'.
+2024-12-13 16:19:50: Info: Connecting to MySQL at: root@localhost
+2024-12-13 16:30:36: Info: mysqlsh   Ver 8.4.3 for Linux on x86_64 - for MySQL 8.4.3 (MySQL Community Server (GPL)) - build 16905018 - commit_id 5390350953be90239ac6aada0952478288bfd3dd - product_id ubuntu22.04-x86-64bit deb
+2024-12-13 16:30:36: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-12-13 16:30:36: Info: Setting Python home to '/usr/lib/mysqlsh'
+2024-12-13 16:30:36: Info: Loading startup files...
+2024-12-13 16:30:36: Info: Loading plugins...
+2024-12-13 16:30:37: Info: Pager has been set to 'less'.
+2024-12-13 16:30:47: Info: Connecting to MySQL at: root@localhost
+2024-12-13 16:30:59: Info: mysqlsh   Ver 8.4.3 for Linux on x86_64 - for MySQL 8.4.3 (MySQL Community Server (GPL)) - build 16905018 - commit_id 5390350953be90239ac6aada0952478288bfd3dd - product_id ubuntu22.04-x86-64bit deb
+2024-12-13 16:30:59: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-12-13 16:30:59: Info: Setting Python home to '/usr/lib/mysqlsh'
+2024-12-13 16:30:59: Info: Loading startup files...
+2024-12-13 16:30:59: Info: Loading plugins...
+2024-12-13 16:30:59: Info: Pager has been set to 'less'.
+2024-12-13 16:31:00: Info: Connecting to MySQL at: root@localhost
+2024-12-13 19:07:35: Info: mysqlsh   Ver 8.4.3 for Linux on x86_64 - for MySQL 8.4.3 (MySQL Community Server (GPL)) - build 16905018 - commit_id 5390350953be90239ac6aada0952478288bfd3dd - product_id ubuntu22.04-x86-64bit deb
+2024-12-13 19:07:35: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-12-13 19:07:35: Info: Setting Python home to '/usr/lib/mysqlsh'
+2024-12-13 19:07:35: Info: Loading startup files...
+2024-12-13 19:07:35: Info: Loading plugins...
+2024-12-13 19:07:35: Info: Pager has been set to 'less'.
+2024-12-13 19:07:38: Info: Connecting to MySQL at: root@localhost
+2024-12-13 19:07:38: Info: main: tid=15: CONNECTED: localhost
+2024-12-13 19:07:41: Info: main: tid=15: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'user_defined_functions', SQL: SELECT UDF_NAME FROM performance_schema.user_defined_functions
+2024-12-13 19:07:41: Info: main: tid=15: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'func', SQL: SELECT name FROM mysql.func
+2024-12-13 19:07:41: Warning: Failed to fetch UDFs for SQL auto-completion: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'func'
+2024-12-13 19:07:41: Info: main: tid=15: MySQL Error 1227: Access denied; you need (at least one of) the PROCESS privilege(s) for this operation, SQL: SELECT LOGFILE_GROUP_NAME FROM INFORMATION_SCHEMA.FILES WHERE LOGFILE_GROUP_NAME IS NOT NULL
+2024-12-13 19:42:57: Info: mysqlsh   Ver 8.4.3 for Linux on x86_64 - for MySQL 8.4.3 (MySQL Community Server (GPL)) - build 16905018 - commit_id 5390350953be90239ac6aada0952478288bfd3dd - product_id ubuntu22.04-x86-64bit deb
+2024-12-13 19:42:57: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-12-13 19:42:57: Info: Setting Python home to '/usr/lib/mysqlsh'
+2024-12-13 19:42:57: Info: Loading startup files...
+2024-12-13 19:42:57: Info: Loading plugins...
+2024-12-13 19:42:58: Info: Pager has been set to 'less'.
+2024-12-13 19:42:58: Warning: Error loading prompt theme '/home/gnarwal/.mysqlsh/prompt.json': Error parsing map, unexpected character reading key.
+2024-12-13 19:43:20: Error: Unknown command '\q'
+2024-12-13 19:43:20: Error: Unknown command '\m'
+2024-12-13 19:43:20: Error: Unknown command '\q'
+2024-12-13 19:43:21: Error: Unknown command '\q'
+2024-12-13 19:43:21: Error: Unknown command '\q'
+2024-12-13 19:43:21: Error: Unknown command '\q'
+2024-12-13 19:43:28: Info: mysqlsh   Ver 8.4.3 for Linux on x86_64 - for MySQL 8.4.3 (MySQL Community Server (GPL)) - build 16905018 - commit_id 5390350953be90239ac6aada0952478288bfd3dd - product_id ubuntu22.04-x86-64bit deb
+2024-12-13 19:43:28: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-12-13 19:43:28: Info: Setting Python home to '/usr/lib/mysqlsh'
+2024-12-13 19:43:28: Info: Loading startup files...
+2024-12-13 19:43:28: Info: Loading plugins...
+2024-12-13 19:43:29: Info: Pager has been set to 'less'.
+2024-12-13 19:43:29: Info: Connecting to MySQL at: root@localhost
+2024-12-13 19:43:29: Info: main: tid=16: CONNECTED: localhost
+2024-12-13 19:43:29: Info: main: tid=16: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'user_defined_functions', SQL: SELECT UDF_NAME FROM performance_schema.user_defined_functions
+2024-12-13 19:43:29: Info: main: tid=16: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'func', SQL: SELECT name FROM mysql.func
+2024-12-13 19:43:29: Warning: Failed to fetch UDFs for SQL auto-completion: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'func'
+2024-12-13 19:43:29: Info: main: tid=16: MySQL Error 1227: Access denied; you need (at least one of) the PROCESS privilege(s) for this operation, SQL: SELECT LOGFILE_GROUP_NAME FROM INFORMATION_SCHEMA.FILES WHERE LOGFILE_GROUP_NAME IS NOT NULL
+2024-12-13 19:43:29: Warning: Error loading prompt theme '/home/gnarwal/.mysqlsh/prompt.json': Error parsing map, unexpected character reading key.
+2024-12-13 23:21:54: Info: mysqlsh   Ver 8.4.3 for Linux on x86_64 - for MySQL 8.4.3 (MySQL Community Server (GPL)) - build 16905018 - commit_id 5390350953be90239ac6aada0952478288bfd3dd - product_id ubuntu22.04-x86-64bit deb
+2024-12-13 23:21:54: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-12-13 23:21:54: Info: Setting Python home to '/usr/lib/mysqlsh'
+2024-12-13 23:21:54: Info: Loading startup files...
+2024-12-13 23:21:54: Info: Loading plugins...
+2024-12-13 23:21:55: Info: Pager has been set to 'less'.
+2024-12-13 23:21:55: Info: Connecting to MySQL at: root@localhost
+2024-12-13 23:21:55: Info: main: tid=17: CONNECTED: localhost
+2024-12-13 23:21:55: Info: main: tid=17: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'user_defined_functions', SQL: SELECT UDF_NAME FROM performance_schema.user_defined_functions
+2024-12-13 23:21:55: Info: main: tid=17: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'func', SQL: SELECT name FROM mysql.func
+2024-12-13 23:21:55: Warning: Failed to fetch UDFs for SQL auto-completion: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'func'
+2024-12-13 23:21:55: Info: main: tid=17: MySQL Error 1227: Access denied; you need (at least one of) the PROCESS privilege(s) for this operation, SQL: SELECT LOGFILE_GROUP_NAME FROM INFORMATION_SCHEMA.FILES WHERE LOGFILE_GROUP_NAME IS NOT NULL
+2024-12-13 23:21:55: Warning: Error loading prompt theme '/home/gnarwal/.mysqlsh/prompt.json': Error parsing map, unexpected character reading key.
+2024-12-13 23:23:28: Info: mysqlsh   Ver 8.4.3 for Linux on x86_64 - for MySQL 8.4.3 (MySQL Community Server (GPL)) - build 16905018 - commit_id 5390350953be90239ac6aada0952478288bfd3dd - product_id ubuntu22.04-x86-64bit deb
+2024-12-13 23:23:28: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-12-13 23:23:28: Info: Setting Python home to '/usr/lib/mysqlsh'
+2024-12-13 23:23:28: Info: Loading startup files...
+2024-12-13 23:23:28: Info: Loading plugins...
+2024-12-13 23:23:28: Info: Pager has been set to 'less'.
+2024-12-13 23:23:28: Info: Connecting to MySQL at: root@localhost
+2024-12-13 23:23:28: Info: main: tid=18: CONNECTED: localhost
+2024-12-13 23:23:28: Info: main: tid=18: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'user_defined_functions', SQL: SELECT UDF_NAME FROM performance_schema.user_defined_functions
+2024-12-13 23:23:28: Info: main: tid=18: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'func', SQL: SELECT name FROM mysql.func
+2024-12-13 23:23:28: Warning: Failed to fetch UDFs for SQL auto-completion: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'func'
+2024-12-13 23:23:28: Info: main: tid=18: MySQL Error 1227: Access denied; you need (at least one of) the PROCESS privilege(s) for this operation, SQL: SELECT LOGFILE_GROUP_NAME FROM INFORMATION_SCHEMA.FILES WHERE LOGFILE_GROUP_NAME IS NOT NULL
+2024-12-13 23:23:28: Warning: Error loading prompt theme '/home/gnarwal/.mysqlsh/prompt.json': Error loading prompt theme: Error loading variable definition is_production: Invalid typecast: Map expected, but value is Bool
+2024-12-13 23:39:17: Info: mysqlsh   Ver 8.4.3 for Linux on x86_64 - for MySQL 8.4.3 (MySQL Community Server (GPL)) - build 16905018 - commit_id 5390350953be90239ac6aada0952478288bfd3dd - product_id ubuntu22.04-x86-64bit deb
+2024-12-13 23:39:17: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-12-13 23:39:17: Info: Setting Python home to '/usr/lib/mysqlsh'
+2024-12-13 23:39:17: Info: Loading startup files...
+2024-12-13 23:39:17: Info: Loading plugins...
+2024-12-13 23:39:17: Info: Pager has been set to 'less'.
+2024-12-13 23:39:41: Info: mysqlsh   Ver 8.4.3 for Linux on x86_64 - for MySQL 8.4.3 (MySQL Community Server (GPL)) - build 16905018 - commit_id 5390350953be90239ac6aada0952478288bfd3dd - product_id ubuntu22.04-x86-64bit deb
+2024-12-13 23:39:41: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-12-13 23:39:41: Info: Setting Python home to '/usr/lib/mysqlsh'
+2024-12-13 23:39:41: Info: Loading startup files...
+2024-12-13 23:39:41: Info: Loading plugins...
+2024-12-13 23:39:42: Info: Pager has been set to 'less'.
+2024-12-13 23:42:22: Info: mysqlsh   Ver 8.4.3 for Linux on x86_64 - for MySQL 8.4.3 (MySQL Community Server (GPL)) - build 16905018 - commit_id 5390350953be90239ac6aada0952478288bfd3dd - product_id ubuntu22.04-x86-64bit deb
+2024-12-13 23:42:22: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-12-13 23:42:22: Info: Setting Python home to '/usr/lib/mysqlsh'
+2024-12-13 23:42:22: Info: Loading startup files...
+2024-12-13 23:42:22: Info: Loading plugins...
+2024-12-13 23:42:23: Info: Pager has been set to 'less'.
+2024-12-13 23:43:33: Info: mysqlsh   Ver 8.4.3 for Linux on x86_64 - for MySQL 8.4.3 (MySQL Community Server (GPL)) - build 16905018 - commit_id 5390350953be90239ac6aada0952478288bfd3dd - product_id ubuntu22.04-x86-64bit deb
+2024-12-13 23:43:33: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-12-13 23:43:33: Info: Setting Python home to '/usr/lib/mysqlsh'
+2024-12-13 23:43:33: Info: Loading startup files...
+2024-12-13 23:43:33: Info: Loading plugins...
+2024-12-13 23:43:34: Info: Pager has been set to 'less'.
+2024-12-13 23:43:34: Info: Connecting to MySQL at: root@localhost
+2024-12-13 23:43:34: Info: main: tid=19: CONNECTED: localhost
+2024-12-13 23:43:34: Info: main: tid=19: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'user_defined_functions', SQL: SELECT UDF_NAME FROM performance_schema.user_defined_functions
+2024-12-13 23:43:34: Info: main: tid=19: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'func', SQL: SELECT name FROM mysql.func
+2024-12-13 23:43:34: Warning: Failed to fetch UDFs for SQL auto-completion: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'func'
+2024-12-13 23:43:34: Info: main: tid=19: MySQL Error 1227: Access denied; you need (at least one of) the PROCESS privilege(s) for this operation, SQL: SELECT LOGFILE_GROUP_NAME FROM INFORMATION_SCHEMA.FILES WHERE LOGFILE_GROUP_NAME IS NOT NULL
+2024-12-13 23:44:47: Info: mysqlsh   Ver 8.4.3 for Linux on x86_64 - for MySQL 8.4.3 (MySQL Community Server (GPL)) - build 16905018 - commit_id 5390350953be90239ac6aada0952478288bfd3dd - product_id ubuntu22.04-x86-64bit deb
+2024-12-13 23:44:47: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-12-13 23:44:47: Info: Setting Python home to '/usr/lib/mysqlsh'
+2024-12-13 23:44:47: Info: Loading startup files...
+2024-12-13 23:44:47: Info: Loading plugins...
+2024-12-13 23:44:48: Info: Pager has been set to 'less'.
+2024-12-13 23:44:48: Info: Connecting to MySQL at: root@localhost
+2024-12-13 23:44:48: Info: main: tid=20: CONNECTED: localhost
+2024-12-13 23:44:48: Info: main: tid=20: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'user_defined_functions', SQL: SELECT UDF_NAME FROM performance_schema.user_defined_functions
+2024-12-13 23:44:48: Info: main: tid=20: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'func', SQL: SELECT name FROM mysql.func
+2024-12-13 23:44:48: Warning: Failed to fetch UDFs for SQL auto-completion: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'func'
+2024-12-13 23:44:48: Info: main: tid=20: MySQL Error 1227: Access denied; you need (at least one of) the PROCESS privilege(s) for this operation, SQL: SELECT LOGFILE_GROUP_NAME FROM INFORMATION_SCHEMA.FILES WHERE LOGFILE_GROUP_NAME IS NOT NULL
+2024-12-13 23:45:43: Info: mysqlsh   Ver 8.4.3 for Linux on x86_64 - for MySQL 8.4.3 (MySQL Community Server (GPL)) - build 16905018 - commit_id 5390350953be90239ac6aada0952478288bfd3dd - product_id ubuntu22.04-x86-64bit deb
+2024-12-13 23:45:43: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-12-13 23:45:43: Info: Setting Python home to '/usr/lib/mysqlsh'
+2024-12-13 23:45:43: Info: Loading startup files...
+2024-12-13 23:45:43: Info: Loading plugins...
+2024-12-13 23:45:44: Info: Pager has been set to 'less'.
+2024-12-13 23:45:44: Info: Connecting to MySQL at: root@localhost
+2024-12-13 23:45:44: Info: main: tid=21: CONNECTED: localhost
+2024-12-13 23:45:44: Info: main: tid=21: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'user_defined_functions', SQL: SELECT UDF_NAME FROM performance_schema.user_defined_functions
+2024-12-13 23:45:44: Info: main: tid=21: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'func', SQL: SELECT name FROM mysql.func
+2024-12-13 23:45:44: Warning: Failed to fetch UDFs for SQL auto-completion: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'func'
+2024-12-13 23:45:44: Info: main: tid=21: MySQL Error 1227: Access denied; you need (at least one of) the PROCESS privilege(s) for this operation, SQL: SELECT LOGFILE_GROUP_NAME FROM INFORMATION_SCHEMA.FILES WHERE LOGFILE_GROUP_NAME IS NOT NULL
+2024-12-14 00:02:09: Info: mysqlsh   Ver 8.4.3 for Linux on x86_64 - for MySQL 8.4.3 (MySQL Community Server (GPL)) - build 16905018 - commit_id 5390350953be90239ac6aada0952478288bfd3dd - product_id ubuntu22.04-x86-64bit deb
+2024-12-14 00:02:09: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-12-14 00:02:09: Info: Setting Python home to '/usr/lib/mysqlsh'
+2024-12-14 00:02:09: Info: Loading startup files...
+2024-12-14 00:02:09: Info: Loading plugins...
+2024-12-14 00:02:10: Info: Pager has been set to 'less'.
+2024-12-14 00:02:10: Info: Connecting to MySQL at: root@localhost
+2024-12-14 00:02:10: Info: main: tid=22: CONNECTED: localhost
+2024-12-14 00:02:10: Info: main: tid=22: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'user_defined_functions', SQL: SELECT UDF_NAME FROM performance_schema.user_defined_functions
+2024-12-14 00:02:10: Info: main: tid=22: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'func', SQL: SELECT name FROM mysql.func
+2024-12-14 00:02:10: Warning: Failed to fetch UDFs for SQL auto-completion: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'func'
+2024-12-14 00:02:10: Info: main: tid=22: MySQL Error 1227: Access denied; you need (at least one of) the PROCESS privilege(s) for this operation, SQL: SELECT LOGFILE_GROUP_NAME FROM INFORMATION_SCHEMA.FILES WHERE LOGFILE_GROUP_NAME IS NOT NULL
+2024-12-14 00:02:10: Warning: Error loading prompt theme '/home/gnarwal/.mysqlsh/prompt.json': Can't parse 'l'
+2024-12-14 00:05:05: Info: mysqlsh   Ver 8.4.3 for Linux on x86_64 - for MySQL 8.4.3 (MySQL Community Server (GPL)) - build 16905018 - commit_id 5390350953be90239ac6aada0952478288bfd3dd - product_id ubuntu22.04-x86-64bit deb
+2024-12-14 00:05:05: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-12-14 00:05:05: Info: Setting Python home to '/usr/lib/mysqlsh'
+2024-12-14 00:05:05: Info: Loading startup files...
+2024-12-14 00:05:05: Info: Loading plugins...
+2024-12-14 00:05:05: Info: Pager has been set to 'less'.
+2024-12-14 00:05:05: Info: Connecting to MySQL at: root@localhost
+2024-12-14 00:05:05: Info: main: tid=23: CONNECTED: localhost
+2024-12-14 00:05:05: Info: main: tid=23: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'user_defined_functions', SQL: SELECT UDF_NAME FROM performance_schema.user_defined_functions
+2024-12-14 00:05:05: Info: main: tid=23: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'func', SQL: SELECT name FROM mysql.func
+2024-12-14 00:05:05: Warning: Failed to fetch UDFs for SQL auto-completion: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'func'
+2024-12-14 00:05:05: Info: main: tid=23: MySQL Error 1227: Access denied; you need (at least one of) the PROCESS privilege(s) for this operation, SQL: SELECT LOGFILE_GROUP_NAME FROM INFORMATION_SCHEMA.FILES WHERE LOGFILE_GROUP_NAME IS NOT NULL
+2024-12-14 00:06:39: Info: mysqlsh   Ver 8.4.3 for Linux on x86_64 - for MySQL 8.4.3 (MySQL Community Server (GPL)) - build 16905018 - commit_id 5390350953be90239ac6aada0952478288bfd3dd - product_id ubuntu22.04-x86-64bit deb
+2024-12-14 00:06:39: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-12-14 00:06:39: Info: Setting Python home to '/usr/lib/mysqlsh'
+2024-12-14 00:06:39: Info: Loading startup files...
+2024-12-14 00:06:39: Info: Loading plugins...
+2024-12-14 00:06:40: Info: Pager has been set to 'less'.
+2024-12-14 00:06:40: Info: Connecting to MySQL at: root@localhost
+2024-12-14 00:06:40: Info: main: tid=24: CONNECTED: localhost
+2024-12-14 00:06:40: Info: main: tid=24: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'user_defined_functions', SQL: SELECT UDF_NAME FROM performance_schema.user_defined_functions
+2024-12-14 00:06:40: Info: main: tid=24: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'func', SQL: SELECT name FROM mysql.func
+2024-12-14 00:06:40: Warning: Failed to fetch UDFs for SQL auto-completion: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'func'
+2024-12-14 00:06:40: Info: main: tid=24: MySQL Error 1227: Access denied; you need (at least one of) the PROCESS privilege(s) for this operation, SQL: SELECT LOGFILE_GROUP_NAME FROM INFORMATION_SCHEMA.FILES WHERE LOGFILE_GROUP_NAME IS NOT NULL
+2024-12-14 00:06:40: Warning: Error loading prompt theme '/home/gnarwal/.mysqlsh/prompt.json': Error parsing map, unexpected item separator.
+2024-12-14 00:07:45: Info: mysqlsh   Ver 8.4.3 for Linux on x86_64 - for MySQL 8.4.3 (MySQL Community Server (GPL)) - build 16905018 - commit_id 5390350953be90239ac6aada0952478288bfd3dd - product_id ubuntu22.04-x86-64bit deb
+2024-12-14 00:07:45: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-12-14 00:07:45: Info: Setting Python home to '/usr/lib/mysqlsh'
+2024-12-14 00:07:45: Info: Loading startup files...
+2024-12-14 00:07:45: Info: Loading plugins...
+2024-12-14 00:07:46: Info: Pager has been set to 'less'.
+2024-12-14 00:09:42: Info: mysqlsh   Ver 8.4.3 for Linux on x86_64 - for MySQL 8.4.3 (MySQL Community Server (GPL)) - build 16905018 - commit_id 5390350953be90239ac6aada0952478288bfd3dd - product_id ubuntu22.04-x86-64bit deb
+2024-12-14 00:09:42: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-12-14 00:09:42: Info: Setting Python home to '/usr/lib/mysqlsh'
+2024-12-14 00:09:42: Info: Loading startup files...
+2024-12-14 00:09:42: Info: Loading plugins...
+2024-12-14 00:09:42: Info: Pager has been set to 'less'.
+2024-12-14 00:09:43: Info: Connecting to MySQL at: root@localhost
+2024-12-14 00:09:43: Info: main: tid=25: CONNECTED: localhost
+2024-12-14 00:09:43: Info: main: tid=25: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'user_defined_functions', SQL: SELECT UDF_NAME FROM performance_schema.user_defined_functions
+2024-12-14 00:09:43: Info: main: tid=25: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'func', SQL: SELECT name FROM mysql.func
+2024-12-14 00:09:43: Warning: Failed to fetch UDFs for SQL auto-completion: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'func'
+2024-12-14 00:09:43: Info: main: tid=25: MySQL Error 1227: Access denied; you need (at least one of) the PROCESS privilege(s) for this operation, SQL: SELECT LOGFILE_GROUP_NAME FROM INFORMATION_SCHEMA.FILES WHERE LOGFILE_GROUP_NAME IS NOT NULL
+2024-12-14 00:13:12: Info: mysqlsh   Ver 8.4.3 for Linux on x86_64 - for MySQL 8.4.3 (MySQL Community Server (GPL)) - build 16905018 - commit_id 5390350953be90239ac6aada0952478288bfd3dd - product_id ubuntu22.04-x86-64bit deb
+2024-12-14 00:13:12: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-12-14 00:13:12: Info: Setting Python home to '/usr/lib/mysqlsh'
+2024-12-14 00:13:12: Info: Loading startup files...
+2024-12-14 00:13:12: Info: Loading plugins...
+2024-12-14 00:13:13: Info: Pager has been set to 'less'.
+2024-12-14 00:13:13: Info: Connecting to MySQL at: root@localhost
+2024-12-14 00:13:13: Info: main: tid=26: CONNECTED: localhost
+2024-12-14 00:13:13: Info: main: tid=26: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'user_defined_functions', SQL: SELECT UDF_NAME FROM performance_schema.user_defined_functions
+2024-12-14 00:13:13: Info: main: tid=26: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'func', SQL: SELECT name FROM mysql.func
+2024-12-14 00:13:13: Warning: Failed to fetch UDFs for SQL auto-completion: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'func'
+2024-12-14 00:13:13: Info: main: tid=26: MySQL Error 1227: Access denied; you need (at least one of) the PROCESS privilege(s) for this operation, SQL: SELECT LOGFILE_GROUP_NAME FROM INFORMATION_SCHEMA.FILES WHERE LOGFILE_GROUP_NAME IS NOT NULL
+2024-12-14 00:14:26: Info: mysqlsh   Ver 8.4.3 for Linux on x86_64 - for MySQL 8.4.3 (MySQL Community Server (GPL)) - build 16905018 - commit_id 5390350953be90239ac6aada0952478288bfd3dd - product_id ubuntu22.04-x86-64bit deb
+2024-12-14 00:14:26: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-12-14 00:14:26: Info: Setting Python home to '/usr/lib/mysqlsh'
+2024-12-14 00:14:26: Info: Loading startup files...
+2024-12-14 00:14:26: Info: Loading plugins...
+2024-12-14 00:14:27: Info: Pager has been set to 'less'.
+2024-12-14 00:14:27: Info: Connecting to MySQL at: root@localhost
+2024-12-14 00:14:27: Info: main: tid=27: CONNECTED: localhost
+2024-12-14 00:14:27: Info: main: tid=27: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'user_defined_functions', SQL: SELECT UDF_NAME FROM performance_schema.user_defined_functions
+2024-12-14 00:14:27: Info: main: tid=27: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'func', SQL: SELECT name FROM mysql.func
+2024-12-14 00:14:27: Warning: Failed to fetch UDFs for SQL auto-completion: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'func'
+2024-12-14 00:14:27: Info: main: tid=27: MySQL Error 1227: Access denied; you need (at least one of) the PROCESS privilege(s) for this operation, SQL: SELECT LOGFILE_GROUP_NAME FROM INFORMATION_SCHEMA.FILES WHERE LOGFILE_GROUP_NAME IS NOT NULL
+2024-12-14 00:17:12: Info: mysqlsh   Ver 8.4.3 for Linux on x86_64 - for MySQL 8.4.3 (MySQL Community Server (GPL)) - build 16905018 - commit_id 5390350953be90239ac6aada0952478288bfd3dd - product_id ubuntu22.04-x86-64bit deb
+2024-12-14 00:17:12: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-12-14 00:17:12: Info: Setting Python home to '/usr/lib/mysqlsh'
+2024-12-14 00:17:12: Info: Loading startup files...
+2024-12-14 00:17:12: Info: Loading plugins...
+2024-12-14 00:17:12: Info: Pager has been set to 'less'.
+2024-12-14 00:17:12: Info: Connecting to MySQL at: root@localhost
+2024-12-14 00:17:12: Info: main: tid=28: CONNECTED: localhost
+2024-12-14 00:17:12: Info: main: tid=28: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'user_defined_functions', SQL: SELECT UDF_NAME FROM performance_schema.user_defined_functions
+2024-12-14 00:17:12: Info: main: tid=28: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'func', SQL: SELECT name FROM mysql.func
+2024-12-14 00:17:12: Warning: Failed to fetch UDFs for SQL auto-completion: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'func'
+2024-12-14 00:17:12: Info: main: tid=28: MySQL Error 1227: Access denied; you need (at least one of) the PROCESS privilege(s) for this operation, SQL: SELECT LOGFILE_GROUP_NAME FROM INFORMATION_SCHEMA.FILES WHERE LOGFILE_GROUP_NAME IS NOT NULL
+2024-12-14 00:18:34: Info: mysqlsh   Ver 8.4.3 for Linux on x86_64 - for MySQL 8.4.3 (MySQL Community Server (GPL)) - build 16905018 - commit_id 5390350953be90239ac6aada0952478288bfd3dd - product_id ubuntu22.04-x86-64bit deb
+2024-12-14 00:18:34: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-12-14 00:18:34: Info: Setting Python home to '/usr/lib/mysqlsh'
+2024-12-14 00:18:34: Info: Loading startup files...
+2024-12-14 00:18:34: Info: Loading plugins...
+2024-12-14 00:18:35: Info: Pager has been set to 'less'.
+2024-12-14 00:18:35: Info: Connecting to MySQL at: root@localhost
+2024-12-14 00:18:35: Info: main: tid=29: CONNECTED: localhost
+2024-12-14 00:18:35: Info: main: tid=29: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'user_defined_functions', SQL: SELECT UDF_NAME FROM performance_schema.user_defined_functions
+2024-12-14 00:18:35: Info: main: tid=29: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'func', SQL: SELECT name FROM mysql.func
+2024-12-14 00:18:35: Warning: Failed to fetch UDFs for SQL auto-completion: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'func'
+2024-12-14 00:18:35: Info: main: tid=29: MySQL Error 1227: Access denied; you need (at least one of) the PROCESS privilege(s) for this operation, SQL: SELECT LOGFILE_GROUP_NAME FROM INFORMATION_SCHEMA.FILES WHERE LOGFILE_GROUP_NAME IS NOT NULL
+2024-12-14 00:25:24: Info: mysqlsh   Ver 8.4.3 for Linux on x86_64 - for MySQL 8.4.3 (MySQL Community Server (GPL)) - build 16905018 - commit_id 5390350953be90239ac6aada0952478288bfd3dd - product_id ubuntu22.04-x86-64bit deb
+2024-12-14 00:25:24: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-12-14 00:25:24: Info: Setting Python home to '/usr/lib/mysqlsh'
+2024-12-14 00:25:24: Info: Loading startup files...
+2024-12-14 00:25:24: Info: Loading plugins...
+2024-12-14 00:25:25: Info: Pager has been set to 'less'.
+2024-12-14 00:25:25: Info: Connecting to MySQL at: root@localhost
+2024-12-14 00:25:25: Info: main: tid=30: CONNECTED: localhost
+2024-12-14 00:25:25: Info: main: tid=30: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'user_defined_functions', SQL: SELECT UDF_NAME FROM performance_schema.user_defined_functions
+2024-12-14 00:25:25: Info: main: tid=30: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'func', SQL: SELECT name FROM mysql.func
+2024-12-14 00:25:25: Warning: Failed to fetch UDFs for SQL auto-completion: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'func'
+2024-12-14 00:25:25: Info: main: tid=30: MySQL Error 1227: Access denied; you need (at least one of) the PROCESS privilege(s) for this operation, SQL: SELECT LOGFILE_GROUP_NAME FROM INFORMATION_SCHEMA.FILES WHERE LOGFILE_GROUP_NAME IS NOT NULL
+2024-12-14 00:26:25: Info: mysqlsh   Ver 8.4.3 for Linux on x86_64 - for MySQL 8.4.3 (MySQL Community Server (GPL)) - build 16905018 - commit_id 5390350953be90239ac6aada0952478288bfd3dd - product_id ubuntu22.04-x86-64bit deb
+2024-12-14 00:26:25: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-12-14 00:26:25: Info: Setting Python home to '/usr/lib/mysqlsh'
+2024-12-14 00:26:25: Info: Loading startup files...
+2024-12-14 00:26:25: Info: Loading plugins...
+2024-12-14 00:26:26: Info: Pager has been set to 'less'.
+2024-12-14 00:26:26: Info: Connecting to MySQL at: root@localhost
+2024-12-14 00:26:26: Info: main: tid=31: CONNECTED: localhost
+2024-12-14 00:26:26: Info: main: tid=31: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'user_defined_functions', SQL: SELECT UDF_NAME FROM performance_schema.user_defined_functions
+2024-12-14 00:26:26: Info: main: tid=31: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'func', SQL: SELECT name FROM mysql.func
+2024-12-14 00:26:26: Warning: Failed to fetch UDFs for SQL auto-completion: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'func'
+2024-12-14 00:26:26: Info: main: tid=31: MySQL Error 1227: Access denied; you need (at least one of) the PROCESS privilege(s) for this operation, SQL: SELECT LOGFILE_GROUP_NAME FROM INFORMATION_SCHEMA.FILES WHERE LOGFILE_GROUP_NAME IS NOT NULL
+2024-12-14 00:27:19: Info: mysqlsh   Ver 8.4.3 for Linux on x86_64 - for MySQL 8.4.3 (MySQL Community Server (GPL)) - build 16905018 - commit_id 5390350953be90239ac6aada0952478288bfd3dd - product_id ubuntu22.04-x86-64bit deb
+2024-12-14 00:27:19: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-12-14 00:27:19: Info: Setting Python home to '/usr/lib/mysqlsh'
+2024-12-14 00:27:19: Info: Loading startup files...
+2024-12-14 00:27:19: Info: Loading plugins...
+2024-12-14 00:27:20: Info: Pager has been set to 'less'.
+2024-12-14 00:27:20: Info: Connecting to MySQL at: root@localhost
+2024-12-14 00:27:20: Info: main: tid=32: CONNECTED: localhost
+2024-12-14 00:27:20: Info: main: tid=32: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'user_defined_functions', SQL: SELECT UDF_NAME FROM performance_schema.user_defined_functions
+2024-12-14 00:27:20: Info: main: tid=32: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'func', SQL: SELECT name FROM mysql.func
+2024-12-14 00:27:20: Warning: Failed to fetch UDFs for SQL auto-completion: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'func'
+2024-12-14 00:27:20: Info: main: tid=32: MySQL Error 1227: Access denied; you need (at least one of) the PROCESS privilege(s) for this operation, SQL: SELECT LOGFILE_GROUP_NAME FROM INFORMATION_SCHEMA.FILES WHERE LOGFILE_GROUP_NAME IS NOT NULL
+2024-12-14 00:28:27: Info: mysqlsh   Ver 8.4.3 for Linux on x86_64 - for MySQL 8.4.3 (MySQL Community Server (GPL)) - build 16905018 - commit_id 5390350953be90239ac6aada0952478288bfd3dd - product_id ubuntu22.04-x86-64bit deb
+2024-12-14 00:28:27: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-12-14 00:28:27: Info: Setting Python home to '/usr/lib/mysqlsh'
+2024-12-14 00:28:27: Info: Loading startup files...
+2024-12-14 00:28:27: Info: Loading plugins...
+2024-12-14 00:28:28: Info: Pager has been set to 'less'.
+2024-12-14 00:28:28: Info: Connecting to MySQL at: root@localhost
+2024-12-14 00:28:28: Info: main: tid=33: CONNECTED: localhost
+2024-12-14 00:28:28: Info: main: tid=33: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'user_defined_functions', SQL: SELECT UDF_NAME FROM performance_schema.user_defined_functions
+2024-12-14 00:28:28: Info: main: tid=33: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'func', SQL: SELECT name FROM mysql.func
+2024-12-14 00:28:28: Warning: Failed to fetch UDFs for SQL auto-completion: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'func'
+2024-12-14 00:28:28: Info: main: tid=33: MySQL Error 1227: Access denied; you need (at least one of) the PROCESS privilege(s) for this operation, SQL: SELECT LOGFILE_GROUP_NAME FROM INFORMATION_SCHEMA.FILES WHERE LOGFILE_GROUP_NAME IS NOT NULL
+2024-12-14 00:31:37: Info: mysqlsh   Ver 8.4.3 for Linux on x86_64 - for MySQL 8.4.3 (MySQL Community Server (GPL)) - build 16905018 - commit_id 5390350953be90239ac6aada0952478288bfd3dd - product_id ubuntu22.04-x86-64bit deb
+2024-12-14 00:31:37: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-12-14 00:31:37: Info: Setting Python home to '/usr/lib/mysqlsh'
+2024-12-14 00:31:37: Info: Loading startup files...
+2024-12-14 00:31:37: Info: Loading plugins...
+2024-12-14 00:31:38: Info: Pager has been set to 'less'.
+2024-12-14 00:31:38: Info: Connecting to MySQL at: root@localhost
+2024-12-14 00:31:38: Info: main: tid=34: CONNECTED: localhost
+2024-12-14 00:31:38: Info: main: tid=34: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'user_defined_functions', SQL: SELECT UDF_NAME FROM performance_schema.user_defined_functions
+2024-12-14 00:31:38: Info: main: tid=34: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'func', SQL: SELECT name FROM mysql.func
+2024-12-14 00:31:38: Warning: Failed to fetch UDFs for SQL auto-completion: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'func'
+2024-12-14 00:31:38: Info: main: tid=34: MySQL Error 1227: Access denied; you need (at least one of) the PROCESS privilege(s) for this operation, SQL: SELECT LOGFILE_GROUP_NAME FROM INFORMATION_SCHEMA.FILES WHERE LOGFILE_GROUP_NAME IS NOT NULL
+2024-12-14 00:33:00: Info: mysqlsh   Ver 8.4.3 for Linux on x86_64 - for MySQL 8.4.3 (MySQL Community Server (GPL)) - build 16905018 - commit_id 5390350953be90239ac6aada0952478288bfd3dd - product_id ubuntu22.04-x86-64bit deb
+2024-12-14 00:33:00: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-12-14 00:33:00: Info: Setting Python home to '/usr/lib/mysqlsh'
+2024-12-14 00:33:00: Info: Loading startup files...
+2024-12-14 00:33:00: Info: Loading plugins...
+2024-12-14 00:33:00: Info: Pager has been set to 'less'.
+2024-12-14 00:33:00: Info: Connecting to MySQL at: root@localhost
+2024-12-14 00:33:00: Info: main: tid=35: CONNECTED: localhost
+2024-12-14 00:33:00: Info: main: tid=35: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'user_defined_functions', SQL: SELECT UDF_NAME FROM performance_schema.user_defined_functions
+2024-12-14 00:33:00: Info: main: tid=35: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'func', SQL: SELECT name FROM mysql.func
+2024-12-14 00:33:00: Warning: Failed to fetch UDFs for SQL auto-completion: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'func'
+2024-12-14 00:33:00: Info: main: tid=35: MySQL Error 1227: Access denied; you need (at least one of) the PROCESS privilege(s) for this operation, SQL: SELECT LOGFILE_GROUP_NAME FROM INFORMATION_SCHEMA.FILES WHERE LOGFILE_GROUP_NAME IS NOT NULL
+2024-12-14 00:33:52: Info: mysqlsh   Ver 8.4.3 for Linux on x86_64 - for MySQL 8.4.3 (MySQL Community Server (GPL)) - build 16905018 - commit_id 5390350953be90239ac6aada0952478288bfd3dd - product_id ubuntu22.04-x86-64bit deb
+2024-12-14 00:33:52: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-12-14 00:33:52: Info: Setting Python home to '/usr/lib/mysqlsh'
+2024-12-14 00:33:53: Info: Loading startup files...
+2024-12-14 00:33:53: Info: Loading plugins...
+2024-12-14 00:33:53: Info: Pager has been set to 'less'.
+2024-12-14 00:33:53: Info: Connecting to MySQL at: root@localhost
+2024-12-14 00:33:53: Info: main: tid=36: CONNECTED: localhost
+2024-12-14 00:33:53: Info: main: tid=36: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'user_defined_functions', SQL: SELECT UDF_NAME FROM performance_schema.user_defined_functions
+2024-12-14 00:33:53: Info: main: tid=36: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'func', SQL: SELECT name FROM mysql.func
+2024-12-14 00:33:53: Warning: Failed to fetch UDFs for SQL auto-completion: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'func'
+2024-12-14 00:33:53: Info: main: tid=36: MySQL Error 1227: Access denied; you need (at least one of) the PROCESS privilege(s) for this operation, SQL: SELECT LOGFILE_GROUP_NAME FROM INFORMATION_SCHEMA.FILES WHERE LOGFILE_GROUP_NAME IS NOT NULL
+2024-12-14 00:37:56: Info: mysqlsh   Ver 8.4.3 for Linux on x86_64 - for MySQL 8.4.3 (MySQL Community Server (GPL)) - build 16905018 - commit_id 5390350953be90239ac6aada0952478288bfd3dd - product_id ubuntu22.04-x86-64bit deb
+2024-12-14 00:37:56: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-12-14 00:37:56: Info: Setting Python home to '/usr/lib/mysqlsh'
+2024-12-14 00:37:56: Info: Loading startup files...
+2024-12-14 00:37:56: Info: Loading plugins...
+2024-12-14 00:37:57: Info: Pager has been set to 'less'.
+2024-12-14 00:37:57: Info: Connecting to MySQL at: root@localhost
+2024-12-14 00:37:57: Info: main: tid=37: CONNECTED: localhost
+2024-12-14 00:37:57: Info: main: tid=37: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'user_defined_functions', SQL: SELECT UDF_NAME FROM performance_schema.user_defined_functions
+2024-12-14 00:37:57: Info: main: tid=37: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'func', SQL: SELECT name FROM mysql.func
+2024-12-14 00:37:57: Warning: Failed to fetch UDFs for SQL auto-completion: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'func'
+2024-12-14 00:37:57: Info: main: tid=37: MySQL Error 1227: Access denied; you need (at least one of) the PROCESS privilege(s) for this operation, SQL: SELECT LOGFILE_GROUP_NAME FROM INFORMATION_SCHEMA.FILES WHERE LOGFILE_GROUP_NAME IS NOT NULL
+2024-12-14 00:41:29: Info: mysqlsh   Ver 8.4.3 for Linux on x86_64 - for MySQL 8.4.3 (MySQL Community Server (GPL)) - build 16905018 - commit_id 5390350953be90239ac6aada0952478288bfd3dd - product_id ubuntu22.04-x86-64bit deb
+2024-12-14 00:41:29: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-12-14 00:41:29: Info: Setting Python home to '/usr/lib/mysqlsh'
+2024-12-14 00:41:29: Info: Loading startup files...
+2024-12-14 00:41:29: Info: Loading plugins...
+2024-12-14 00:41:29: Info: Pager has been set to 'less'.
+2024-12-14 00:41:29: Info: Connecting to MySQL at: root@localhost
+2024-12-14 00:41:29: Info: main: tid=38: CONNECTED: localhost
+2024-12-14 00:41:29: Info: main: tid=38: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'user_defined_functions', SQL: SELECT UDF_NAME FROM performance_schema.user_defined_functions
+2024-12-14 00:41:29: Info: main: tid=38: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'func', SQL: SELECT name FROM mysql.func
+2024-12-14 00:41:29: Warning: Failed to fetch UDFs for SQL auto-completion: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'func'
+2024-12-14 00:41:29: Info: main: tid=38: MySQL Error 1227: Access denied; you need (at least one of) the PROCESS privilege(s) for this operation, SQL: SELECT LOGFILE_GROUP_NAME FROM INFORMATION_SCHEMA.FILES WHERE LOGFILE_GROUP_NAME IS NOT NULL
+2024-12-14 00:47:46: Info: mysqlsh   Ver 8.4.3 for Linux on x86_64 - for MySQL 8.4.3 (MySQL Community Server (GPL)) - build 16905018 - commit_id 5390350953be90239ac6aada0952478288bfd3dd - product_id ubuntu22.04-x86-64bit deb
+2024-12-14 00:47:46: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-12-14 00:47:46: Info: Setting Python home to '/usr/lib/mysqlsh'
+2024-12-14 00:47:46: Info: Loading startup files...
+2024-12-14 00:47:46: Info: Loading plugins...
+2024-12-14 00:47:47: Info: Pager has been set to 'less'.
+2024-12-14 00:47:47: Info: Connecting to MySQL at: root@localhost
+2024-12-14 00:47:47: Info: main: tid=39: CONNECTED: localhost
+2024-12-14 00:47:47: Info: main: tid=39: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'user_defined_functions', SQL: SELECT UDF_NAME FROM performance_schema.user_defined_functions
+2024-12-14 00:47:47: Info: main: tid=39: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'func', SQL: SELECT name FROM mysql.func
+2024-12-14 00:47:47: Warning: Failed to fetch UDFs for SQL auto-completion: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'func'
+2024-12-14 00:47:47: Info: main: tid=39: MySQL Error 1227: Access denied; you need (at least one of) the PROCESS privilege(s) for this operation, SQL: SELECT LOGFILE_GROUP_NAME FROM INFORMATION_SCHEMA.FILES WHERE LOGFILE_GROUP_NAME IS NOT NULL
+2024-12-14 00:47:47: Warning: Error loading prompt theme '/home/gnarwal/.mysqlsh/prompt.json': Error parsing map, unexpected item separator.
+2024-12-14 00:50:30: Info: mysqlsh   Ver 8.4.3 for Linux on x86_64 - for MySQL 8.4.3 (MySQL Community Server (GPL)) - build 16905018 - commit_id 5390350953be90239ac6aada0952478288bfd3dd - product_id ubuntu22.04-x86-64bit deb
+2024-12-14 00:50:30: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-12-14 00:50:30: Info: Setting Python home to '/usr/lib/mysqlsh'
+2024-12-14 00:50:30: Info: Loading startup files...
+2024-12-14 00:50:30: Info: Loading plugins...
+2024-12-14 00:50:31: Info: Pager has been set to 'less'.
+2024-12-14 00:50:31: Info: Connecting to MySQL at: root@localhost
+2024-12-14 00:50:31: Info: main: tid=40: CONNECTED: localhost
+2024-12-14 00:50:31: Info: main: tid=40: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'user_defined_functions', SQL: SELECT UDF_NAME FROM performance_schema.user_defined_functions
+2024-12-14 00:50:31: Info: main: tid=40: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'func', SQL: SELECT name FROM mysql.func
+2024-12-14 00:50:31: Warning: Failed to fetch UDFs for SQL auto-completion: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'func'
+2024-12-14 00:50:31: Info: main: tid=40: MySQL Error 1227: Access denied; you need (at least one of) the PROCESS privilege(s) for this operation, SQL: SELECT LOGFILE_GROUP_NAME FROM INFORMATION_SCHEMA.FILES WHERE LOGFILE_GROUP_NAME IS NOT NULL
+2024-12-14 00:56:10: Info: mysqlsh   Ver 8.4.3 for Linux on x86_64 - for MySQL 8.4.3 (MySQL Community Server (GPL)) - build 16905018 - commit_id 5390350953be90239ac6aada0952478288bfd3dd - product_id ubuntu22.04-x86-64bit deb
+2024-12-14 00:56:10: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-12-14 00:56:10: Info: Setting Python home to '/usr/lib/mysqlsh'
+2024-12-14 00:56:10: Info: Loading startup files...
+2024-12-14 00:56:10: Info: Loading plugins...
+2024-12-14 00:56:11: Info: Pager has been set to 'less'.
+2024-12-14 00:56:11: Info: Connecting to MySQL at: root@localhost
+2024-12-14 00:56:11: Info: main: tid=41: CONNECTED: localhost
+2024-12-14 00:56:11: Info: main: tid=41: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'user_defined_functions', SQL: SELECT UDF_NAME FROM performance_schema.user_defined_functions
+2024-12-14 00:56:11: Info: main: tid=41: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'func', SQL: SELECT name FROM mysql.func
+2024-12-14 00:56:11: Warning: Failed to fetch UDFs for SQL auto-completion: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'func'
+2024-12-14 00:56:11: Info: main: tid=41: MySQL Error 1227: Access denied; you need (at least one of) the PROCESS privilege(s) for this operation, SQL: SELECT LOGFILE_GROUP_NAME FROM INFORMATION_SCHEMA.FILES WHERE LOGFILE_GROUP_NAME IS NOT NULL
+2024-12-14 01:09:46: Info: mysqlsh   Ver 8.4.3 for Linux on x86_64 - for MySQL 8.4.3 (MySQL Community Server (GPL)) - build 16905018 - commit_id 5390350953be90239ac6aada0952478288bfd3dd - product_id ubuntu22.04-x86-64bit deb
+2024-12-14 01:09:46: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-12-14 01:09:46: Info: Setting Python home to '/usr/lib/mysqlsh'
+2024-12-14 01:09:46: Info: Loading startup files...
+2024-12-14 01:09:46: Info: Loading plugins...
+2024-12-14 01:09:46: Info: Pager has been set to 'less'.
+2024-12-14 01:09:46: Info: Connecting to MySQL at: root@localhost
+2024-12-14 01:09:46: Info: main: tid=42: CONNECTED: localhost
+2024-12-14 01:09:46: Info: main: tid=42: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'user_defined_functions', SQL: SELECT UDF_NAME FROM performance_schema.user_defined_functions
+2024-12-14 01:09:46: Info: main: tid=42: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'func', SQL: SELECT name FROM mysql.func
+2024-12-14 01:09:46: Warning: Failed to fetch UDFs for SQL auto-completion: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'func'
+2024-12-14 01:09:46: Info: main: tid=42: MySQL Error 1227: Access denied; you need (at least one of) the PROCESS privilege(s) for this operation, SQL: SELECT LOGFILE_GROUP_NAME FROM INFORMATION_SCHEMA.FILES WHERE LOGFILE_GROUP_NAME IS NOT NULL
+2024-12-14 01:09:46: Warning: Error loading prompt theme '/home/gnarwal/.mysqlsh/prompt.json': Error parsing map, unexpected end of stream.
+2024-12-14 01:10:36: Info: mysqlsh   Ver 8.4.3 for Linux on x86_64 - for MySQL 8.4.3 (MySQL Community Server (GPL)) - build 16905018 - commit_id 5390350953be90239ac6aada0952478288bfd3dd - product_id ubuntu22.04-x86-64bit deb
+2024-12-14 01:10:36: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-12-14 01:10:36: Info: Setting Python home to '/usr/lib/mysqlsh'
+2024-12-14 01:10:36: Info: Loading startup files...
+2024-12-14 01:10:36: Info: Loading plugins...
+2024-12-14 01:10:37: Info: Pager has been set to 'less'.
+2024-12-14 01:10:37: Info: Connecting to MySQL at: root@localhost
+2024-12-14 01:10:37: Info: main: tid=43: CONNECTED: localhost
+2024-12-14 01:10:37: Info: main: tid=43: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'user_defined_functions', SQL: SELECT UDF_NAME FROM performance_schema.user_defined_functions
+2024-12-14 01:10:37: Info: main: tid=43: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'func', SQL: SELECT name FROM mysql.func
+2024-12-14 01:10:37: Warning: Failed to fetch UDFs for SQL auto-completion: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'func'
+2024-12-14 01:10:37: Info: main: tid=43: MySQL Error 1227: Access denied; you need (at least one of) the PROCESS privilege(s) for this operation, SQL: SELECT LOGFILE_GROUP_NAME FROM INFORMATION_SCHEMA.FILES WHERE LOGFILE_GROUP_NAME IS NOT NULL
+2024-12-14 01:10:37: Error: Error processing prompt: Error in class SQL of prompt theme: Invalid typecast: String expected, but value is Map
+2024-12-14 01:13:32: Error: Error processing prompt: Error in class SQL of prompt theme: Invalid typecast: String expected, but value is Map
+2024-12-14 01:19:08: Info: mysqlsh   Ver 8.4.3 for Linux on x86_64 - for MySQL 8.4.3 (MySQL Community Server (GPL)) - build 16905018 - commit_id 5390350953be90239ac6aada0952478288bfd3dd - product_id ubuntu22.04-x86-64bit deb
+2024-12-14 01:19:08: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-12-14 01:19:08: Info: Setting Python home to '/usr/lib/mysqlsh'
+2024-12-14 01:19:08: Info: Loading startup files...
+2024-12-14 01:19:08: Info: Loading plugins...
+2024-12-14 01:19:08: Info: Pager has been set to 'less'.
+2024-12-14 01:19:08: Info: Connecting to MySQL at: root@localhost
+2024-12-14 01:19:08: Info: main: tid=44: CONNECTED: localhost
+2024-12-14 01:19:08: Info: main: tid=44: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'user_defined_functions', SQL: SELECT UDF_NAME FROM performance_schema.user_defined_functions
+2024-12-14 01:19:08: Info: main: tid=44: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'func', SQL: SELECT name FROM mysql.func
+2024-12-14 01:19:08: Warning: Failed to fetch UDFs for SQL auto-completion: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'func'
+2024-12-14 01:19:08: Info: main: tid=44: MySQL Error 1227: Access denied; you need (at least one of) the PROCESS privilege(s) for this operation, SQL: SELECT LOGFILE_GROUP_NAME FROM INFORMATION_SCHEMA.FILES WHERE LOGFILE_GROUP_NAME IS NOT NULL
+2024-12-14 01:24:17: Info: mysqlsh   Ver 8.4.3 for Linux on x86_64 - for MySQL 8.4.3 (MySQL Community Server (GPL)) - build 16905018 - commit_id 5390350953be90239ac6aada0952478288bfd3dd - product_id ubuntu22.04-x86-64bit deb
+2024-12-14 01:24:17: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-12-14 01:24:17: Info: Setting Python home to '/usr/lib/mysqlsh'
+2024-12-14 01:24:17: Info: Loading startup files...
+2024-12-14 01:24:17: Info: Loading plugins...
+2024-12-14 01:24:18: Info: Pager has been set to 'less'.
+2024-12-14 01:24:18: Info: Connecting to MySQL at: root@localhost
+2024-12-14 01:24:18: Info: main: tid=45: CONNECTED: localhost
+2024-12-14 01:24:18: Info: main: tid=45: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'user_defined_functions', SQL: SELECT UDF_NAME FROM performance_schema.user_defined_functions
+2024-12-14 01:24:18: Info: main: tid=45: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'func', SQL: SELECT name FROM mysql.func
+2024-12-14 01:24:18: Warning: Failed to fetch UDFs for SQL auto-completion: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'func'
+2024-12-14 01:24:18: Info: main: tid=45: MySQL Error 1227: Access denied; you need (at least one of) the PROCESS privilege(s) for this operation, SQL: SELECT LOGFILE_GROUP_NAME FROM INFORMATION_SCHEMA.FILES WHERE LOGFILE_GROUP_NAME IS NOT NULL
+2024-12-14 01:27:13: Info: mysqlsh   Ver 8.4.3 for Linux on x86_64 - for MySQL 8.4.3 (MySQL Community Server (GPL)) - build 16905018 - commit_id 5390350953be90239ac6aada0952478288bfd3dd - product_id ubuntu22.04-x86-64bit deb
+2024-12-14 01:27:13: Info: Using credential store helper: /usr/bin/mysql-secret-store-login-path
+2024-12-14 01:27:13: Info: Setting Python home to '/usr/lib/mysqlsh'
+2024-12-14 01:27:13: Info: Loading startup files...
+2024-12-14 01:27:13: Info: Loading plugins...
+2024-12-14 01:27:14: Info: Pager has been set to 'less'.
+2024-12-14 01:27:14: Info: Connecting to MySQL at: root@localhost
+2024-12-14 01:27:14: Info: main: tid=46: CONNECTED: localhost
+2024-12-14 01:27:14: Info: main: tid=46: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'user_defined_functions', SQL: SELECT UDF_NAME FROM performance_schema.user_defined_functions
+2024-12-14 01:27:14: Info: main: tid=46: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'func', SQL: SELECT name FROM mysql.func
+2024-12-14 01:27:14: Warning: Failed to fetch UDFs for SQL auto-completion: MySQL Error 1142: SELECT command denied to user 'root'@'localhost' for table 'func'
+2024-12-14 01:27:14: Info: main: tid=46: MySQL Error 1227: Access denied; you need (at least one of) the PROCESS privilege(s) for this operation, SQL: SELECT LOGFILE_GROUP_NAME FROM INFORMATION_SCHEMA.FILES WHERE LOGFILE_GROUP_NAME IS NOT NULL

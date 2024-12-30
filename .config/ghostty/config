@@ -1,2 +1,5 @@
 window-decoration = false
 theme = Galaxy
+font-family = RobotoMono Nerd Font Mono
+font-size = 14
+auto-update-channel = stable
