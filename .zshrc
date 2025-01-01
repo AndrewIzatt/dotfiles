@@ -5,6 +5,8 @@
 #
 # Created by `pipx` on 2024-12-08 23:59:18
 export PATH="$PATH:/home/gnarwal/.local/bin"
+# Add zig to path
+export PATH="$HOME/repos/zig:$PATH"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -36,7 +38,8 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="agnoster"
+# ZSH_THEME="agnoster"
+ZSH_THEME="custom_agnoster"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -106,6 +109,7 @@ fzf
 git
 sudo
 zsh-autosuggestions
+shrink-path
 # zsh-history-substring-search
 zsh-syntax-highlighting # must be last plugin sourced
 )
@@ -113,6 +117,8 @@ zsh-syntax-highlighting # must be last plugin sourced
 # Adding zsh-completions as regular OhMyZsh plug won't work properly
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 source $ZSH/oh-my-zsh.sh
+# see shrink-path plugin docs
+setopt prompt_subst
 
 # User configuration
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
@@ -124,6 +130,7 @@ ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 # https://upload.wikimedia.org/wikipedia/commons/1/15/Xterm_256color_chart.svg
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=241'
 bindkey '^a' autosuggest-accept
+
 # export MANPATH="/usr/local/man:$MANPATH"
 #
 # You may need to manually set your language environment
@@ -156,4 +163,3 @@ source ~/bash_config/.functions
 
 
 fastfetch
-export PATH="$HOME/repos/zig:$PATH"
