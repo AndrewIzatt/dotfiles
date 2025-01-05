@@ -29,6 +29,7 @@ config.enable_tab_bar = false
 
 config.use_dead_keys = false
 config.scrollback_lines = 5000
+config.audible_bell = "Disabled"
 
 -- config.enable_kitty_keyboard = true
 
