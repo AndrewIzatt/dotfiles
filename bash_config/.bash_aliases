@@ -45,6 +45,8 @@ alias kittyup="curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/st
 # Ghostty aliases
 alias ghostconf="nvim ~/.config/ghostty/config"
 alias ghosttheme="ghostty +list-themes"
+alias updghost="cd ~/repos/ghostty && pull main && zig build -Doptimize=ReleaseFast"
+
 
 # Tmux Aliases
 alias tconf="nvim ~/tmux/.tmux.conf"
@@ -80,9 +82,11 @@ alias tks="tmux kill-session -t"
 alias tkall='tmux ls | cut -d : -f 1 | xargs -I {} tmux kill-session -t {}'
 
 alias yazi="~/repos/yazi/target/release/yazi"
+alias updyazi="cd repos/yazi && pull main && cargo build --release --locked"
 
 # Neovim config and plugins
 alias nvrc="nvim ~/.config/nvim/init.vim"
+alias updnvim="cd ~/repos/neovim && pull master && sudo make install"
 alias commands_nvim="nvim ~/.config/nvim/lua/commands.lua"
 alias keymaps_nvim="nvim ~/.config/nvim/lua/keymaps.lua"
 alias options_nvim="nvim ~/.config/nvim/lua/options.lua"
