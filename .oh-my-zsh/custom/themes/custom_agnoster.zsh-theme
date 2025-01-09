@@ -79,7 +79,11 @@ prompt_end() {
   else
     echo -n "%{%k%}"
   fi
-  echo -n "%{%f%}"
+  # add special character to end of prompt
+  # # Set ➤ to always be theme "white"
+  # echo -n "\n%{%F{white}%}➤%{%f%}"
+  # # Set unicode character to be pure white regardless of theme
+  echo -n "\n\033[38;2;255;255;255m➤ \033[0m"
   CURRENT_BG=''
 }
 
