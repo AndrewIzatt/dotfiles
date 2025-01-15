@@ -47,11 +47,11 @@ bind R source-file ~/.tmux.conf \; display "config file loaded."
 set -gq allow-passthrough on
 
 # Pane Creation
-# Remap splitting pane horizontally
-bind | "split-window -h"
-
 # Remap splitting pane vertically
-bind - "split-window -v"
+bind C-v "split-window -h"
+
+# Remap splitting pane horizontally
+# bind C-s "split-window -v"
 
 # pane destruction
 # Kill a pane
@@ -73,15 +73,15 @@ bind-key Right select-pane -R
 
 # Resize panes
 # Resize vertical current pane left by five columns
-# bind-key -r < resize-pane -L 5
+bind-key -r < resize-pane -L 5
 # Resize vertical current pane right by five columns
-# bind-key -r > resize-pane -R 5
+bind-key -r > resize-pane -R 5
 # Resize current horizontal pane height by five rows
-# bind-key -r + resize-pane -U 5
+bind-key -r + resize-pane -U 5
 # Resize current horizontal pane height by five rows
-# bind-key -r - resize-pane -D 5
-# bind-key = select-layout even-vertical
-# bind-key | select-layout even-horizontal
+bind-key -r - resize-pane -D 5
+bind-key = select-layout even-vertical
+bind-key | select-layout even-horizontal
 
 # If we enter the command prompt
 # and type some tmux commands,
@@ -106,8 +106,7 @@ bind-key -T copy-mode-vi 'y' send -X copy-selection
 # The extra <ctrl> keeps this rarely-used command from taking up a
 # spot that could be used by something more, you know, useful, and
 # ensures that when we tell tmux to save a screen shot we mean it.
-# unbind t
-# bind t run "tmux capture-pane && tmux save-buffer /home/orca/buffer.txt"
+# bind C-t run "tmux capture-pane && tmux save-buffer /home/orca/buffer.txt"
 
 # Choose a buffer and paste the contents
 bind C-c run "tmux choose-buffer"
@@ -116,7 +115,7 @@ bind C-c run "tmux choose-buffer"
 set -g @plugin 'tmux-plugins/tpm'
 set -g @plugin 'tmux-plugins/tmux-sensible'
 set -g @plugin 'tmux-plugins/tmux-resurrect'
-# set -g @plugin 'tmux-plugins/tmux-continuum'
+set -g @plugin 'tmux-plugins/tmux-continuum'
 set -g @plugin 'egel/tmux-gruvbox'
 set -g @plugin 'Freed-Wu/tmux-digit'
 
