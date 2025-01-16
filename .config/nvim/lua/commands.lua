@@ -1,7 +1,7 @@
 local group = vim.api.nvim_create_augroup("custom_buffer", { clear = true })
 
 -- see usr_05.txt online
-vim.cmd.packadd("nohlsearch")
+-- vim.cmd.packadd("nohlsearch")
 -- Highlight yank
 vim.api.nvim_create_autocmd("TextYankPost", {
   group = group,
