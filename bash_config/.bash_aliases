@@ -229,3 +229,6 @@ alias signal="flatpak run org.signal.Signal"
 
 #MySQL
 alias mysql="mysqlsh -u root -h localhost"
+
+# rsync script
+alias mrsync="rsync -a --exclude-from=$HOME/.config/rsync_exclude.txt home/$USER /media/$USER/Home_Thinkpad"
