@@ -1,3 +1,4 @@
-.config/nvim/lazy-lock.json
+/.config/nvim/lazy-lock.json
 /.config/nvim.*
+/.config/tmux/plugins/
 /vim/.vim/netrwhist
