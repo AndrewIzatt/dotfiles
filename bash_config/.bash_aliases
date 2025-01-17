@@ -86,7 +86,7 @@ alias updyazi="cd repos/yazi && pull main && cargo build --release --locked"
 
 # Neovim config and plugins
 alias nvrc="nvim ~/.config/nvim/init.vim"
-alias updnvim="cd ~/repos/neovim && pull master && sudo make install"
+alias updnvim="cd ~/repos/neovim && pull stable && sudo make install"
 alias commands_nvim="nvim ~/.config/nvim/lua/commands.lua"
 alias keymaps_nvim="nvim ~/.config/nvim/lua/keymaps.lua"
 alias options_nvim="nvim ~/.config/nvim/lua/options.lua"
@@ -193,12 +193,16 @@ alias commit="git commit -m"
 alias fetch="git fetch"
 alias pull="git pull origin"
 alias push="git push origin"
+alias stash="git stash"
 alias stat="git status -uno" # automatically hides untracked files #'status is protected name so using stat instead'
 alias statun="git status"
 alias tag="git tag"
 alias newtag="git tag -a"
 alias remote="git remote"
 alias reset="git reset --hard"
+
+alias dockup="docker compose up -d"
+alias dockdown="docker compose down"
 
 # use different browser for testing websites (haven't tried)
 alias ff="firefox"
