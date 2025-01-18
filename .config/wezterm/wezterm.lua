@@ -24,7 +24,7 @@ config.color_scheme = 'Galaxy'
 config.font_size = 13.0
 config.font = wezterm.font('RobotoMono Nerd Font Mono')
 
-config.window_decorations = "RESIZE"
+-- config.window_decorations = "RESIZE"
 config.enable_tab_bar = false
 
 config.use_dead_keys = false
