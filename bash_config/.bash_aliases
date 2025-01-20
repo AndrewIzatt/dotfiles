@@ -22,6 +22,13 @@ alias .2="cd ../.."
 alias .3="cd ../../../"
 alias .4="cd ../../../../"
 alias .5="cd ../../../../.."
+alias dwn="cd ~/Downloads/"
+alias docs="cd ~/Documents"
+alias cd_nvim="cd ~/.config/nvim"
+alias cd_ftp="cd ~/.config/nvim/after/ftplugin"
+alias cd_vim="cd ~/vim"
+alias cdc="cd ~/Documents/Coding"
+alias dot="cd ~/dotfiles"
 
 # Coding
 alias rc="nvim ~/.bashrc"
@@ -146,11 +153,6 @@ alias activate="source venv/bin/activate"
 
 # Run custom scripts
 alias cd_scripts="cd ~/Documents/scripts"
-alias cd_nvim="cd ~/.config/nvim"
-alias cd_ftp="cd ~/.config/nvim/after/ftplugin"
-alias cd_vim="cd ~/vim"
-alias cdc="cd ~/Documents/Coding"
-alias cddot="cd ~/dotfiles"
 
 # Restart Services
 # alias restart_sound="pulseaudio -D"
