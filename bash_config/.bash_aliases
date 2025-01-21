@@ -1,5 +1,5 @@
-alias vim='NVIM_APPNAME=nvim nvim'
-alias vz='NVIM_APPNAME=lvim nvim'
+# alias vim='NVIM_APPNAME=nvim nvim'
+alias lvim='NVIM_APPNAME=lvim nvim'
 
 
 # apt packages
