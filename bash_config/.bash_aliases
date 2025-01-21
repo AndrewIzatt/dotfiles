@@ -1,4 +1,6 @@
-# alias vim="nvim"
+alias vim='NVIM_APPNAME=nvim nvim'
+alias vz='NVIM_APPNAME=lvim nvim'
+
 
 # apt packages
 alias nalaup="sudo nala update && sudo nala upgrade"

@@ -26,7 +26,8 @@ export NVM_DIR="$HOME/.nvm"
 #Set Neovim Config
 # export NVIM_APPNAME="nvim-andrew"
 # CURRENT CONFIG
-export NVIM_APPNAME="nvim"
+# export NVIM_APPNAME="nvim"
+# export NVIM_APPNAME="lvim nvim"
 # export NVIM_APPNAME="nvim.orig"
 # export NVIM_APPNAME="nvim-custom"
 # switch to Kickstart Configuration
