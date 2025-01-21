@@ -46,7 +46,7 @@ return {
 
       lspconfig.bashls.setup({})
       lspconfig.cmake.setup({})
-      lspconfig.emmet_ls.setup({})
+      lspconfig.emmet_language_server.setup({})
       -- vscode-eslint-language-server provides an EslintFixAll command that can be used to format a document on save:
       lspconfig.eslint.setup({
         ---@diagnostic disable-next-line: unused-local
