@@ -187,3 +187,5 @@ fastfetch
 export PATH="$PATH:~/.local/bin"
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 eval "$(zoxide init zsh)"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
