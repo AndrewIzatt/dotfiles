@@ -90,7 +90,7 @@ alias tks="tmux kill-session -t"
 # See ch. 3 of Tmux Taster by Mark McDonnell
 alias tkall='tmux ls | cut -d : -f 1 | xargs -I {} tmux kill-session -t {}'
 
-alias yazi="~/repos/yazi/target/release/yazi"
+# alias yazi="~/repos/yazi/target/release/yazi"
 alias updyazi="cd repos/yazi && pull main && cargo build --release --locked"
 
 # Neovim config and plugins
