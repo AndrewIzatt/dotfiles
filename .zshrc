@@ -186,3 +186,4 @@ fastfetch
 # Created by `pipx` on 2025-01-16 21:51:25
 export PATH="$PATH:~/.local/bin"
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+eval "$(zoxide init zsh)"
