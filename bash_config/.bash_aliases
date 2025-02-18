@@ -58,7 +58,7 @@ alias updghost="cd ~/repos/ghostty && pull main && zig build -Doptimize=ReleaseF
 
 
 # Tmux Aliases
-alias tconf="nvim ~/.config/tmux/.tmux.conf"
+alias tconf="nvim ~/.config/tmux/tmux.conf"
 # Returns a list of all active tmux sessions
 alias tls="tmux ls"
 # Attach to a named session. Type `tas foo`
