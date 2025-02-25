@@ -236,3 +236,6 @@ alias mysql="mysqlsh -u root -h localhost"
 
 # rsync script
 alias mrsync="rsync -a -S --no-links --info=progress2 --exclude-from=$HOME/.config/rsync_exclude.txt $HOME /media/$USER/Home_Thinkpad"
+
+# Update Git Repos
+alias up_dot="cd ~/dotfiles && pull main"
