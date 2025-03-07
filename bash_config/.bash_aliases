@@ -238,4 +238,4 @@ alias mrsync="rsync -a -S --no-links --info=progress2 --exclude-from=$HOME/.conf
 alias nvimupd="cd ~/repos/neovim && pull master && sudo make install"
 alias dotupd="cd ~/dotfiles && pull main"
 alias ghostupd="cd ~/repos/ghostty && pull main && zig build -Doptimize=ReleaseFast"
-alias yaziupd="cd repos/yazi && pull main && cargo build --release --locked"
+alias yaziupd="cd ~/repos/yazi && pull main && cargo build --release --locked"
