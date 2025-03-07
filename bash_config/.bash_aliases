@@ -235,7 +235,7 @@ alias mysql="mysqlsh -u root -h localhost"
 alias mrsync="rsync -a -S --no-links --info=progress2 --exclude-from=$HOME/.config/rsync_exclude.txt $HOME /media/$USER/Home_Thinkpad"
 
 # Update Git Repos
-alias nvimup="cd ~/repos/neovim && pull master && sudo make install"
-alias dotup="cd ~/dotfiles && pull main"
-alias updghost="cd ~/repos/ghostty && pull main && zig build -Doptimize=ReleaseFast"
-alias updyazi="cd repos/yazi && pull main && cargo build --release --locked"
+alias nvimupd="cd ~/repos/neovim && pull master && sudo make install"
+alias dotupd="cd ~/dotfiles && pull main"
+alias ghostupd="cd ~/repos/ghostty && pull main && zig build -Doptimize=ReleaseFast"
+alias yaziupd="cd repos/yazi && pull main && cargo build --release --locked"
