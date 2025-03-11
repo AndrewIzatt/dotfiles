@@ -1,4 +1,4 @@
-echo ".PROFILE"
+# echo ".PROFILE"
 # ~/.profile: executed by the command interpreter for login shells.
 # This file is not read by bash(1), if ~/.bash_profile or ~/.bash_login
 # exists.
@@ -10,22 +10,22 @@ echo ".PROFILE"
 #umask 022
 
 # if running bash
-if [ -n "$BASH_VERSION" ]; then
-    # include .bashrc if it exists
-    if [ ! -f "$HOME/.bashrc" ]; then
-	. "${HOME}/bash_config/.bashrc"
-    fi
-fi
+# if [ -n "$BASH_VERSION" ]; then
+#     # include .bashrc if it exists
+#     if [ ! -f "$HOME/.bashrc" ]; then
+# 	. "${HOME}/bash_config/.bashrc"
+#     fi
+# fi
 
 # set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/bin" ] ; then
-    PATH="$HOME/bin:$PATH"
-fi
+# if [ -d "$HOME/bin" ] ; then
+#     PATH="$HOME/bin:$PATH"
+# fi
 
 # set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/.local/bin" ] ; then
-    PATH="$HOME/.local/bin:$PATH"
-fi
+# if [ -d "$HOME/.local/bin" ] ; then
+    # PATH="$HOME/.local/bin:$PATH"
+# fi
 # source aliases
-source ~/bash_config/.bash_aliases
-. "$HOME/.cargo/env"
+# source ~/bash_config/.bash_aliases
+# . "$HOME/.cargo/env"

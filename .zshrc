@@ -1,13 +1,11 @@
 # Created by `pipx` on 2024-12-08 23:59:18
-# setopt verbose
-# If you come from bash you might have to change your $PATH.
-# PATH stuff
-# export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
-#
-# Created by `pipx` on 2024-12-08 23:59:18
-export PATH="$PATH:/home/gnarwal/.local/bin"
+if [[ ":$PATH:" != *":$HOME/.local/bin:"* ]]; then
+    export PATH="$HOME/.local/bin:$PATH"
+fi
 # Add zig to path
 export PATH="$HOME/repos/zig:$PATH"
+# Add yazi to path
+export PATH="$HOME/repos/yazi:$PATH"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -169,14 +167,12 @@ alias ohmyzsh="nvim ~/.oh-my-zsh"
 # autoload run-help
 # HELPDIR=/usr/share/zsh/"${ZSH_VERSION}"/help
 # alias help=run-help
-source ~/bash_config/.bash_aliases
-source ~/bash_config/.functions
+source $HOME/bash_config/.bash_aliases
+source $HOME/bash_config/.functions
 
 
 fastfetch
 
-# Created by `pipx` on 2025-01-16 21:51:25
-export PATH="$PATH:~/.local/bin"
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 eval "$(zoxide init zsh)"
 

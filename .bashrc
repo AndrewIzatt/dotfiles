@@ -3,7 +3,7 @@
 # for examples
 # Adding exa to PATH
 # See https://youtu.be/TKX29fJ8U2Y?si=w5v5KNJIEOsKxa73&t=1481
-PATH="$HOME/.cargo/bin${PATH:+:${PATH}}"
+# PATH="$HOME/.cargo/bin${PATH:+:${PATH}}"
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
@@ -118,4 +118,3 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 . "$HOME/.cargo/env"
-export PATH="$HOME/repos/zig:$PATH"
