@@ -156,6 +156,7 @@ alias cd_scripts="cd ~/Documents/scripts"
 # Restart Services
 # alias restart_sound="pulseaudio -D"
 alias restart_bluetooth="sudo systemctl restart bluetooth.service"
+alias restart_network="sudo systemctl restart NetworkManager"
 
 # Reboot/Restart Computer
 alias reboot="sudo reboot"
