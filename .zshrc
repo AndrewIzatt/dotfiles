@@ -1,19 +1,54 @@
-# Created by `pipx` on 2024-12-08 23:59:18
-# setopt verbose
-# If you come from bash you might have to change your $PATH.
-# PATH stuff
-# export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
-#
-# Created by `pipx` on 2024-12-08 23:59:18
-export PATH="$PATH:/home/gnarwal/.local/bin"
+# To debug
+# set -x
+
+# Detect Platform
+case "$OSTYPE" in
+	darwin*) export PLATFORM="macOS";;
+	linux*) export PLATFORM="linux";;
+	*)	export PLATFORM="unknown";;
+esac
+
+# ---------------
+# PATH Setup
+# ---------------
+
+# Shared user bin
+export PATH="$PATH:$HOME/.local/bin"
+
+# Linux-only paths
+if [[ "$PLATFORM" == "linux" ]]; then
+  export PATH="$PATH:/home/$USER/.local/bin"
+  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"  # Linuxbrew
+fi
+
+# macOS-only paths
+if [[ "$PLATFORM" == "macOS" ]]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"  # macOS Homebrew
+fi
+
 # Add zig to path
 export PATH="$HOME/repos/zig:$PATH"
+
+# MSSQL Tools (Linux-only usually)
+if [[ "$PLATFORM" == "linux" ]]; then
+  export PATH="$PATH:/opt/mssql-tools18/bin"
+fi
+
+export MYSQLSH_PROMPT_THEME=~/.mysqlsh/prompt.json
+# export MYSQLSH_PROMPT_THEME=/usr/share/mysqlsh/prompt/prompt_256inv.json
+# export MYSQLSH_PROMPT_THEME=/usr/share/mysqlsh/prompt/prompt_256pl.json
+# export MYSQLSH_PROMPT_THEME=/usr/share/mysqlsh/prompt/prompt_256pl+aw.json
+# export MYSQLSH_PROMPT_THEME=/usr/share/mysqlsh/prompt/prompt_dbl_256.json
+# export MYSQLSH_PROMPT_THEME=/usr/share/mysqlsh/prompt/prompt_dbl_256pl.json
+
+
+# ----------------
+# NVM setup
+# ----------------
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 #Set Neovim Config
 # export NVIM_APPNAME="nvim-andrew"
@@ -23,16 +58,12 @@ export NVM_DIR="$HOME/.nvm"
 # export NVIM_APPNAME="nvim.orig"
 # export NVIM_APPNAME="nvim-custom"
 # switch to Kickstart Configuration
-
-export MYSQLSH_PROMPT_THEME=~/.mysqlsh/prompt.json
-# export MYSQLSH_PROMPT_THEME=/usr/share/mysqlsh/prompt/prompt_256inv.json
-# export MYSQLSH_PROMPT_THEME=/usr/share/mysqlsh/prompt/prompt_256pl.json
-# export MYSQLSH_PROMPT_THEME=/usr/share/mysqlsh/prompt/prompt_256pl+aw.json
-# export MYSQLSH_PROMPT_THEME=/usr/share/mysqlsh/prompt/prompt_dbl_256.json
-# export MYSQLSH_PROMPT_THEME=/usr/share/mysqlsh/prompt/prompt_dbl_256pl.json
+# NVIM Alias
 
 alias nvim-mod='NVIM_APPNAME="kickmod" nvim'
-
+# adds a blank line before prompt
+precmd() { print "" }
+ 
 # history setup
 # HISTFILE=$HOME/.zhistory
 # SAVEHIST=1000
@@ -42,6 +73,46 @@ alias nvim-mod='NVIM_APPNAME="kickmod" nvim'
 # setopt hist_ignore_dups
 # setopt hist_verify
 setopt HIST_IGNORE_SPACE
+
+# ---------------
+# Plugins
+# ---------------
+
+
+# ----------------
+# zsh-autosuggestions
+# ----------------
+case "$OSTYPE" in
+  darwin*)  # macOS (Homebrew install)
+    if [[ -n "$HOMEBREW_PREFIX" && -f "$HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh" ]]; then
+      source "$HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
+    fi
+    ;;
+  linux*)   # Linux (cloned into Oh My Zsh custom folder)
+    if [[ -f ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ]]; then
+      source ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+    fi
+    ;;
+esac
+
+
+# Load zsh-syntax-highlighting
+case "$OSTYPE" in
+  darwin*)  # macOS (Homebrew)
+    if [[ -n "$HOMEBREW_PREFIX" && -f "$HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]]; then
+      source "$HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+    fi
+    ;;
+  linux*)   # Linux (assume cloned into Oh My Zsh custom folder)
+    if [[ -f ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]]; then
+      source ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+    fi
+    ;;
+esac
+
+# ----------------
+# Oh My Zsh
+# ----------------
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -120,10 +191,10 @@ colored-man-pages
 fzf
 git
 sudo
-zsh-autosuggestions
+# zsh-autosuggestions
 shrink-path
 # zsh-history-substring-search
-zsh-syntax-highlighting # must be last plugin sourced
+# zsh-syntax-highlighting # must be last plugin sourced
 )
 
 # Adding zsh-completions as regular OhMyZsh plug won't work properly
@@ -132,8 +203,8 @@ source $ZSH/oh-my-zsh.sh
 # see shrink-path plugin docs
 setopt prompt_subst
 
-# User configuration
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+# source $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 # https://github.com/zsh-users/zsh-autosuggestions?tab=readme-ov-file
 # :Set ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE to configure the style that the suggestion is shown with. The default is fg=8,
 # which will set the foreground color to color 8 from the 256-color palette. If your terminal only supports 8 colors,
@@ -174,12 +245,26 @@ source ~/bash_config/.bash_aliases
 source ~/bash_config/.functions
 
 
-fastfetch
 
-# Created by `pipx` on 2025-01-16 21:51:25
-export PATH="$PATH:~/.local/bin"
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 eval "$(zoxide init zsh)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export PATH="$PATH:/opt/mssql-tools18/bin"
+
+fastfetch
+# Must be sourced last in `.zshrc` after all other plugins and customizations
+# ----------------
+# zsh-syntax-highlighting
+# ----------------
+case "$OSTYPE" in
+  darwin*)  # macOS (Homebrew install)
+    if [[ -n "$HOMEBREW_PREFIX" && -f "$HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]]; then
+      source "$HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+    fi
+    ;;
+  linux*)   # Linux (cloned into Oh My Zsh custom folder)
+    if [[ -f ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]]; then
+      source ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+    fi
+    ;;
+esac
+
