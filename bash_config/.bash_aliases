@@ -186,6 +186,7 @@ alias myip="curl ipinfo.io/ip; echo"
 alias ports="netstat -tulanp"
 
 # git
+alias add="git add"
 alias addall="git add ."
 alias addup="git add -u"
 alias branch="git branch"
