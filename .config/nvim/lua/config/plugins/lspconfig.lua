@@ -1,24 +1,28 @@
 return {
   -- Mason
   {
-    "williamboman/mason.nvim",
+    -- "williamboman/mason.nvim",
+    "mason-org/mason.nvim",
     enabled = true,
-    config = function()
-      require("mason").setup()
-    end
+    opts = {}
+    -- config = function()
+    -- require("mason").setup()
+    -- end
   },
   -- Mason LSP Config
   {
-    "williamboman/mason-lspconfig.nvim",
+    "mason-org/mason-lspconfig.nvim",
     enabled = true,
-    config = function()
-      require("mason-lspconfig").setup({
-        ensure_installed = {
-          "lua_ls",
-          "ruff"
-        },
-      })
-    end
+    opts = {
+      ensure_installed = {
+        "lua_ls",
+        "ruff"
+      },
+    },
+    dependencies = {
+      { "mason-org/mason.nvim", opts = {} },
+      "neovim/nvim-lspconfig",
+    },
   },
   {
     "neovim/nvim-lspconfig",
@@ -42,52 +46,52 @@ return {
     },
     config = function()
       local capabilities = require('blink.cmp').get_lsp_capabilities()
-      local lspconfig = require("lspconfig")
 
-      lspconfig.bashls.setup({})
-      lspconfig.cmake.setup({})
-      lspconfig.emmet_language_server.setup({})
+      vim.lsp.config("*", { capabilities = capabilities })
+
+      -- OLD ESLINT Setting JUST IN CASE
       -- vscode-eslint-language-server provides an EslintFixAll command that can be used to format a document on save:
-      lspconfig.eslint.setup({
-        ---@diagnostic disable-next-line: unused-local
-        on_attach = function(client, bufnr)
-          vim.api.nvim_create_autocmd("BufWritePre", {
-            buffer = bufnr,
-            command = "EslintFixAll",
-          })
-        end
-      })
-      lspconfig.lua_ls.setup({
-        capabilities = capabilities,
+      -- lspconfig.eslint.setup({
+      --   ---@diagnostic disable-next-line: unused-local
+      --   on_attach = function(client, bufnr)
+      --     vim.api.nvim_create_autocmd("BufWritePre", {
+      --       buffer = bufnr,
+      --       command = "EslintFixAll",
+      --     })
+      --   end
+      -- })
+      --
+      -- lspconfig.lua_ls.setup({
+      --   capabilities = capabilities,
+      --
+      --   vim.api.nvim_create_autocmd('LspAttach', {
+      --     callback = function(args)
+      --       local client = vim.lsp.get_client_by_id(args.data.client_id)
+      --       if not client then return end
+      --
+      --       if client:supports_method('textDocument/formatting') then
+      --         -- Format the current buffer on save
+      --         vim.api.nvim_create_autocmd('BufWritePre', {
+      --           buffer = args.buf,
+      --           callback = function()
+      --             vim.lsp.buf.format({ bufnr = args.buf, id = client.id })
+      --           end,
+      --         })
+      --       end
+      --     end,
+      --   })
+      --   -- OLD LUA SETTINGS JUST IN CASE
+      --   settings = {
+      --     Lua = {
+      --       diagnostics = {
+      --         -- eliminate `Undefined global "vim" error
+      --         globals = { "vim" }
+      --       }
+      --     }
+      --   }
+      -- })
 
-        vim.api.nvim_create_autocmd('LspAttach', {
-          callback = function(args)
-            local client = vim.lsp.get_client_by_id(args.data.client_id)
-            if not client then return end
-
-            if client:supports_method('textDocument/formatting') then
-              -- Format the current buffer on save
-              vim.api.nvim_create_autocmd('BufWritePre', {
-                buffer = args.buf,
-                callback = function()
-                  vim.lsp.buf.format({ bufnr = args.buf, id = client.id })
-                end,
-              })
-            end
-          end,
-        })
-        --   settings = {
-        --     Lua = {
-        --       diagnostics = {
-        --         -- eliminate `Undefined global "vim" error
-        --         globals = { "vim" }
-        --       }
-        --     }
-        --   }
-      })
-      lspconfig.ruff.setup({})
-      lspconfig.sqlls.setup {}
-      lspconfig.vimls.setup({})
+      -- LSP Keymaps
       vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
       -- Global mappings.
       -- See `:help vim.diagnostic.*` for documentation on any of the below functions
@@ -130,6 +134,18 @@ return {
           end, opts)
         end,
       })
+
+      vim.lsp.enable(
+        { "bashls",
+          "cmake",
+          "lua_ls",
+          "emmet_language_server",
+          "eslint",
+          "ruff",
+          "sqlls",
+          "vimls"
+        }
+      )
     end
   }
 }
