@@ -1,3 +1,4 @@
+ZSH_DISABLE_COMPFIX="true"
 # To debug
 # set -x
 
