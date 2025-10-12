@@ -9,6 +9,7 @@ brew "fzf"
 brew "git"
 brew "mysql"
 brew "neovim", args: ["HEAD"]
+brew "node"
 brew "nvm"
 brew "p7zip"
 brew "pinentry-mac"
