@@ -1,79 +1,10 @@
-ZSH_DISABLE_COMPFIX="true"
+# Get aliases and environment variables
+source ~/.bash_profile
+source ~/bash_config/.bash_aliases
+source ~/bash_config/.functions
+
 # To debug
 # set -x
-
-# Detect Platform
-case "$OSTYPE" in
-	darwin*) export PLATFORM="macOS";;
-	linux*) export PLATFORM="linux";;
-	*)	export PLATFORM="unknown";;
-esac
-
-# ---------------
-# PATH Setup
-# ---------------
-
-# Shared user bin
-export PATH="$PATH:$HOME/.local/bin"
-
-# Linux-only paths
-if [[ "$PLATFORM" == "linux" ]]; then
-  export PATH="$PATH:/home/$USER/.local/bin"
-  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"  # Linuxbrew
-fi
-
-# macOS-only paths
-if [[ "$PLATFORM" == "macOS" ]]; then
-  eval "$(/opt/homebrew/bin/brew shellenv)"  # macOS Homebrew
-fi
-
-# Add zig to path
-export PATH="$HOME/repos/zig:$PATH"
-
-# MSSQL Tools (Linux-only usually)
-if [[ "$PLATFORM" == "linux" ]]; then
-  export PATH="$PATH:/opt/mssql-tools18/bin"
-fi
-
-export MYSQLSH_PROMPT_THEME=~/.mysqlsh/prompt.json
-# export MYSQLSH_PROMPT_THEME=/usr/share/mysqlsh/prompt/prompt_256inv.json
-# export MYSQLSH_PROMPT_THEME=/usr/share/mysqlsh/prompt/prompt_256pl.json
-# export MYSQLSH_PROMPT_THEME=/usr/share/mysqlsh/prompt/prompt_256pl+aw.json
-# export MYSQLSH_PROMPT_THEME=/usr/share/mysqlsh/prompt/prompt_dbl_256.json
-# export MYSQLSH_PROMPT_THEME=/usr/share/mysqlsh/prompt/prompt_dbl_256pl.json
-
-
-# ----------------
-# NVM setup
-# ----------------
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-#Set Neovim Config
-# export NVIM_APPNAME="nvim-andrew"
-# CURRENT CONFIG
-# export NVIM_APPNAME="nvim"
-# export NVIM_APPNAME="lvim nvim"
-# export NVIM_APPNAME="nvim.orig"
-# export NVIM_APPNAME="nvim-custom"
-# switch to Kickstart Configuration
-# NVIM Alias
-
-alias nvim-mod='NVIM_APPNAME="kickmod" nvim'
-# adds a blank line before prompt
-precmd() { print "" }
- 
-# history setup
-# HISTFILE=$HOME/.zhistory
-# SAVEHIST=1000
-# HISTSIZE=999
-# setopt share_history
-# setopt hist_expire_dups_first
-# setopt hist_ignore_dups
-# setopt hist_verify
-setopt HIST_IGNORE_SPACE
 
 # ---------------
 # Plugins
@@ -111,6 +42,7 @@ case "$OSTYPE" in
     ;;
 esac
 
+ZSH_DISABLE_COMPFIX="true"
 # ----------------
 # Oh My Zsh
 # ----------------
@@ -162,6 +94,16 @@ ZSH_THEME="custom_agnoster"
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+# history setup
+# HISTFILE=$HOME/.zhistory
+# SAVEHIST=1000
+# HISTSIZE=999
+# setopt share_history
+# setopt hist_expire_dups_first
+# setopt hist_ignore_dups
+# setopt hist_verify
+setopt HIST_IGNORE_SPACE
 
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
@@ -242,8 +184,6 @@ alias ohmyzsh="nvim ~/.oh-my-zsh"
 # autoload run-help
 # HELPDIR=/usr/share/zsh/"${ZSH_VERSION}"/help
 # alias help=run-help
-source ~/bash_config/.bash_aliases
-source ~/bash_config/.functions
 
 
 
@@ -251,7 +191,6 @@ eval "$(zoxide init zsh)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-fastfetch
 # Must be sourced last in `.zshrc` after all other plugins and customizations
 # ----------------
 # zsh-syntax-highlighting
@@ -269,3 +208,4 @@ case "$OSTYPE" in
     ;;
 esac
 
+fastfetch
