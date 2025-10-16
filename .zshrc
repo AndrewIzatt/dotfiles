@@ -1,7 +1,7 @@
 # Get aliases and environment variables
 source ~/.bash_profile
-source ~/bash_config/.bash_aliases
-source ~/bash_config/.functions
+# source ~/bash_config/.bash_aliases
+# source ~/bash_config/.bash_functions
 
 # To debug
 # set -x
