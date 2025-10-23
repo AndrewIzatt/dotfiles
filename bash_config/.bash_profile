@@ -62,3 +62,4 @@ precmd() { print "" }
 export HOMEBREW_ACCEPT_EULA=Y
 export HOMEBREW_NO_ANALYTICS=1
 export HOMEBREW_NO_ENV_HINTS=1
+export HOMEBREW_BUNDLE_FILE=/Users/$USER/.config/brewfile/Brewfile

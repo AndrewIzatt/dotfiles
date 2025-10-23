@@ -1,6 +1,8 @@
 # alias vim='NVIM_APPNAME=nvim nvim'
 alias lvim='NVIM_APPNAME=lvim nvim'
 
+# Brew
+alias upd_brewfile="brew bundle dump"
 
 # apt packages
 alias nalaup="sudo nala update && sudo nala upgrade"
