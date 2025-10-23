@@ -2,8 +2,7 @@
 alias lvim='NVIM_APPNAME=lvim nvim'
 
 # Brew
-alias upd_brewfile="brew bundle dump"
-
+alias upd_brewfile='if [ -e "$HOMEBREW_BUNDLE_FILE" ]; then rm -f $HOMEBREW_BUNDLE_FILE; fi && brew bundle dump'
 # apt packages
 alias nalaup="sudo nala update && sudo nala upgrade"
 alias aptup="sudo apt update && sudo apt upgrade"
