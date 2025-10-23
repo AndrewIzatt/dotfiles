@@ -1,8 +1,8 @@
 # Detect Platform
 case "$OSTYPE" in
-	darwin*) export PLATFORM="macOS";;
-	linux*) export PLATFORM="linux";;
-	*)	export PLATFORM="unknown";;
+    darwin*) export PLATFORM="macOS";;
+    linux*) export PLATFORM="linux";;
+    *)	export PLATFORM="unknown";;
 esac
 # ---------------
 # PATH Setup

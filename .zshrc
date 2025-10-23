@@ -1,48 +1,11 @@
 # Get aliases and environment variables
-source ~/.bash_profile
-# source ~/bash_config/.bash_aliases
-# source ~/bash_config/.bash_functions
+source ~/bash_config/.bash_profile
+source ~/bash_config/.bash_functions
+source ~/bash_config/.bash_aliases
 
 # To debug
 # set -x
 
-# ---------------
-# Plugins
-# ---------------
-
-
-# ----------------
-# zsh-autosuggestions
-# ----------------
-case "$OSTYPE" in
-  darwin*)  # macOS (Homebrew install)
-    if [[ -n "$HOMEBREW_PREFIX" && -f "$HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh" ]]; then
-      source "$HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
-    fi
-    ;;
-  linux*)   # Linux (cloned into Oh My Zsh custom folder)
-    if [[ -f ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ]]; then
-      source ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-    fi
-    ;;
-esac
-
-
-# Load zsh-syntax-highlighting
-case "$OSTYPE" in
-  darwin*)  # macOS (Homebrew)
-    if [[ -n "$HOMEBREW_PREFIX" && -f "$HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]]; then
-      source "$HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
-    fi
-    ;;
-  linux*)   # Linux (assume cloned into Oh My Zsh custom folder)
-    if [[ -f ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]]; then
-      source ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-    fi
-    ;;
-esac
-
-ZSH_DISABLE_COMPFIX="true"
 # ----------------
 # Oh My Zsh
 # ----------------
@@ -155,10 +118,9 @@ ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 # For list of numbers 0-255:
 # https://upload.wikimedia.org/wikipedia/commons/1/15/Xterm_256color_chart.svg
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=241'
-bindkey '^a' autosuggest-accept
+bindkey '^i' autosuggest-accept
 
 # export MANPATH="/usr/local/man:$MANPATH"
-#
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
@@ -190,6 +152,23 @@ alias ohmyzsh="nvim ~/.oh-my-zsh"
 eval "$(zoxide init zsh)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+fastfetch
+
+# ----------------
+# zsh-autosuggestions
+# ----------------
+case "$OSTYPE" in
+  darwin*)  # macOS (Homebrew install)
+    if [[ -n "$HOMEBREW_PREFIX" && -f "$HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh" ]]; then
+      source "$HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
+    fi
+    ;;
+  linux*)   # Linux (cloned into Oh My Zsh custom folder)
+    if [[ -f ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ]]; then
+      source ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+    fi
+    ;;
+esac
 
 # Must be sourced last in `.zshrc` after all other plugins and customizations
 # ----------------
@@ -198,14 +177,15 @@ eval "$(zoxide init zsh)"
 case "$OSTYPE" in
   darwin*)  # macOS (Homebrew install)
     if [[ -n "$HOMEBREW_PREFIX" && -f "$HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]]; then
-      source "$HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+        source "$HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
     fi
     ;;
   linux*)   # Linux (cloned into Oh My Zsh custom folder)
-    if [[ -f ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]]; then
-      source ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+    if [[ -f "${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]]; then
+      source "${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
     fi
     ;;
 esac
-
-fastfetch
+if [[ -f ~/bash_config/.bash_aliases ]]; then
+  source ~/bash_config/.bash_aliases
+fi
