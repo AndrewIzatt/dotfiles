@@ -66,7 +66,7 @@ alias tls="tmux ls"
 alias tas="tmux attach -t"
 # Create a new named session. Type `tns foo`
 # to create a session named "foo"
-# alias tns="tmux new-session -s"
+alias tns="tmux new-session -s"
 # Creates a new session and automatically names it after current directory
 # The way it works is by utilizing the –A flag for the new-session command. The –A flag
 # makes new-session behave like attach-session, if the specified session name already
@@ -81,7 +81,7 @@ alias tas="tmux attach -t"
 # Finally, we pipe (|) the folder name through to the translate (tr) command, which
 # converts any dots (.) into hyphens, to ensure the session name is valid. This avoids issues
 # wherein the folder name is x.y.z, by converting it int
-alias tns='tmux new-session -As $(basename $PWD | tr . -)'
+alias tnss='tmux new-session -As $(basename $PWD | tr . -)'
 
 # Kill a named session. Type `tks foo`
 # to kill session "foo"
