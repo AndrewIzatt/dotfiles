@@ -4,7 +4,12 @@ return {
     -- "williamboman/mason.nvim",
     "mason-org/mason.nvim",
     enabled = true,
-    opts = {}
+    opts = {
+      registries = {
+        "github:mason-org/mason-registry",
+        "github:Crashdummyy/mason-registry",
+      },
+    },
     -- config = function()
     -- require("mason").setup()
     -- end
