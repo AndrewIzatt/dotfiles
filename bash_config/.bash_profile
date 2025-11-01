@@ -1,14 +1,14 @@
 # Detect Platform
 case "$OSTYPE" in
-    darwin*) export PLATFORM="macOS";;
-    linux*) export PLATFORM="linux";;
-    *)	export PLATFORM="unknown";;
+    darwin*) export HOST_OS="macOS";;
+    linux*) export HOST_OS="linux";;
+    *)	export HOST_OS="unknown";;
 esac
 # ---------------
 # PATH Setup
 # ---------------
 # Linux-only paths
-if [[ "$PLATFORM" == "linux" ]]; then
+if [[ "$HOST_OS" == "linux" ]]; then
     # Shared user bin
     export PATH="$PATH:$HOME/.local/bin"
     # Add zig to path
@@ -20,7 +20,7 @@ if [[ "$PLATFORM" == "linux" ]]; then
 fi
 
 # macOS-only paths
-if [[ "$PLATFORM" == "macOS" ]]; then
+if [[ "$HOST_OS" == "macOS" ]]; then
     # Add Applications folder to PATH
     export PATH=$PATH:/Applications/
     # Homebrew
