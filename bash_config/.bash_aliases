@@ -242,3 +242,10 @@ alias nvimupd="cd ~/repos/neovim && pull master && sudo make install"
 alias dotupd="cd ~/dotfiles && pull main"
 alias ghostupd="cd ~/repos/ghostty && pull main && zig build -Doptimize=ReleaseFast"
 alias yaziupd="cd ~/repos/yazi && pull main && cargo build --release --locked"
+
+#MacOS Aliases
+if [[ "$HOST_OS" == "macOS" ]]; then
+    alias tupd="Terminal-Update"
+    alias tmain="Terminal-Maintenance"
+fi
+
