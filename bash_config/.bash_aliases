@@ -245,7 +245,7 @@ alias yaziupd="cd ~/repos/yazi && pull main && cargo build --release --locked"
 
 #MacOS Aliases
 if [[ "$HOST_OS" == "macOS" ]]; then
-    alias tupd="Terminal-Update"
+    alias tupd="Terminal-Updates"
     alias tmain="Terminal-Maintenance"
 fi
 
