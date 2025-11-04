@@ -25,6 +25,8 @@ if [[ "$HOST_OS" == "macOS" ]]; then
     export PATH=$PATH:/Applications/
     # Homebrew
     eval "$(/opt/homebrew/bin/brew shellenv)"  # macOS Homebrew
+    # Add dotnet to PATH
+    export PATH="$PATH:$HOME/.dotnet/tools"
 fi
 
 # -------------------------------
