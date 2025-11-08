@@ -98,8 +98,8 @@ set whichwrap=b,s,<,>,[,]
 
 " Every tab will be displayed as ">---" and trailing whites space as "-"
 " See usr_05.txt
-set list
-set listchars=tab:>-<,trail:-
+"set list
+"set listchars=tab:>-<,trail:-
 "Increases message window at bottom of vim to 2
 "Default 1
 set cmdheight=1
@@ -135,12 +135,12 @@ let g:netrw_keepdir=0
 " Set the timeout length for mapped sequences (in milliseconds)
 " Controls the time Vim waits for a mapped sequence to complete
 " Default 1000ms
-set timeoutlen=500
+set timeoutlen=700
 " set the timeout length for key codes (in milliseconds)
 " Controls the time Vim waits for key codes to complete. The default is -1
 " which means no timeout. 
 " Changed from 50
-set ttimeoutlen=50
+set ttimeoutlen=75
 let mapleader = " "
 "nnoremap \ ;
 "n = normalmode
@@ -153,9 +153,9 @@ let mapleader = " "
 "see whether it contains another mapping).'
 "https://vim.fandom.com/wiki/Avoid_the_escape_key
 " remap <Esc> key in insert mode
-inoremap jk <Esc>
+"inoremap jk <Esc>
 " Map jk to escape in visual mode
-xmap jk <Esc>
+"xmap jk <Esc>
 
 "Run Netrw in Vertical split mode
 "nnoremap <leader>ee :Lexplore %:p:h<CR>
@@ -174,25 +174,45 @@ nnoremap <leader>wp :wprev<CR>
 nnoremap <leader>cn :cnext<CR>
 " maps <Leader>cp to :cprev command
 nnoremap <leader>cp :cprev<CR>
+
+"Navigating tabs
+" Move to previous tab
+nnoremap H :tabprevious<CR>
+" Move to next tab
+nnoremap L :tabnext<CR>
+" Close current window or tab
+nnoremap Q <C-w>q
+" Move tab left
+nnoremap <S-Left> :tabmove -1<CR>
+" Move tab right
+nnoremap <S-Right> :tabmove +1<CR>
+" Go to next tab
+"nnoremap <leader>tn <cmd>tabn<CR>
+" Go to previous tab
+"nnoremap <leader>tp <cmd>tabp<CR>
+" Close current tab
+"nnoremap <leader>tx <cmd>tabc<CR>
+" move current buffer to new tab
+nnoremap <leader>tf <cmd>tabnew %<CR>
+
 " navigate buffers
 "Tab to go to next buffer
 nnoremap  <silent>   <tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bnext<CR>
 "Shift-Tab to go to previous buffer
 nnoremap  <silent> <s-tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bprevious<CR>
-
-"Navigating tabs
 "Open a new tab (o for open)
 nnoremap <leader>to <cmd>tabnew<CR>
-" Go to next tab
-nnoremap <leader>tn <cmd>tabn<CR>
-" Go to previous tab
-nnoremap <leader>tp <cmd>tabp<CR>
-" Close current tab
-nnoremap <leader>tx <cmd>tabc<CR>
-" move current buffer to new tab
-nnoremap <leader>tf <cmd>tabnew %<CR>
 
 "Navigating window splits
+" Open current buffer to new horizontal split
+nnoremap <leader>ws <cmd>split %<CR>
+" Open current buffer to new vertical split
+nnoremap <leader>wv <cmd>vsplit %<CR>
+" Navigate splits
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
 "split vertically
 "nnoremap <leader>wv <C-w>v
 " split horizontally
@@ -209,7 +229,7 @@ nnoremap <C-w>+ 5<C-w>+
 " Resize horizontal split (down) by 5 lines
 nnoremap <C-w>- 5<C-w>-
 " Resize vertical split (right) by 10 lines
-" Give vertical split more space on the right by 5 lines
+" G:ve vertical split more space on the right by 5 lines
 nnoremap <C-w>> 15<C-w>>
 " Give vertical split more space on the left by 5 lines
 " <lt> is `<` character
