@@ -24,7 +24,7 @@ config.keys = {
 -- config.color_scheme = 'AdventureTime'
 -- config.color_scheme = 'Gruvbox Material (Gogh)'
 config.color_scheme = "Galaxy"
-config.font_size = 13.0
+config.font_size = 16.0
 config.font = wezterm.font("RobotoMono Nerd Font Mono")
 
 -- config.window_decorations = "RESIZE"
