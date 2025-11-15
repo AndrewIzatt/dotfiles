@@ -168,11 +168,11 @@ alias suspend="sudo systemctl suspend"
 alias get_bluetooth="sudo systemctl status bluetooth.service"
 
 # change ls to exa aliases
-alias ls="eza -alh --color=always --group-directories-first" # preferred listing
-alias la="eza -ah --color=always --group-directories-first" # all files and directories
+alias ls="eza -Alh --color=always --group-directories-first" # preferred listing
+alias la="eza -Ah --color=always --group-directories-first" # all files and directories
 alias ll="eza -lh --color=always --group-directories-first" # long format
-alias lt="eza -aTh --color=always --group-directories-first" # tree format
-alias l.='eza -ah | egrep "^\."' # Only returns hidden files
+alias lt="eza -ATh --color=always --group-directories-first" # tree format
+alias l.='eza -Ah | egrep "^\."' # Only returns hidden files
 
 # Colorize grep output (good for log files)
 alias grep="grep -i --color=auto"
