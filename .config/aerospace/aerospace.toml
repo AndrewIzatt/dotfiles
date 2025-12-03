@@ -1,6 +1,11 @@
 # Place a copy of this config to ~/.aerospace.toml
 # After that, you can edit ~/.aerospace.toml to your liking
 
+# You can use it to add commands that run after login to macOS user session.
+# 'start-at-login' needs to be 'true' for 'after-login-command' to work
+# Available commands: https://nikitabobko.github.io/AeroSpace/commands
+after-login-command = []
+
 # You can use it to add commands that run after AeroSpace startup.
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands
 after-startup-command = []
@@ -51,12 +56,96 @@ automatically-unhide-macos-hidden-apps = false
 #                 See:
 #                 https://nikitabobko.github.io/AeroSpace/guide#assign-workspaces-to-monitors
 [gaps]
-    inner.horizontal = 10
-    inner.vertical =   10
-    outer.left =       10
-    outer.bottom =     10
-    outer.top =        10
-    outer.right =      10
+    inner.horizontal = 5
+    inner.vertical =   5
+    outer.left =       0
+    outer.bottom =     0
+    outer.top =        0
+    outer.right =      0
+
+# APPLICATION WORKSPACE SETUP:
+# This config includes automatic workspace assignment for applications.
+# Each application has two configurations:
+# 1. Window detection rule: [[on-window-detected]] - automatically moves app windows to designated workspace
+# 2. Keyboard binding: alt-{letter} - launches app and switches to its workspace
+#
+# Current application mappings:
+# | Workspace | Application(s)          | Shortcut | App Path/Command |
+# |-----------|-------------------------|----------|------------------|
+# | A         | ChatGPT, Claude         | alt-a    | /Applications/ChatGPT.app |
+# | B         | Chrome (browsers)       | alt-b    | /Applications/Google Chrome.app |
+# | C         | Cursor                  | alt-c    | /Applications/Cursor.app |
+# | D         | Docker Desktop          | alt-d    | /Applications/Docker.app |
+# | E         | Emacs                   | alt-e    | /Applications/Emacs.app |
+# | M         | Mimestream              | alt-m    | /Applications/Mimestream.app |
+# | N         | Obsidian                | alt-n    | /Applications/Obsidian.app |
+# | Q         | Preview                 | alt-q    | /Applications/Preview.app |
+# | S         | Slack                   | alt-s    | /Applications/Slack.app |
+# | T         | Terminal/Warp           | alt-t    | /Applications/Warp.app |
+# | U         | Unread                  | alt-u    | /Applications/Unread.app |
+# | V         | Books                   | alt-v    | /Applications/Books.app |
+# | W         | WhatsApp, Messages      | alt-w    | /Applications/WhatsApp.app |
+# | X         | X (x.com), Elk          | alt-x    | ~/Applications/Chrome Apps.localized/X.app |
+#
+# To add new applications:
+# 1. Add [[on-window-detected]] rule with app-name-regex-substring matching
+# 2. Update the corresponding alt-{letter} binding in [mode.main.binding]
+# 3. Update this documentation comment
+
+# Finder - Float
+[[on-window-detected]]
+if.app-name-regex-substring = 'Finder'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-name-regex-substring = 'Bloom'
+run = 'layout floating'
+
+# Bitwarden - Float
+[[on-window-detected]]
+if.app-name-regex-substring = 'Bitwarden'
+run = 'layout floating'
+
+# Browser to workspace B
+[[on-window-detected]]
+if.app-name-regex-substring = 'Brave'
+run = ['move-node-to-workspace B']
+
+[[on-window-detected]]
+if.app-name-regex-substring = 'Firefox'
+run = ['move-node-to-workspace B']
+
+# VSCode/VSCodium/PyCharm to workspace C
+[[on-window-detected]]
+if.app-name-regex-substring = 'VSCode'
+run = ['move-node-to-workspace C']
+
+[[on-window-detected]]
+if.app-name-regex-substring = 'VSCodium'
+run = ['move-node-to-workspace C']
+
+[[on-window-detected]]
+if.app-name-regex-substring = 'PyCharm'
+run = ['move-node-to-workspace C']
+
+# Signal to workspace S
+[[on-window-detected]]
+if.app-name-regex-substring = 'Signal'
+run = ['move-node-to-workspace S']
+
+# Terminal/Wezterm to workspace T
+[[on-window-detected]]
+if.app-name-regex-substring = 'Terminal'
+run = ['move-node-to-workspace T']
+
+[[on-window-detected]]
+if.app-name-regex-substring = 'Wezterm'
+run = ['move-node-to-workspace T']
+
+# WhatsApp to Workspace W
+[[on-window-detected]]
+if.app-name-regex-substring = 'WhatsApp'
+run = ['move-node-to-workspace W']
 
 # 'main' binding mode declaration
 # see: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -126,26 +215,28 @@ automatically-unhide-macos-hidden-apps = false
     alt-9 = 'workspace 9'
     # alt-a = 'workspace A' # In your config, you can drop workspace bindings that you don't need
     alt-b = 'workspace B'
-    alt-c = 'workspace C'
+    alt-c = ['exec-and-forget open /Applications/VSCodium.app', 'workspace C'] # VSCodium workspace
     alt-d = 'workspace D'
     # alt-e = 'workspace E'
     # alt-f = 'workspace F'
     alt-g = 'workspace G'
-    alt-i = 'workspace I'
+    # alt-i = 'workspace I'
     alt-m = 'workspace M'
-    alt-n = 'workspace N'
-    alt-o = 'workspace O'
-    alt-p = 'workspace P'
+    # alt-n = 'workspace N'
+    # alt-o = 'workspace O'
+    alt-p = ['exec-and-forget open /Applications/PyCharm.app', 'workspace C'] # PyCharm workspace
     alt-q = 'workspace Q'
     alt-r = 'workspace R'
-    alt-s = 'workspace S'
-    alt-t = 'workspace T'
-    alt-u = 'workspace U'
-    alt-v = 'workspace V'
-    alt-w = 'workspace W'
+    alt-s = ['exec-and-forget open /Applications/Signal.app', 'workspace S'] # Signal workspace
+    alt-t = ['exec-and-forget open /Applications/Wezterm.app', 'workspace T'] # Terminal/Wezterm workspace
+    # alt-u = 'workspace U'
+    alt-v = ['exec-and-forget open /Applications/Visual\ Studio\ Code.app', 'workspace C'] # VSCode workspace
+    alt-w = ['exec-and-forget open /Applications/WhatsApp.app', 'workspace W'] # WhatsApp workspace
     alt-x = 'workspace X'
     alt-y = 'workspace Y'
     alt-z = 'workspace Z'
+    alt-enter = ['exec-and-forget open /Applications/Wezterm.app', 'workspace T'] # Terminal/Wezterm workspace
+    
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
     alt-shift-1 = 'move-node-to-workspace 1'
@@ -157,23 +248,23 @@ automatically-unhide-macos-hidden-apps = false
     alt-shift-7 = 'move-node-to-workspace 7'
     alt-shift-8 = 'move-node-to-workspace 8'
     alt-shift-9 = 'move-node-to-workspace 9'
-    alt-shift-a = 'move-node-to-workspace A'
+    # alt-shift-a = 'move-node-to-workspace A'
     alt-shift-b = 'move-node-to-workspace B'
     alt-shift-c = 'move-node-to-workspace C'
     alt-shift-d = 'move-node-to-workspace D'
     # alt-shift-e = 'move-node-to-workspace E'
     # alt-shift-f = 'move-node-to-workspace F'
     alt-shift-g = 'move-node-to-workspace G'
-    alt-shift-i = 'move-node-to-workspace I'
+    # alt-shift-i = 'move-node-to-workspace I'
     alt-shift-m = 'move-node-to-workspace M'
-    alt-shift-n = 'move-node-to-workspace N'
-    alt-shift-o = 'move-node-to-workspace O'
+    # alt-shift-n = 'move-node-to-workspace N'
+    # alt-shift-o = 'move-node-to-workspace O'
     alt-shift-p = 'move-node-to-workspace P'
     alt-shift-q = 'move-node-to-workspace Q'
     alt-shift-r = 'move-node-to-workspace R'
     alt-shift-s = 'move-node-to-workspace S'
     alt-shift-t = 'move-node-to-workspace T'
-    alt-shift-u = 'move-node-to-workspace U'
+    # alt-shift-u = 'move-node-to-workspace U'
     alt-shift-v = 'move-node-to-workspace V'
     alt-shift-w = 'move-node-to-workspace W'
     alt-shift-x = 'move-node-to-workspace X'
@@ -210,7 +301,3 @@ automatically-unhide-macos-hidden-apps = false
 
 # App specific configuration
 
-# Bitwarden - Float
-[[on-window-detected]]
-    if.app-id = 'com.bitwarden.desktop'
-    run = 'layout floating'

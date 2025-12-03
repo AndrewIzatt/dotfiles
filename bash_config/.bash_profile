@@ -27,6 +27,9 @@ if [[ "$HOST_OS" == "macOS" ]]; then
     eval "$(/opt/homebrew/bin/brew shellenv)"  # macOS Homebrew
     # Add dotnet to PATH
     export PATH="$PATH:$HOME/.dotnet/tools"
+    source /opt/homebrew/opt/chruby/share/chruby/auto.sh
+    source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
+    chruby ruby-3.4.7
 fi
 
 # -------------------------------
@@ -65,5 +68,4 @@ export HOMEBREW_ACCEPT_EULA=Y
 export HOMEBREW_NO_ANALYTICS=1
 export HOMEBREW_NO_ENV_HINTS=1
 export HOMEBREW_BUNDLE_FILE=/Users/$USER/.config/brewfile/Brewfile
-
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
