@@ -8,7 +8,7 @@ after-login-command = []
 
 # You can use it to add commands that run after AeroSpace startup.
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands
-after-startup-command = ['workspace B']
+after-startup-command = ['workspace T']
 
 # Start AeroSpace at login
 start-at-login = true
@@ -93,55 +93,64 @@ automatically-unhide-macos-hidden-apps = false
 # 3. Update this documentation comment
 
 # Finder - Float
-[[on-window-detected]]
-if.app-name-regex-substring = 'Finder'
-run = 'layout floating'
-
-[[on-window-detected]]
-if.app-name-regex-substring = 'Bloom'
-run = 'layout floating'
+# [[on-window-detected]]
+# if.app-name-regex-substring = 'Finder'
+# run = 'layout floating'
+# 
+# [[on-window-detected]]
+# if.app-name-regex-substring = 'Bloom'
+# run = 'layout floating'
 
 # Bitwarden - Float
 [[on-window-detected]]
 if.app-name-regex-substring = 'Bitwarden'
 run = 'layout floating'
 
-# Browser to workspace B
+# Browser to workspace 1
 [[on-window-detected]]
-if.app-name-regex-substring = 'Brave'
-run = ['move-node-to-workspace B']
+if.app-name-regex-substring = '\bBrave\b'
+run = ['move-node-to-workspace 1']
 
 [[on-window-detected]]
 if.app-name-regex-substring = 'Firefox'
-run = ['move-node-to-workspace B']
+run = ['move-node-to-workspace 1']
 
-# VSCode/VSCodium/PyCharm to workspace C
+# VSCode/VSCodium/PyCharm to workspace 2
 [[on-window-detected]]
 if.app-name-regex-substring = 'VSCode'
-run = ['move-node-to-workspace C']
-
-[[on-window-detected]]
-if.app-name-regex-substring = 'VSCodium'
-run = ['move-node-to-workspace C']
-
-# YouTube to Workspace M (Media)
-[[on-window-detected]]
-if.app-name-regex-substring = '\bYouTube\b'
-run = ['move-node-to-workspace M']
-
-# YouTubeMusic to Workspace M (Media)
-[[on-window-detected]]
-if.app-name-regex-substring = '\bYouTube Music\b'
-run = ['move-node-to-workspace M']
+run = ['move-node-to-workspace 2']
 
 [[on-window-detected]]
 if.app-name-regex-substring = 'PyCharm'
-run = ['move-node-to-workspace P']
+run = ['move-node-to-workspace 2']
 
-# Signal to workspace S
+[[on-window-detected]]
+if.app-name-regex-substring = 'VSCodium'
+run = ['move-node-to-workspace 2']
+
+# YouTube to Workspace 3 
+[[on-window-detected]]
+if.app-name-regex-substring = '\bYouTube\b'
+run = ['move-node-to-workspace 3']
+
+# YouTubeMusic to Workspace 3
+[[on-window-detected]]
+if.app-name-regex-substring = '\bYouTube Music\b'
+run = ['move-node-to-workspace 3']
+
+# Signal to workspace 4
 [[on-window-detected]]
 if.app-name-regex-substring = 'Signal'
-run = ['move-node-to-workspace S']
+run = ['move-node-to-workspace 4']
+
+# WhatsApp to Workspace 4
+[[on-window-detected]]
+if.app-name-regex-substring = 'WhatsApp'
+run = ['move-node-to-workspace 4']
+
+[[on-window-detected]]
+if.app-name-regex-substring = 'Readest'
+run = ['move-node-to-workspace 5']
 
 # Terminal/Wezterm to workspace T
 [[on-window-detected]]
@@ -152,10 +161,6 @@ run = ['move-node-to-workspace T']
 if.app-name-regex-substring = 'Wezterm'
 run = ['move-node-to-workspace T']
 
-# WhatsApp to Workspace W
-[[on-window-detected]]
-if.app-name-regex-substring = 'WhatsApp'
-run = ['move-node-to-workspace W']
 
 
 # 'main' binding mode declaration
@@ -191,7 +196,7 @@ run = ['move-node-to-workspace W']
     # end tell'
     
     # Toggle fullscreen
-    alt-f = 'fullscreen'
+    alt-shift-f = 'fullscreen'
 
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#layout
@@ -215,69 +220,70 @@ run = ['move-node-to-workspace W']
     alt-equal = 'resize smart +50'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
-    # alt-1 = 'workspace 1'
-    # alt-2 = 'workspace 2'
-    # alt-3 = 'workspace 3'
-    # alt-4 = 'workspace 4'
-    # alt-5 = 'workspace 5'
-    # alt-6 = 'workspace 6'
+    alt-1 = 'workspace 1' # Main (Browser)
+    alt-2 = 'workspace 2' # IDE (VSCodium, VSCode, PyCharm)
+    alt-3 = 'workspace 3' # Media (YouTube, YouTube Music)
+    alt-4 = 'workspace 4' # Communications (Signal, WhatsApp)
+    alt-5 = 'workspace 5' # Reading (PDFs, Readest)
+    alt-6 = 'workspace 6' # Writing (LibreOffice)
     # alt-7 = 'workspace 7'
     # alt-8 = 'workspace 8'
     # alt-9 = 'workspace 9'
     # alt-a = 'workspace A' # In your config, you can drop workspace bindings that you don't need
-    alt-b = 'workspace B'
-    alt-c = ['exec-and-forget open /Applications/VSCodium.app', 'workspace C'] # VSCodium workspace
+    alt-b = ['exec-and-forget open /Applications/Brave\ Browser.app', 'workspace 1'] # Main workspace (1) (Browser)
+    alt-c = ['exec-and-forget open /Applications/VSCodium.app', 'workspace 2'] # IDE workspace (2) (vsCodium)
     # alt-d = 'workspace D'
-    # alt-e = 'workspace E'
+    alt-d = ['exec-and-forget open /Applications/Adobe\ Acrobat\ Reader.app', 'workspace 5'] # Reading Workspace (pDf)
+    alt-e = ['exec-and-forget open /Applications/Bloom.app', 'workspace E'] # Bloom Workspace (Explorer)
     # alt-f = 'workspace F'
     # alt-g = 'workspace G'
     # alt-i = 'workspace I'
-    alt-m = ['exec-and-forget open /Users/Meno/Applications/Brave\ Browser\ Apps.localized/YouTube\ Music.app', 'workspace M'] # YouTube Music (Media) workspace
+    alt-m = ['exec-and-forget open /Users/Meno/Applications/Brave\ Browser\ Apps.localized/YouTube\ Music.app', 'workspace 3'] # Media Workspace 3 (Music/Media)
     # alt-n = 'workspace N'
-    # alt-o = 'workspace O'
-    alt-p = ['exec-and-forget open /Applications/PyCharm.app', 'workspace P'] # PyCharm workspace
+    alt-o = ['exec-and-forget open /Applications/LibreOffice.app', 'workspace 6'] # Writing workspace (6) OpenOffice (Old name of Libre Office)
+    alt-p = ['exec-and-forget open /Applications/PyCharm.app', 'workspace 2'] # IDE Workspace (Pycharm)
     # alt-q = 'workspace Q'
-    # alt-r = 'workspace R'
-    alt-s = ['exec-and-forget open /Applications/Signal.app', 'workspace S'] # Signal workspace
-    alt-t = ['exec-and-forget open /Applications/Wezterm.app', 'workspace T'] # Terminal/Wezterm workspace
+    alt-r = ['exec-and-forget open /Applications/Readest.app', 'workspace 5'] # Reading workspace 5 (Readest)
+    alt-s = ['exec-and-forget open /Applications/Signal.app', 'workspace 4'] # Signal workspace (Signal)
+    alt-t = 'workspace T' # Terminal/Wezterm workspace
     # alt-u = 'workspace U'
-    alt-v = ['exec-and-forget open /Applications/Visual\ Studio\ Code.app', 'workspace C'] # VSCode workspace
-    alt-w = ['exec-and-forget open /Applications/WhatsApp.app', 'workspace W'] # WhatsApp workspace
+    alt-v = ['exec-and-forget open /Applications/Visual\ Studio\ Code.app', 'workspace 2'] # IDE workspace 2 (Vscode)
+    alt-w = ['exec-and-forget open /Applications/WhatsApp.app', 'workspace 4'] # Communication workspace 3 (Whatsapp)
     # alt-x = 'workspace X'
-    alt-y = ['exec-and-forget open /Users/Meno/Applications/Brave\ Browser\ Apps.localized/YouTube.app', 'workspace M'] # YouTube (Media) workspace
+    alt-y = ['exec-and-forget open /Users/Meno/Applications/Brave\ Browser\ Apps.localized/YouTube.app', 'workspace 3'] # Media workspace 3 (Youtube)
     # alt-z = 'workspace Z'
     alt-enter = ['exec-and-forget open /Applications/Wezterm.app', 'workspace T'] # Terminal/Wezterm workspace
     
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
-    # alt-shift-1 = 'move-node-to-workspace 1'
-    # alt-shift-2 = 'move-node-to-workspace 2'
-    # alt-shift-3 = 'move-node-to-workspace 3'
-    # alt-shift-4 = 'move-node-to-workspace 4'
-    # alt-shift-5 = 'move-node-to-workspace 5'
-    # alt-shift-6 = 'move-node-to-workspace 6'
+    alt-shift-1 = 'move-node-to-workspace 1'
+    alt-shift-2 = 'move-node-to-workspace 2'
+    alt-shift-3 = 'move-node-to-workspace 3'
+    alt-shift-4 = 'move-node-to-workspace 4'
+    alt-shift-5 = 'move-node-to-workspace 5'
+    alt-shift-6 = 'move-node-to-workspace 6'
     # alt-shift-7 = 'move-node-to-workspace 7'
     # alt-shift-8 = 'move-node-to-workspace 8'
     # alt-shift-9 = 'move-node-to-workspace 9'
     # alt-shift-a = 'move-node-to-workspace A'
-    alt-shift-b = 'move-node-to-workspace B'
-    alt-shift-c = 'move-node-to-workspace C'
+    # alt-shift-b = 'move-node-to-workspace B'
+    # alt-shift-c = 'move-node-to-workspace C'
     # alt-shift-d = 'move-node-to-workspace D'
     # alt-shift-e = 'move-node-to-workspace E'
     # alt-shift-f = 'move-node-to-workspace F'
     # alt-shift-g = 'move-node-to-workspace G'
     # alt-shift-i = 'move-node-to-workspace I'
-    alt-shift-m = 'move-node-to-workspace M'
+    # alt-shift-m = 'move-node-to-workspace M'
     # alt-shift-n = 'move-node-to-workspace N'
     # alt-shift-o = 'move-node-to-workspace O'
-    alt-shift-p = 'move-node-to-workspace P'
+    # alt-shift-p = 'move-node-to-workspace P'
     # alt-shift-q = 'move-node-to-workspace Q'
     # alt-shift-r = 'move-node-to-workspace R'
-    alt-shift-s = 'move-node-to-workspace S'
-    alt-shift-t = 'move-node-to-workspace T'
+    # alt-shift-s = 'move-node-to-workspace S'
+    # alt-shift-t = 'move-node-to-workspace T'
     # alt-shift-u = 'move-node-to-workspace U'
     # alt-shift-v = 'move-node-to-workspace V'
-    alt-shift-w = 'move-node-to-workspace W'
+    # alt-shift-w = 'move-node-to-workspace W'
     # alt-shift-x = 'move-node-to-workspace X'
     # alt-shift-y = 'move-node-to-workspace Y'
     # alt-shift-z = 'move-node-to-workspace Z'
