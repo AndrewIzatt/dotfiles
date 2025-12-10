@@ -97,18 +97,28 @@ automatically-unhide-macos-hidden-apps = false
 # if.app-name-regex-substring = 'Finder'
 # run = 'layout floating'
 # 
-# [[on-window-detected]]
-# if.app-name-regex-substring = 'Bloom'
-# run = 'layout floating'
+[[on-window-detected]]
+if.app-name-regex-substring = 'Bloom'
+run = ['move-node-to-workspace E']
 
 # Bitwarden - Float
 [[on-window-detected]]
 if.app-name-regex-substring = 'Bitwarden'
 run = 'layout floating'
 
+# ProtonVPN - Float
+[[on-window-detected]]
+if.app-name-regex-substring = '\bProton VPN\b'
+run = 'layout floating'
+
 # Browser to workspace 1
 [[on-window-detected]]
 if.app-name-regex-substring = '\bBrave\b'
+run = ['move-node-to-workspace 1']
+
+# Browser to workspace 1
+[[on-window-detected]]
+if.app-name-regex-substring = '\bTor\b'
 run = ['move-node-to-workspace 1']
 
 [[on-window-detected]]
@@ -126,6 +136,11 @@ run = ['move-node-to-workspace 2']
 
 [[on-window-detected]]
 if.app-name-regex-substring = 'VSCodium'
+run = ['move-node-to-workspace 2']
+
+# Postman to Workspace 2
+[[on-window-detected]]
+if.app-name-regex-substring = 'Postman'
 run = ['move-node-to-workspace 2']
 
 # YouTube to Workspace 3 
@@ -226,15 +241,15 @@ run = ['move-node-to-workspace T']
     alt-4 = 'workspace 4' # Communications (Signal, WhatsApp)
     alt-5 = 'workspace 5' # Reading (PDFs, Readest)
     alt-6 = 'workspace 6' # Writing (LibreOffice)
-    # alt-7 = 'workspace 7'
-    # alt-8 = 'workspace 8'
-    # alt-9 = 'workspace 9'
-    # alt-a = 'workspace A' # In your config, you can drop workspace bindings that you don't need
+    alt-7 = 'workspace 7'
+    alt-8 = 'workspace 8'
+    alt-9 = 'workspace 9'
+    alt-a = ['exec-and-forget open /Applications/Postman.app', 'workspace 2'] # Coding/IDE workspace (1) (Api)
     alt-b = ['exec-and-forget open /Applications/Brave\ Browser.app', 'workspace 1'] # Main workspace (1) (Browser)
     alt-c = ['exec-and-forget open /Applications/VSCodium.app', 'workspace 2'] # IDE workspace (2) (vsCodium)
     # alt-d = 'workspace D'
     alt-d = ['exec-and-forget open /Applications/Adobe\ Acrobat\ Reader.app', 'workspace 5'] # Reading Workspace (pDf)
-    alt-e = ['exec-and-forget open /Applications/Bloom.app', 'workspace E'] # Bloom Workspace (Explorer)
+    alt-e = 'workspace E' 
     # alt-f = 'workspace F'
     # alt-g = 'workspace G'
     # alt-i = 'workspace I'
