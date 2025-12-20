@@ -3,7 +3,6 @@
 " You can find a list of commands here: https://jb.gg/h38q75
 " Find more examples here: https://jb.gg/share-ideavimrc
 
-
 "" -- Suggested options --
 " Show a few lines of context around the cursor. Note that this makes the
 " text scroll if you mouse-click near the start or end of the window.
@@ -12,7 +11,9 @@ set shiftwidth=2
 set shiftround
 set tabstop=2
 set expandtab
-set relativenumber
+set cursorline
+set number relativenumber
+set signcolumn=yes
 set ignorecase
 set smartcase
 set virtualedit=block
@@ -25,12 +26,16 @@ set hlsearch
 set showmode
 set showcmd
 set visualbell
-set clipboard+=unnamed
+set clipboard+=unnamedplus
 filetype plugin indent on
 set functiontextobj
 
 " Don't use Ex mode, use Q for formatting.
 map Q gq
+
+" Move selected line up and down in Visual Mode
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '>-2<CR>gv=gv
 
 " --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
 
@@ -52,8 +57,6 @@ set which-key
 set highlightedyank
 
 let mapleader = " "
-inoremap jk <Esc>
-xmap jk <Esc>
 
 " Comment lines
 "map gcc <action>(CommentByLineComment)

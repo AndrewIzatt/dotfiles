@@ -215,12 +215,12 @@ alias ffp="firefox --private-window"
 # alias ff13="/opt/firefox13/firefox"
 alias chrome="/opt/google/chrome/chrome"
 alias chromep="/opt/google/chrome/chrome --incognito"
-alias brave="brave-browser"
+# alias brave="brave-browser"
 
 # Websites
-alias browser="firefox"
+# alias browser="brave-browser"
 alias gpt="browser https://chat.openai.com/"
-alias gh="browser https://github.com/AndrewIzatt"
+# alias gh="browser https://github.com/AndrewIzatt"
 
 #Backup
 alias idrive="cd /opt/IDriveForLinux/bin && ./idrive"
