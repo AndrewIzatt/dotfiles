@@ -106,6 +106,10 @@ run = ['move-node-to-workspace E']
 if.app-name-regex-substring = 'Bitwarden'
 run = 'layout floating'
 
+[[on-window-detected]]
+if.app-name-regex-substring = 'Python'
+run = 'layout floating'
+
 # ProtonVPN - Float
 [[on-window-detected]]
 if.app-name-regex-substring = '\bProton VPN\b'

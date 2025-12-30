@@ -189,3 +189,8 @@ esac
 if [[ -f ~/bash_config/.bash_aliases ]]; then
   source ~/bash_config/.bash_aliases
 fi
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/meno/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions
