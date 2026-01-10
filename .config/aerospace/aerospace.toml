@@ -20,10 +20,10 @@ enable-normalization-opposite-orientation-for-nested-containers = true
 # See: https://nikitabobko.github.io/AeroSpace/guide#layouts
 # The 'accordion-padding' specifies the size of accordion padding
 # You can set 0 to disable the padding feature
-accordion-padding = 15
+accordion-padding = 0
 
 # Possible values: tiles|accordion
-default-root-container-layout = 'tiles'
+default-root-container-layout = 'accordion'
 
 # Possible values: horizontal|vertical|auto
 # 'auto' means: wide monitor (anything wider than high) gets horizontal orientation,
@@ -115,56 +115,25 @@ run = 'layout floating'
 if.app-name-regex-substring = '\bProton VPN\b'
 run = 'layout floating'
 
-# Browser to workspace 1
-[[on-window-detected]]
-if.app-name-regex-substring = '\bTor\b'
-run = ['move-node-to-workspace 1']
-
-[[on-window-detected]]
-if.app-name-regex-substring = 'Firefox'
-run = ['move-node-to-workspace 1']
-
-# VSCode/VSCodium/PyCharm to workspace 2
-[[on-window-detected]]
-if.app-name-regex-substring = 'VSCode'
-run = ['move-node-to-workspace 2']
-
-[[on-window-detected]]
-if.app-name-regex-substring = 'PyCharm'
-run = ['move-node-to-workspace 2']
-
-[[on-window-detected]]
-if.app-name-regex-substring = 'VSCodium'
-run = ['move-node-to-workspace 2']
-
-# Postman to Workspace 2
+# YouTube to Workspace Y
 # [[on-window-detected]]
-# if.app-name-regex-substring = 'Postman'
-# run = ['move-node-to-workspace 2']
+#if.app-name-regex-substring = '\bYouTube\b'
+#run = ['move-node-to-workspace Y']
 
-# YouTube to Workspace 3 
-[[on-window-detected]]
-if.app-name-regex-substring = '\bYouTube\b'
-run = ['move-node-to-workspace 3']
+# YouTubeMusic to Workspace M
+# [[on-window-detected]]
+# if.app-name-regex-substring = '\bYouTube Music\b'
+# run = ['move-node-to-workspace M']
 
-# YouTubeMusic to Workspace 3
-[[on-window-detected]]
-if.app-name-regex-substring = '\bYouTube Music\b'
-run = ['move-node-to-workspace 3']
-
-# Signal to workspace 4
+# Signal to Workspace S
 [[on-window-detected]]
 if.app-name-regex-substring = 'Signal'
-run = ['move-node-to-workspace 4']
+run = ['move-node-to-workspace S']
 
-# WhatsApp to Workspace 4
+# WhatsApp to Workspace W
 [[on-window-detected]]
 if.app-name-regex-substring = 'WhatsApp'
-run = ['move-node-to-workspace 4']
-
-[[on-window-detected]]
-if.app-name-regex-substring = 'Readest'
-run = ['move-node-to-workspace 5']
+run = ['move-node-to-workspace W']
 
 # Terminal/Wezterm to workspace T
 [[on-window-detected]]
