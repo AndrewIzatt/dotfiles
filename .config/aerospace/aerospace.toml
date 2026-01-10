@@ -117,11 +117,6 @@ run = 'layout floating'
 
 # Browser to workspace 1
 [[on-window-detected]]
-if.app-name-regex-substring = '\bBrave\b'
-run = ['move-node-to-workspace 1']
-
-# Browser to workspace 1
-[[on-window-detected]]
 if.app-name-regex-substring = '\bTor\b'
 run = ['move-node-to-workspace 1']
 
@@ -143,9 +138,9 @@ if.app-name-regex-substring = 'VSCodium'
 run = ['move-node-to-workspace 2']
 
 # Postman to Workspace 2
-[[on-window-detected]]
-if.app-name-regex-substring = 'Postman'
-run = ['move-node-to-workspace 2']
+# [[on-window-detected]]
+# if.app-name-regex-substring = 'Postman'
+# run = ['move-node-to-workspace 2']
 
 # YouTube to Workspace 3 
 [[on-window-detected]]
@@ -239,37 +234,37 @@ run = ['move-node-to-workspace T']
     alt-equal = 'resize smart +50'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
-    alt-1 = 'workspace 1' # Main (Browser)
-    alt-2 = 'workspace 2' # IDE (VSCodium, VSCode, PyCharm)
-    alt-3 = 'workspace 3' # Media (YouTube, YouTube Music)
-    alt-4 = 'workspace 4' # Communications (Signal, WhatsApp)
-    alt-5 = 'workspace 5' # Reading (PDFs, Readest)
-    alt-6 = 'workspace 6' # Writing (LibreOffice)
+    alt-1 = 'workspace 1' 
+    alt-2 = 'workspace 2' 
+    alt-3 = 'workspace 3' 
+    alt-4 = 'workspace 4' 
+    alt-5 = 'workspace 5' 
+    alt-6 = 'workspace 6' 
     alt-7 = 'workspace 7'
     alt-8 = 'workspace 8'
     alt-9 = 'workspace 9'
-    alt-a = ['exec-and-forget open /Applications/Postman.app', 'workspace 2'] # Coding/IDE workspace (1) (Api)
-    alt-b = ['exec-and-forget open /Applications/Brave\ Browser.app', 'workspace 1'] # Main workspace (1) (Browser)
-    alt-c = ['exec-and-forget open /Applications/VSCodium.app', 'workspace 2'] # IDE workspace (2) (vsCodium)
+    alt-a = ['exec-and-forget open /Applications/Postman.app'] 
+    alt-b = ['exec-and-forget open /Applications/Brave\ Browser.app'] # Launch Brave
+    alt-c = ['exec-and-forget open /Applications/VSCodium.app', ] # Lamch (vsCodium)
     # alt-d = 'workspace D'
-    alt-d = ['exec-and-forget open /Applications/Adobe\ Acrobat\ Reader.app', 'workspace 5'] # Reading Workspace (pDf)
+    alt-d = ['exec-and-forget open /Applications/Adobe\ Acrobat\ Reader.app'] # Launch Adobbe (pDf)
     alt-e = 'workspace E' 
     # alt-f = 'workspace F'
     # alt-g = 'workspace G'
     # alt-i = 'workspace I'
-    alt-m = ['exec-and-forget open /Users/Meno/Applications/Brave\ Browser\ Apps.localized/YouTube\ Music.app', 'workspace 3'] # Media Workspace 3 (Music/Media)
+    alt-m = ['exec-and-forget open /Users/Meno/Applications/Brave\ Browser\ Apps.localized/YouTube\ Music.app', 'workspace M'] # Launch Music
     # alt-n = 'workspace N'
-    alt-o = ['exec-and-forget open /Applications/LibreOffice.app', 'workspace 6'] # Writing workspace (6) OpenOffice (Old name of Libre Office)
-    alt-p = ['exec-and-forget open /Applications/PyCharm.app', 'workspace 2'] # IDE Workspace (Pycharm)
+    alt-o = ['exec-and-forget open /Applications/LibreOffice.app'] # Launch OpenOffice (Old name of Libre Office)
+    alt-p = ['exec-and-forget open /Applications/PyCharm.app'] # Launch Pycharm
     # alt-q = 'workspace Q'
-    alt-r = ['exec-and-forget open /Applications/Readest.app', 'workspace 5'] # Reading workspace 5 (Readest)
-    alt-s = ['exec-and-forget open /Applications/Signal.app', 'workspace 4'] # Signal workspace (Signal)
+    alt-r = ['exec-and-forget open /Applications/Readest.app'] # Launch Readest)
+    alt-s = ['exec-and-forget open /Applications/Signal.app', 'workspace S'] # Launch Signal
     alt-t = 'workspace T' # Terminal/Wezterm workspace
     # alt-u = 'workspace U'
-    alt-v = ['exec-and-forget open /Applications/Visual\ Studio\ Code.app', 'workspace 2'] # IDE workspace 2 (Vscode)
-    alt-w = ['exec-and-forget open /Applications/WhatsApp.app', 'workspace 4'] # Communication workspace 3 (Whatsapp)
+    alt-v = ['exec-and-forget open /Applications/Visual\ Studio\ Code.app'] # Launch Vscode
+    alt-w = ['exec-and-forget open /Applications/WhatsApp.app', 'workspace W'] # Launch Whatsapp
     # alt-x = 'workspace X'
-    alt-y = ['exec-and-forget open /Users/Meno/Applications/Brave\ Browser\ Apps.localized/YouTube.app', 'workspace 3'] # Media workspace 3 (Youtube)
+    alt-y = ['exec-and-forget open /Users/Meno/Applications/Brave\ Browser\ Apps.localized/YouTube.app', 'workspace Y'] # Youtube
     # alt-z = 'workspace Z'
     alt-enter = ['exec-and-forget open /Applications/Wezterm.app', 'workspace T'] # Terminal/Wezterm workspace
     
