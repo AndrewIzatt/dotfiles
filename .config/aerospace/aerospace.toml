@@ -120,7 +120,7 @@ run = 'layout floating'
 #if.app-name-regex-substring = '\bYouTube\b'
 #run = ['move-node-to-workspace Y']
 
-# YouTubeMusic to Workspace M
+# YouTube Music to Workspace M
 [[on-window-detected]]
 if.app-name-regex-substring = '\bYouTube Music\b'
 run = ['move-node-to-workspace M']
@@ -224,7 +224,7 @@ run = ['move-node-to-workspace T']
     alt-m = ['exec-and-forget open /Users/Meno/Applications/Brave\ Browser\ Apps.localized/YouTube\ Music.app', 'workspace M'] # Launch Music
     alt-n = ['exec-and-forget open /Applications/Standard\ Notes.app', 'workspace N'] # Launch Standard Notes
     alt-o = ['exec-and-forget open /Applications/LibreOffice.app'] # Launch OpenOffice (Old name of Libre Office)
-    alt-p = ['exec-and-forget open /Applications/PyCharm.app'] # Launch Pycharm
+    alt-p = ['exec-and-forget open /Applications/PyCharm.app', 'workspace 2'] # Launch Pycharm
     # alt-q = 'workspace Q'
     alt-r = ['exec-and-forget open /Applications/Readest.app'] # Launch Readest)
     alt-s = ['exec-and-forget open /Applications/Signal.app', 'workspace S'] # Launch Signal
@@ -256,19 +256,19 @@ run = ['move-node-to-workspace T']
     # alt-shift-f = 'move-node-to-workspace F'
     # alt-shift-g = 'move-node-to-workspace G'
     # alt-shift-i = 'move-node-to-workspace I'
-    # alt-shift-m = 'move-node-to-workspace M'
-    # alt-shift-n = 'move-node-to-workspace N'
+    alt-shift-m = 'move-node-to-workspace M'
+    alt-shift-n = 'move-node-to-workspace N'
     # alt-shift-o = 'move-node-to-workspace O'
     # alt-shift-p = 'move-node-to-workspace P'
     # alt-shift-q = 'move-node-to-workspace Q'
     # alt-shift-r = 'move-node-to-workspace R'
-    # alt-shift-s = 'move-node-to-workspace S'
+    alt-shift-s = 'move-node-to-workspace S'
     alt-shift-t = 'move-node-to-workspace T'
     # alt-shift-u = 'move-node-to-workspace U'
     # alt-shift-v = 'move-node-to-workspace V'
-    # alt-shift-w = 'move-node-to-workspace W'
+    alt-shift-w = 'move-node-to-workspace W'
     # alt-shift-x = 'move-node-to-workspace X'
-    # alt-shift-y = 'move-node-to-workspace Y'
+    alt-shift-y = 'move-node-to-workspace Y'
     # alt-shift-z = 'move-node-to-workspace Z'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
