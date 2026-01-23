@@ -118,7 +118,7 @@ ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 # For list of numbers 0-255:
 # https://upload.wikimedia.org/wikipedia/commons/1/15/Xterm_256color_chart.svg
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=241'
-bindkey '^ ' autosuggest-accept
+bindkey '^g' autosuggest-accept
 
 # export MANPATH="/usr/local/man:$MANPATH"
 # You may need to manually set your language environment
