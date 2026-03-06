@@ -115,6 +115,16 @@ run = 'layout floating'
 if.app-name-regex-substring = '\bProton VPN\b'
 run = 'layout floating'
 
+# Python Windows - Float
+[[on-window-detected]]
+if.app-name-regex-substring = '\bPython\b'
+run = 'layout floating'
+
+# Proton Pass - Float
+[[on-window-detected]]
+if.app-name-regex-substring = '\bProton Pass\b'
+run = 'layout floating'
+
 # YouTube to Workspace Y
 # [[on-window-detected]]
 #if.app-name-regex-substring = '\bYouTube\b'
