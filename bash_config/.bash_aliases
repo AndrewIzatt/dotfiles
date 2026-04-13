@@ -208,7 +208,7 @@ alias remote="git remote"
 alias reset="git reset --hard"
 
 #github cli
-alias repo="gh repo create --public --source=. --remote=origin --push"
+alias crepo="gh repo create --public --source=. --remote=origin --push"
 
 alias dockup="docker compose up -d"
 alias dockdown="docker compose down"
