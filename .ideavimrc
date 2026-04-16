@@ -35,11 +35,11 @@ vnoremap K :m '>-2<CR>gv=gv
 "" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
 "" Map \r to the Reformat Code action
 "map \r <Action>(ReformatCode)
-nnoremap <leader>r <Action>(RenameElement)
-nnoremap ]e <Action>(GotoNextError)
-nnoremap [e <Action>(GotoPreviousError)
-nnoremap <leader>e <Action>(ShowErrorDescription)
-nnoremap <leader>a <Action>(ShowIntentionActions)
+nmap <leader>r <Action>(RenameElement)
+nmap ]e <Action>(GotoNextError)
+nmap [e <Action>(GotoPreviousError)
+nmap <leader>e <Action>(ShowErrorDescription)
+nmap <leader>a <Action>(ShowIntentionActions)
 
 "set shiftwidth=2
 "set shiftround
