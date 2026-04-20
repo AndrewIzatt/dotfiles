@@ -11,6 +11,9 @@ set smartcase
 set virtualedit=block
 set nowrap
 set scrolloff=999
+" disable the timeout option
+set notimeout
+" increase the timeoutlen (default: 1000), don't add space around the equal sign
 set timeoutlen=5000
 set incsearch
 set hlsearch
@@ -19,8 +22,9 @@ set showcmd
 set visualbell
 set clipboard+=unnamedplus
 set functiontextobj
-"set which-key
+set which-key
 set highlightedyank
+
 
 let mapleader = " "
 
@@ -52,7 +56,8 @@ nmap <leader>a <Action>(ShowIntentionActions)
 " Do incremental searching.
 "filetype plugin indent on
 
-
+" Which Key
+let g:WhichKey_ShowVimActions = "true"
 
 
 " --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
@@ -60,6 +65,8 @@ nmap <leader>a <Action>(ShowIntentionActions)
 Plug 'machakann/vim-highlightedyank'
 " Commentary plugin
 Plug 'tpope/vim-commentary'
+" Surround plugin
+Plug 'tpope/vim-surround'
 
 
 "" Map <leader>d to start debug
