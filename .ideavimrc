@@ -24,6 +24,10 @@ set clipboard+=unnamedplus
 set functiontextobj
 set which-key
 set highlightedyank
+" mini ai plugin
+set mini-ai
+" match it plugin
+packadd matchit
 
 
 let mapleader = " "
