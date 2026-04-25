@@ -1,0 +1,3 @@
+bleopt char_width_mode=auto
+bleopt input_encoding=UTF-8
+bleopt edit_bell=vbell vbell_{default_message=' BEL ',duration=3000,align=right}
