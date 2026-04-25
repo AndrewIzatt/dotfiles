@@ -18,7 +18,8 @@ config.window_decorations = "RESIZE | MACOS_FORCE_SQUARE_CORNERS"
 -- config.font = wezterm.font("JetBrainsMono Nerd Font")
 config.font = wezterm.font("RobotoMono Nerd Font Mono")
 config.font_size = 19
-config.color_scheme = 'Classic Dark (base16)'
+-- config.color_scheme = 'Classic Dark (base16)'
+config.color_scheme = 'Oxocarbon Dark (Gogh)'
 
 -- Finally, return the configuration to wezterm:
 return config
