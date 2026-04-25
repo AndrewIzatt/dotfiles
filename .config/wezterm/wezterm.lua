@@ -8,6 +8,14 @@ local act = wezterm.action
 
 -- This is where you actually apply your config choices
 
+config.automatically_reload_config = true
+config.use_dead_keys = false
+config.scrollback_lines = 5000
+config.audible_bell = "Disabled"
+config.hide_tab_bar_if_only_one_tab = true
+config.window_close_confirmation = 'NeverPrompt'
+config.window_decorations = "RESIZE | MACOS_FORCE_SQUARE_CORNERS"
+
 -- Scroll by line and page
 config.keys = {
   -- { key = 'UpArrow', mods = 'SHIFT|CTRL', action = act.ScrollByLine(-1) },
@@ -23,18 +31,14 @@ config.keys = {
 -- For example, changing the color scheme:
 -- config.color_scheme = 'AdventureTime'
 -- config.color_scheme = 'Gruvbox Material (Gogh)'
-config.color_scheme = "Galaxy"
-config.font_size = 16.0
+-- config.color_scheme = "Galaxy"
+config.color_scheme = 'Oxocarbon Dark (Gogh)'
+-- config.color_scheme = 'Classic Dark (base16)'
+
+-- or, changing the font size and color scheme.
+-- config.font = wezterm.font("JetBrainsMono Nerd Font")
 config.font = wezterm.font("RobotoMono Nerd Font Mono")
-
--- config.window_decorations = "RESIZE"
-config.enable_tab_bar = false
-
-config.use_dead_keys = false
-config.scrollback_lines = 5000
-config.audible_bell = "Disabled"
-config.window_close_confirmation = "NeverPrompt"
-config.automatically_reload_config = true
+config.font_size = 16.0
 
 -- config.enable_kitty_keyboard = true
 
