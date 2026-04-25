@@ -69,3 +69,6 @@ export HOMEBREW_NO_ANALYTICS=1
 export HOMEBREW_NO_ENV_HINTS=1
 export HOMEBREW_BUNDLE_FILE=/Users/$USER/.config/brewfile/Brewfile
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
+# _________________________________________
+# Global eza settings
+export EZA_ICONS_AUTO=always
