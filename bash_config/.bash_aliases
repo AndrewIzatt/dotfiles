@@ -57,7 +57,6 @@ alias kittyup="curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/st
 alias ghostconf="nvim ~/.config/ghostty/config"
 alias ghosttheme="ghostty +list-themes"
 
-
 # Tmux Aliases
 alias tconf="nvim ~/.config/tmux/tmux.conf"
 # Returns a list of all active tmux sessions

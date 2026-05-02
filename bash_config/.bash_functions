@@ -40,3 +40,7 @@ fi
 mcd() {
     test -d "$1" || mkdir -pv "$1" && cd "$1"
 }
+
+iter_colors() {
+    for i in {0..15}; do printf "\e[48;5;${i}m %2d \e[0m" $i; done; echo
+}

@@ -6,13 +6,26 @@
   "modules": [
     "title",
     "separator",
-    "os",
-    "host",
+    {
+        "type": "os",
+        "format": "{name} {codename} {version-id}"
+    },
+    {
+        "type": "host",
+        "format": "{family}"
+    },
     "kernel",
-    "terminal",
+    {
+        "type": "wm",
+        "format": "{pretty-name}"
+    },
+    {
+        "type": "terminal",
+        "format": "{pretty-name}"
+    },
     "shell",
-    "wm",
     "memory",
-    "break"
+    "break",
+    "colors"
   ]
 }
