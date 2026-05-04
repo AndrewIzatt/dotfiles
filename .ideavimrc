@@ -32,23 +32,27 @@ packadd matchit
 
 let mapleader = " "
 
-" Don't use Ex mode, use Q for formatting.
-map Q gq
-
 " Move selected line up and down in Visual Mode
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '>-2<CR>gv=gv
 
 " Mappings
+" Use nmap for <Actions> 
 "" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
 "" Map \r to the Reformat Code action
-"map \r <Action>(ReformatCode)
+nmap \r <Action>(ReformatCode)
 nmap <leader>r <Action>(RenameElement)
 nmap ]e <Action>(GotoNextError)
 nmap [e <Action>(GotoPreviousError)
 nmap <leader>e <Action>(ShowErrorDescription)
+nmap <leader>nh :nohlsearch<CR>
 nmap <leader>a <Action>(ShowIntentionActions)
-
+" find references (usages)
+nmap gr <Action>(FindUsages)
+" implemntation is a concrete version abstraction (instatiation of a class)
+nmap gi <Action>(GotoImplementation)
+" Opens fuzzyfinder (like Telescope)
+nmap <leader>ff <Action>(GotoFile)
 "set shiftwidth=2
 "set shiftround
 "set tabstop=2
