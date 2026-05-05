@@ -165,7 +165,7 @@ nnoremap <leader>ee :Explore<CR>
 " maps <leader>n to :next to navigate multiple files in args
 nnoremap <leader>n :next<CR>
 " maps <leader>p to :prev to navigate multiple files in args
-nnoremap<leader>p :prev<CR>
+nnoremap <leader>p :prev<CR>
 " maps <leader>wn to :wnext to save and move next to navigate multiple files
 nnoremap <leader>wn :wnext<CR>
 " maps <leader>wp to :wprev to save and move next to navigate multiple files
