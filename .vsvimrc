@@ -1,0 +1,15 @@
+" set shiftround " >> indents to next multiple of shiftwidth
+" set belloff=all
+set whichwrap=b,s
+set ignorecase
+set smartcase
+set hlsearch
+set incsearch
+set wrapscan
+set clipboard=unnamed
+set number relativenumber
+set backspace=indent,start,eol
+set scrolloff=999
+set statusline
+set laststatus=2
+
