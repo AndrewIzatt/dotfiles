@@ -1,4 +1,10 @@
 .DS_Store
 .vscode/
 .idea/
+.env
+
+# Python specific
+__pycache__/
+*.py[oc]
+
 
