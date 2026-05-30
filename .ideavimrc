@@ -49,6 +49,8 @@ nmap <leader>nh :nohlsearch<CR>
 nmap <leader>a <Action>(ShowIntentionActions)
 " find references (usages)
 nmap gr <Action>(FindUsages)
+" Map gR to PyCharm's Rename Refactoring
+nmap gR :action RenameElement<CR>
 " implemntation is a concrete version abstraction (instatiation of a class)
 nmap gi <Action>(GotoImplementation)
 " Opens fuzzyfinder (like Telescope)
