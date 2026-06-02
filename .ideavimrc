@@ -28,7 +28,9 @@ set highlightedyank
 set mini-ai
 " match it plugin
 packadd matchit
-
+" indent-object plugin
+" https://github.com/michaeljsmith/vim-indent-object/blob/master/doc/indent-object.txt
+set textobj-indent
 
 let mapleader = " "
 
