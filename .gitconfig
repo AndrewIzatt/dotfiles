@@ -1,0 +1,9 @@
+[init]
+	defaultBranch = main
+[user]
+	name = Andrew Izatt
+	email = izatt.andrew@gmail.com
+[push]
+	autoSetupRemote = true
+[core]
+	excludesfile = ~/.config/git/ignore
