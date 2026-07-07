@@ -1,10 +1,74 @@
+# ====================================================================
+# 1. CRITICAL SECURITY & CREDENTIALS (The Vault Layer)
+# ====================================================================
+.env
+.env.*
+*.env
+*.pem
+*.key
+*.secret
+*.pkcs12
+secrets.txt
+credentials.json
+# Block cloud provider local config/token folders
+.aws/
+.gcloud/
+
+# ====================================================================
+# 2. OPERATING SYSTEM JUNK (The Clutter Layer)
+# ====================================================================
+# macOS
 .DS_Store
+.AppleDouble
+.LSOverride
+._*
+.DocumentRevisions-V100/
+.Spotlight-V100/
+.Trashes/
+VolumeIcon.icns
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ====================================================================
+# 3. IDEs & TEXT EDITORS (The Workspace Layer)
+# ====================================================================
+# VS Code
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+*.code-workspace
+# JetBrains (PyCharm, IntelliJ, WebStorm)
+.idea/
+*.iws
+# Text editors / Swaps
+*.swp
+*~
+.history/
+
+# ====================================================================
+# 4. PYTHON COMPILATION & RUNTIMES (The Language Layer)
+# ====================================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+
+# ====================================================================
+# 5. VIRTUAL ENVIRONMENTS (The Framework Layer)
+# ====================================================================
+.venv/
+venv/
+ENV/
+env/
+
+env/.DS_Store
 .vscode/
 .idea/
 .env
-
-# Python specific
-__pycache__/
-*.py[oc]
-
-
