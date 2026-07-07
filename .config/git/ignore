@@ -1,3 +1,4 @@
+#This is called by .gitconfig in ~/.gitconfig
 # ====================================================================
 # 1. CRITICAL SECURITY & CREDENTIALS (The Vault Layer)
 # ====================================================================
