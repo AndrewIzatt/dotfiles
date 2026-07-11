@@ -11,18 +11,21 @@ local act = wezterm.action
 
 -- This is where you actually apply your config choices
 
+if is_mac then
+  config.window_decorations = "RESIZE | MACOS_FORCE_SQUARE_CORNERS"
+else
+  -- On Linux, keep TITLE enabled so the tab bar is allowed to hide
+  config.window_decorations = "RESIZE | TITLE"
+  -- Disable the fancy tab bar so WezTerm doesn't put window controls in it.
+  -- This allows the tab bar to safely hide when only 1 tab is open.
+  config.use_fancy_tab_bar = false
+end
 config.automatically_reload_config = true
 config.use_dead_keys = false
 config.scrollback_lines = 5000
 config.audible_bell = "Disabled"
 config.hide_tab_bar_if_only_one_tab = true
 config.window_close_confirmation = 'NeverPrompt'
-if is_mac then
-  config.window_decorations = "RESIZE | MACOS_FORCE_SQUARE_CORNERS"
-else
-  -- On Linux, keep TITLE enabled so the tab bar is allowed to hide
-  config.window_decorations = "RESIZE | TITLE"
-end
 
 -- Scroll by line and page
 config.keys = {
