@@ -1,6 +1,9 @@
 -- Pull in the wezterm API
 local wezterm = require("wezterm")
 
+-- Check if the operating system is macOS
+local is_mac = wezterm.target_triple:find("darwin") ~= nil
+
 -- This will hold the configuration.
 local config = wezterm.config_builder()
 
@@ -14,7 +17,12 @@ config.scrollback_lines = 5000
 config.audible_bell = "Disabled"
 config.hide_tab_bar_if_only_one_tab = true
 config.window_close_confirmation = 'NeverPrompt'
-config.window_decorations = "RESIZE | MACOS_FORCE_SQUARE_CORNERS"
+if is_mac then
+  config.window_decorations = "RESIZE | MACOS_FORCE_SQUARE_CORNERS"
+else
+  -- On Linux, keep TITLE enabled so the tab bar is allowed to hide
+  config.window_decorations = "RESIZE | TITLE"
+end
 
 -- Scroll by line and page
 config.keys = {
