@@ -96,6 +96,7 @@ plugins=(
 colored-man-pages
 fzf
 git
+git-auto-fetch
 sudo
 # zsh-autosuggestions
 shrink-path
