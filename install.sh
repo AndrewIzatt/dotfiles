@@ -38,13 +38,13 @@ echo "🔗 Symlinking dotfile modules..."
 cd "$DOTFILES_DIR"
 
 # Common cross-platform packages
-MODULES="zsh bash vim ideavim git nvim tmux mysql misc"
+MODULES="zsh bash vim ideavim git nvim tmux mysql misc bin ghostty wezterm"
 
 # OS-specific packages
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     MODULES="$MODULES i3"
 elif [[ "$OSTYPE" == "darwin"* ]]; then
-    MODULES="$MODULES aerospace ghostty wezterm"
+    MODULES="$MODULES aerospace"
 fi
 
 for module in $MODULES; do
@@ -61,6 +61,3 @@ if [ "$SHELL" != "$(which zsh)" ]; then
 fi
 
 echo "✅ Setup complete! Restart your shell or log out and back in."
-EOF
-
-chmod +x ~/dotfiles/install.sh
