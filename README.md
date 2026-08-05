@@ -1,4 +1,3 @@
-```markdown
 # 💻 My Dotfiles
 
 A modular, cross-platform dotfile architecture managed by [GNU Stow](https://www.gnu.org/software/stow/).
@@ -20,8 +19,8 @@ cd ~/dotfiles
 
 These dotfiles use a **modular package approach**. Instead of stowing the entire directory at once, each application has its own dedicated folder.
 
-* **Cross-Platform Modules:** `zsh`, `bash`, `vim`, `ideavim`, `nvim`, `tmux`, `git`, `mysql`, `misc`, `bin`
-* **macOS Only:** `aerospace`, `ghostty`, `wezterm`
+* **Cross-Platform Modules:** `zsh`, `bash`, `vim`, `ideavim`, `nvim`, `tmux`, `git`, `mysql`, `misc`, `bin`, `ghostty`, `wezterm`
+* **macOS Only:** `aerospace`
 * **Linux (Kali/Debian) Only:** `i3`
 
 ---
@@ -79,7 +78,3 @@ stow -D -v <package_name>
 If you experience any problems or want to understand the core GNU Stow symlink strategy that powers this repository, check out the original video that inspired this setup:
 
 * **[Managing Dotfiles with GNU Stow (YouTube)](https://youtu.be/y6XCebnB9gs?si=9UNCt7R2t8VOgjTw)**
-
-```
-
-```
