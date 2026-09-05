@@ -1,0 +1,103 @@
+// Place your key bindings in this file to override the defaults
+[
+    {
+        "key": "space",
+        "command": "-list.toggleSelection"
+    },
+    {
+        "key": "space",
+        "command": "-list.toggleExpand"
+    },
+  	// allows you to hit exit which unfocuses and closes the side bar when in the search text input box
+    {
+        "key": "escape",
+        "command": "runCommands",
+            "args": {
+                "commands": [
+                    "workbench.action.closeSidebar",
+                    "workbench.action.focusActiveEditorGroup"
+                ]
+            },
+        "when": "searchViewletFocus"
+    },
+    // {
+    //     "key": "space e",
+    //     "command":"workbench.files.action.focusFilesExplorer",
+    // },
+    //{
+    //    "key": "space e",
+    //    "command": "workbench.action.toggleSidebarVisibility",
+    //    "when": "sideBarFocus && !inputFocus"
+    //},
+    // Open and focus the File Explorer when not typing
+    {
+        "key": "space e",
+        "command": "workbench.view.explorer",
+        "when": "!inputFocus"
+    },
+    // Close the sidebar if it is already focused
+    {
+        "key": "space e",
+        "command": "workbench.action.closeSidebar",
+        "when": "sideBarFocus && !inputFocus"
+    },
+    {
+        "key": "a",
+        "command": "explorer.newFile",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    },
+    {
+        "key": "f",
+        "command": "explorer.newFolder",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    },
+    {
+        "key": "r",
+        "command": "renameFile",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    },
+    {
+        "key": "x",
+        "command": "filesExplorer.cut",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    },
+    {
+        "key": "y",
+        "command": "filesExplorer.copy",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
+    },
+    {
+        "key": "p",
+        "command": "filesExplorer.paste",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "workbench.action.toggleSidebarVisibility",
+    },
+    {
+        "key": "j",
+        "command": "list.focusDown",
+        "when": "filesExplorerFocus"
+    },
+    {
+        "key": "k",
+        "command": "list.focusUp",
+        "when": "filesExplorerFocus"
+    },
+    {
+        "key": "l",
+        "command": "list.expand",
+        "when": "filesExplorerFocus"
+    },
+    {
+        "key": "h",
+        "command": "list.collapse",
+        "when": "filesExplorerFocus"
+    },
+    {
+        "key": "enter",
+        "command": "list.select",
+        "when": "filesExplorerFocus"
+    }
+]
