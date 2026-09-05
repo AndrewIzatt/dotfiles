@@ -75,8 +75,17 @@ done
 
 # 8. Apply XFCE Desktop Settings (Natural Scrolling fallback)
 echo "🖱️ Applying Natural Scrolling preferences..."
-xfconf-query -c pointers -p /libinput_Natural_Scrolling_Enabled -n -t bool -s true 2>/dev/null || true
-xfconf-query -c pointers -p /QEMU_QEMU_USB_Mouse/Properties/libinput_Natural_Scrolling_Enabled -n -t int -s 1 2>/dev/null || true
+
+REVERSE_SCROLL_PROP="/spice_vdagent_tablet/ReverseScrolling"
+
+if xfconf-query -c pointers -p "$REVERSE_SCROLL_PROP" >/dev/null 2>&1; then
+    xfconf-query -c pointers -p "$REVERSE_SCROLL_PROP" -s true
+else
+    xfconf-query \
+        -c pointers \
+        -p "$REVERSE_SCROLL_PROP" \
+        -n -t bool -s true
+fi
 
 # 9. Set Zsh as default shell
 if [ "$SHELL" != "$(which zsh)" ]; then
