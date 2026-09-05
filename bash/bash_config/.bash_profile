@@ -10,26 +10,34 @@ esac
 # Linux-only paths
 if [[ "$HOST_OS" == "linux" ]]; then
     # Shared user bin
-    export PATH="$PATH:$HOME/.local/bin"
+    [[ -d "$HOME/.local/bin" ]] && export PATH="$PATH:$HOME/.local/bin"
     # Add zig to path
-    export PATH="$HOME/repos/zig:$PATH"
+    [[ -d "$HOME/repos/zig" ]] && export PATH="$HOME/repos/zig:$PATH"
     # Add mssql-tools to path
-    export PATH="$PATH:/opt/mssql-tools18/bin"
-    # Homebrew
-    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"  # Linuxbrew
+    [[ -d "/opt/mssql-tools18/bin" ]] && export PATH="$PATH:/opt/mssql-tools18/bin"
+    # Homebrew (Only run if installed)
+    if [ -f "/home/linuxbrew/.linuxbrew/bin/brew" ]; then
+        eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+    fi
 fi
 
 # macOS-only paths
 if [[ "$HOST_OS" == "macOS" ]]; then
     # Add Applications folder to PATH
-    export PATH=$PATH:/Applications/
+    export PATH="$PATH:/Applications/"
     # Homebrew
-    eval "$(/opt/homebrew/bin/brew shellenv)"  # macOS Homebrew
+    if [ -f "/opt/homebrew/bin/brew" ]; then
+        eval "$(/opt/homebrew/bin/brew shellenv)"
+    fi
     # Add dotnet to PATH
-    export PATH="$PATH:$HOME/.dotnet/tools"
-    source /opt/homebrew/opt/chruby/share/chruby/auto.sh
-    source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
-    chruby ruby-3.4.7
+    [[ -d "$HOME/.dotnet/tools" ]] && export PATH="$PATH:$HOME/.dotnet/tools"
+    
+    # Chruby integration (Only load if present)
+    if [ -f "/opt/homebrew/opt/chruby/share/chruby/chruby.sh" ]; then
+        source /opt/homebrew/opt/chruby/share/chruby/auto.sh
+        source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
+        chruby ruby-3.4.7 2>/dev/null || true
+    fi
 fi
 
 # -------------------------------
@@ -43,7 +51,7 @@ export MYSQLSH_PROMPT_THEME=~/.mysqlsh/prompt.json
 #-------------------------------
 
 # -----------------------------
-# Neovim Setup
+# Node Version Manager Setup
 # ------------------------------
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
