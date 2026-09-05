@@ -9,11 +9,31 @@ echo "🚀 Starting Dotfiles Bootstrap..."
 if [ -f /etc/debian_version ]; then
     echo "📦 Updating apt and installing core dependencies..."
     sudo apt update
-    sudo apt install -y stow git zsh tmux neovim curl build-essential
+    sudo apt install -y stow git zsh tmux neovim curl eza build-essential
+
 elif [[ "$OSTYPE" == "darwin"* ]]; then
-    echo "🍏 macOS detected. Ensuring stow is installed via Homebrew..."
-    command -v brew >/dev/null 2>&1 || { echo "Homebrew required on macOS."; exit 1; }
-    brew install stow git zsh tmux neovim
+    echo "🍏 macOS detected. Bootstrapping via Homebrew & Brewfile..."
+    
+    # Install Homebrew if not already installed
+    if ! command -v brew >/dev/null 2>&1; then
+        echo "🍺 Installing Homebrew..."
+        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+        
+        # Add brew to PATH for Apple Silicon Mac default location
+        if [[ -f /opt/homebrew/bin/brew ]]; then
+            eval "$(/opt/homebrew/bin/brew shellenv)"
+        fi
+    fi
+
+    # Bundle install from your Brewfile module
+    BREWFILE_PATH="$DOTFILES_DIR/brewfile/Brewfile"
+    if [ -f "$BREWFILE_PATH" ]; then
+        echo "📦 Installing Homebrew formulae, casks, and apps from $BREWFILE_PATH..."
+        brew bundle --file="$BREWFILE_PATH"
+    else
+        echo "⚠️ Brewfile not found at $BREWFILE_PATH, installing core fallback packages..."
+        brew install stow git zsh tmux neovim fzf zoxide ripgrep bat eza
+    fi
 fi
 
 # 2. Bootstrap Oh My Zsh if missing
