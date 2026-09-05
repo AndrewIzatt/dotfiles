@@ -80,3 +80,5 @@ env/.DS_Store
 
 # Tableau temp files
 *.twbr
+# Prevent ever committing VSCode/VSCodium workspace settings in any Git repo:
+.vscode/
