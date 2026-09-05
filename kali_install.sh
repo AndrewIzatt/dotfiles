@@ -62,7 +62,7 @@ EOF
 echo "🔗 Symlinking Kali terminal modules..."
 cd "$DOTFILES_DIR"
 
-KALI_MODULES="zsh bash git nvim tmux bin misc kali"
+KALI_MODULES="zsh bash vim git nvim tmux bin misc kali"
 
 for module in $KALI_MODULES; do
     if [ -d "$module" ]; then
