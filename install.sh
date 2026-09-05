@@ -9,7 +9,7 @@ echo "🚀 Starting Dotfiles Bootstrap..."
 if [ -f /etc/debian_version ]; then
     echo "📦 Updating apt and installing core dependencies..."
     sudo apt update
-    sudo apt install -y stow git zsh tmux neovim curl eza build-essential
+    sudo apt install -y stow git zsh tmux neovim curl eza build-essential fastfetch
 
 elif [[ "$OSTYPE" == "darwin"* ]]; then
     echo "🍏 macOS detected. Bootstrapping via Homebrew & Brewfile..."

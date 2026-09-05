@@ -17,7 +17,7 @@ sudo apt update
 sudo apt install -y \
     stow git zsh tmux neovim curl build-essential \
     spice-vdagent x11-xserver-utils \
-    fzf zoxide ripgrep bat eza
+    fzf zoxide ripgrep bat eza fastfetch
 
 # 3. Bootstrap Oh My Zsh
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
