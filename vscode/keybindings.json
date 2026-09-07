@@ -1,5 +1,4 @@
-// Place your key bindings in this file to override the defaults
-[
+// Place your key bindings in this file to override the defaults [
     {
         "key": "space",
         "command": "-list.toggleSelection"
@@ -20,6 +19,16 @@
             },
         "when": "searchViewletFocus"
     },
+ {
+        "key": "space e",
+        "command": "workbench.view.explorer",
+        "when": "!sideBarFocus && vim.mode == 'Normal'"
+    },
+    {
+        "key": "space e",
+        "command": "workbench.action.closeSidebar",
+        "when": "sideBarFocus && vim.mode == 'Normal'"
+    },   
     // {
     //     "key": "space e",
     //     "command":"workbench.files.action.focusFilesExplorer",
@@ -30,17 +39,6 @@
     //    "when": "sideBarFocus && !inputFocus"
     //},
     // Open and focus the File Explorer when not typing
-    {
-        "key": "space e",
-        "command": "workbench.view.explorer",
-        "when": "!inputFocus"
-    },
-    // Close the sidebar if it is already focused
-    {
-        "key": "space e",
-        "command": "workbench.action.closeSidebar",
-        "when": "sideBarFocus && !inputFocus"
-    },
     {
         "key": "a",
         "command": "explorer.newFile",

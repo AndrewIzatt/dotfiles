@@ -4,6 +4,7 @@
 	// ==========================================
 	"telemetry.telemetryLevel": "off",
 	"workbench.startupEditor": "none",
+    "editor.formatOnSave": true,
 	"workbench.secondarySideBar.defaultVisibility": "hidden",
 	"editor.minimap.enabled": false,
 	"editor.stickyScroll.enabled": false,
