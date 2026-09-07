@@ -98,5 +98,12 @@
 	"python.venvFolders": [".venv"],
   	"ruff.interpreter": [
 		"${command:python.interpreterPath}"
-	]
+	],
+    // JSON & JSONC (Prettier)
+	"[json]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[jsonc]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	}
 }
