@@ -1,9 +1,11 @@
 // Place your key bindings in this file to override the defaults
 [
+    // Disables the default behavior where pressing Space selects or deselects items in list views (such as search results).
   {
     "key": "space",
     "command": "-list.toggleSelection",
   },
+    // Disables the default behavior where pressing Space expands or collapses folders in the File Explorer.
   {
     "key": "space",
     "command": "-list.toggleExpand",
@@ -20,46 +22,60 @@
     },
     "when": "searchViewletFocus",
   },
+`// Jump from File Explorer back to code without closing sidebar
+  {
+    "key": "escape",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  // Open and focus the File Explorer when in input window
   {
     "key": "space e",
     "command": "workbench.view.explorer",
-    "when": "!sideBarFocus && vim.mode == 'Normal'",
+    "when": "editorTextFocus && vim.mode == 'Normal'",
   },
+    // Switch focus to File Explorer when in input window and it's already open
+  {
+    "key": "ctrl+h",
+    "command": "workbench.files.action.focusFilesExplorer",
+    "when": "editorTextFocus && vim.mode == 'Normal'"
+  }
   {
     "key": "space e",
     "command": "workbench.action.closeSidebar",
     "when": "sideBarFocus && !inputFocus",
   },
-  // {
-  //     "key": "space e",
-  //     "command":"workbench.files.action.focusFilesExplorer",
-  // },
-  //{
-  //    "key": "space e",
-  //    "command": "workbench.action.toggleSidebarVisibility",
-  //    "when": "sideBarFocus && !inputFocus"
-  //},
-  // Open and focus the File Explorer when not typing
+    // Create a new file while in file explorer
   {
+
     "key": "a",
     "command": "explorer.newFile",
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus",
   },
+    // Create a new folder while in file explorer
   {
     "key": "f",
     "command": "explorer.newFolder",
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus",
   },
+    // Rename a file
   {
     "key": "r",
     "command": "renameFile",
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus",
   },
+    // Cut a file
   {
     "key": "x",
     "command": "filesExplorer.cut",
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus",
   },
+    // Copy a file
   {
     "key": "y",
     "command": "filesExplorer.copy",
