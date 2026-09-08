@@ -1,109 +1,118 @@
 {
-	// ==========================================
-	// 1. Core VS Code Editor Settings
-	// ==========================================
-	"telemetry.telemetryLevel": "off",
-	"workbench.startupEditor": "none",
-    "editor.formatOnSave": true,
-	"workbench.secondarySideBar.defaultVisibility": "hidden",
-	"editor.minimap.enabled": false,
-	"editor.stickyScroll.enabled": false,
-	"editor.insertSpaces": false,
-	"editor.tabSize": 4, // Change this to 2 if you prefer narrower tabs
-	"editor.detectIndentation": false,
-	"editor.autoClosingBrackets": "languageDefined",
-	"launch": {
-		"configurations": [],
-		"compounds": []
-	},
-	// ==========================================
-	// 2. Navigation, Scrolling & Lines
-	// ==========================================
-	"editor.lineNumbers": "relative",
-	"editor.cursorSurroundingLines": 999, // Absolute Scrolloff: keeps cursor centered
-	"editor.renderLineHighlight": "all",
-	"editor.renderLineHighlightOnlyWhenFocus": true,
-	"editor.lineHighlightBackground": "#ff0000",
-	"workbench.list.automaticKeyboardNavigation": false,
+  // ==========================================
+  // 1. Core VS Code Editor Settings
+  // ==========================================
+  "telemetry.telemetryLevel": "off",
+  "workbench.startupEditor": "none",
+  "editor.formatOnSave": true,
+  "workbench.secondarySideBar.defaultVisibility": "hidden",
+  "editor.minimap.enabled": false,
+  "editor.stickyScroll.enabled": false,
+  "editor.insertSpaces": false,
+  "editor.tabSize": 4, // Change this to 2 if you prefer narrower tabs
+  "editor.detectIndentation": false,
+  "editor.autoClosingBrackets": "languageDefined",
+  "launch": {
+    "configurations": [],
+    "compounds": [],
+  },
+  // ==========================================
+  // 2. Navigation, Scrolling & Lines
+  // ==========================================
+  "editor.lineNumbers": "relative",
+  "editor.cursorSurroundingLines": 999, // Absolute Scrolloff: keeps cursor centered
+  "editor.renderLineHighlight": "all",
+  "editor.renderLineHighlightOnlyWhenFocus": true,
+  "editor.lineHighlightBackground": "#ff0000",
+  "workbench.list.automaticKeyboardNavigation": false,
 
-	// ==========================================
-	// 3. Theme & Color Customizations
-	// ==========================================
-	"editor.tokenColorCustomizations": {},
-	"workbench.colorCustomizations": {
-		"editor.lineHighlightBackground": "#00000000",
-		"editor.lineHighlightBorder": "#06a046",
-		"mssql.resultsGridNullBackground": "#00000000",
-		"mssql.resultsGridNullForeground": "#7f7f7f"
-	},
+  // ==========================================
+  // 3. Theme & Color Customizations
+  // ==========================================
+  "editor.tokenColorCustomizations": {},
+  "workbench.colorCustomizations": {
+    "editor.lineHighlightBackground": "#00000000",
+    "editor.lineHighlightBorder": "#06a046",
+    "mssql.resultsGridNullBackground": "#00000000",
+    "mssql.resultsGridNullForeground": "#7f7f7f",
+  },
 
-	// ==========================================
-	// 4. Git Settings
-	// ==========================================
-	"git.confirmSync": false,
-	"git.openRepositoryInParentFolders": "never",
+  // ==========================================
+  // 4. Git Settings
+  // ==========================================
+  "git.confirmSync": false,
+  "git.openRepositoryInParentFolders": "never",
 
-	// ==========================================
-	// 5. Global Vim Configuration Flags
-	// ==========================================
-	"vim.shell": "/bin/zsh",
-	"vim.leader": "<space>",
-	"vim.useSystemClipboard": true,
-	"vim.smartRelativeLine": true,
+  // ==========================================
+  // 5. Global Vim Configuration Flags
+  // ==========================================
+  "vim.shell": "/bin/zsh",
+  "vim.leader": "<space>",
+  "vim.useSystemClipboard": true,
+  "vim.smartRelativeLine": true,
+  "vim.highlightedyank.enable": true,
 
-	// ==========================================
-	// 7. Vim Keybindings: Insert Mode
-	// ==========================================
-	// "vim.insertModeKeyBindings": [
-	//		// exit insert mode by pressing 'jk' or 'jj'
-	//		{
-	// 			"before": ["j", "k"],
-	//			"after": ["<Esc>"]
-	//		}
-	// ],
+  // ==========================================
+  // 6. Vim Keybindings: Normal Mode
+  // ==========================================
+  "vim.normalModeKeyBindingsNonRecursive": [
+    // Yank from cursor to end of line
+    {
+      "before": ["Y"],
+      "after": ["y", "$"],
+    },
+  ],
+  // ==========================================
+  // 7. Vim Keybindings: Insert Mode
+  // ==========================================
+  // "vim.insertModeKeyBindings": [
+  //		// exit insert mode by pressing 'jk' or 'jj'
+  //		{
+  // 			"before": ["j", "k"],
+  //			"after": ["<Esc>"]
+  //		}
+  // ],
 
-	// ==========================================
-	// 8. Vim Keybindings: Visual & Command Line
-	// ==========================================
-	"vim.visualModeKeyBindings": [
-		{
-			"before": [">"],
-			"commands": ["editor.action.indentLines"]
-		},
-		{
-			"before": ["<"],
-			"commands": ["editor.action.outdentLines"]
-		},
-		{
-			"before": ["H"],
-			"after": ["^"]
-		},
-		{
-			"before": ["L"],
-			"after": ["g", "_"] // Highlights to the last character, omitting the newline
-		}
-		// exit visual mode by pressing 'jk' or 'jj'
-		// {
-		// "before": ["j", "k"],
-		// "after": ["<Esc>"]
-		// },
-	],
-	"vim.commandLineModeKeyBindings": [],
-	"security.workspace.trust.untrustedFiles": "open",
-	// ==========================================
-	// 9. Language Specific Settings
-	// ==========================================
-	// Python
-	"python.venvPath": ".",
-	"python.venvFolders": [".venv"],
-  	"ruff.interpreter": [
-		"${command:python.interpreterPath}"
-	],
-    // JSON & JSONC (Prettier)
-	"[json]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	},
-	"[jsonc]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	}
+  // ==========================================
+  // 8. Vim Keybindings: Visual & Command Line
+  // ==========================================
+  "vim.visualModeKeyBindings": [
+    {
+      "before": [">"],
+      "commands": ["editor.action.indentLines"],
+    },
+    {
+      "before": ["<"],
+      "commands": ["editor.action.outdentLines"],
+    },
+    {
+      "before": ["H"],
+      "after": ["^"],
+    },
+    {
+      "before": ["L"],
+      "after": ["g", "_"], // Highlights to the last character, omitting the newline
+    },
+    // exit visual mode by pressing 'jk' or 'jj'
+    // {
+    // "before": ["j", "k"],
+    // "after": ["<Esc>"]
+    // },
+  ],
+  "vim.commandLineModeKeyBindings": [],
+  "security.workspace.trust.untrustedFiles": "open",
+  // ==========================================
+  // 9. Language Specific Settings
+  // ==========================================
+  // Python
+  "python.venvPath": ".",
+  "python.venvFolders": [".venv"],
+  "ruff.interpreter": ["${command:python.interpreterPath}"],
+  // JSON & JSONC (Prettier)
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
 }
