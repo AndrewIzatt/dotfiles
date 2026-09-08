@@ -22,7 +22,7 @@
     },
     "when": "searchViewletFocus",
   },
-`// Jump from File Explorer back to code without closing sidebar
+  // Jump from File Explorer back to code without closing sidebar
   {
     "key": "escape",
     "command": "workbench.action.focusActiveEditorGroup",
@@ -43,8 +43,8 @@
   {
     "key": "ctrl+h",
     "command": "workbench.files.action.focusFilesExplorer",
-    "when": "editorTextFocus && vim.mode == 'Normal'"
-  }
+    "when": "edtorTextFocus && vim.mode == 'Normal'"
+  },
   {
     "key": "space e",
     "command": "workbench.action.closeSidebar",
@@ -113,6 +113,30 @@
   {
     "key": "enter",
     "command": "list.select",
-    "when": "filesExplorerFocus && !inputFocus",
+    "when": "filesExplorerFocus && !inputFocus && !terminalFocus",
+    // "when": "filesExplorerFocus",
   },
+    // ==========================================
+    // Seamless 4-Way Directional Navigation
+    // ==========================================
+    {
+    "key": "ctrl+h",
+    "command": "workbench.action.navigateLeft",
+    "when": "(editorTextFocus && vim.mode == 'Normal') || terminalFocus || (filesExplorerFocus && !inputFocus)"
+    },
+    {
+    "key": "ctrl+j",
+    "command": "workbench.action.navigateDown",
+    "when": "(editorTextFocus && vim.mode == 'Normal') || terminalFocus || (filesExplorerFocus && !inputFocus)"
+    },
+    {
+    "key": "ctrl+k",
+    "command": "workbench.action.navigateUp",
+    "when": "(editorTextFocus && vim.mode == 'Normal') || terminalFocus || (filesExplorerFocus && !inputFocus)"
+    },
+    {
+    "key": "ctrl+l",
+    "command": "workbench.action.navigateRight",
+    "when": "(editorTextFocus && vim.mode == 'Normal') || terminalFocus || (filesExplorerFocus && !inputFocus)"
+    }
 ]
