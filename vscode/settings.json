@@ -14,7 +14,7 @@
   "editor.autoClosingBrackets": "languageDefined",
   "launch": {
     "configurations": [],
-    "compounds": [],
+    "compounds": []
   },
   // ==========================================
   // 2. Navigation, Scrolling & Lines
@@ -23,7 +23,6 @@
   "editor.cursorSurroundingLines": 999, // Absolute Scrolloff: keeps cursor centered
   "editor.renderLineHighlight": "all",
   "editor.renderLineHighlightOnlyWhenFocus": true,
-  "editor.lineHighlightBackground": "#ff0000",
   "workbench.list.automaticKeyboardNavigation": false,
 
   // ==========================================
@@ -32,9 +31,10 @@
   "editor.tokenColorCustomizations": {},
   "workbench.colorCustomizations": {
     "editor.lineHighlightBackground": "#00000000",
+    // "editor.lineHighlightBackground": "#ff0000",
     "editor.lineHighlightBorder": "#06a046",
     "mssql.resultsGridNullBackground": "#00000000",
-    "mssql.resultsGridNullForeground": "#7f7f7f",
+    "mssql.resultsGridNullForeground": "#7f7f7f"
   },
 
   // ==========================================
@@ -59,8 +59,8 @@
     // Yank from cursor to end of line
     {
       "before": ["Y"],
-      "after": ["y", "$"],
-    },
+      "after": ["y", "$"]
+    }
   ],
   // ==========================================
   // 7. Vim Keybindings: Insert Mode
@@ -79,20 +79,20 @@
   "vim.visualModeKeyBindings": [
     {
       "before": [">"],
-      "commands": ["editor.action.indentLines"],
+      "commands": ["editor.action.indentLines"]
     },
     {
       "before": ["<"],
-      "commands": ["editor.action.outdentLines"],
+      "commands": ["editor.action.outdentLines"]
     },
     {
       "before": ["H"],
-      "after": ["^"],
+      "after": ["^"]
     },
     {
       "before": ["L"],
-      "after": ["g", "_"], // Highlights to the last character, omitting the newline
-    },
+      "after": ["g", "_"] // Highlights to the last character, omitting the newline
+    }
     // exit visual mode by pressing 'jk' or 'jj'
     // {
     // "before": ["j", "k"],
@@ -110,9 +110,9 @@
   "ruff.interpreter": ["${command:python.interpreterPath}"],
   // JSON & JSONC (Prettier)
   "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-  },
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
