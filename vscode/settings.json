@@ -30,9 +30,9 @@
   // ==========================================
   "editor.tokenColorCustomizations": {},
   "workbench.colorCustomizations": {
-    "editor.lineHighlightBackground": "#00000000",
+    // "editor.lineHighlightBackground": "#00000000",
     // "editor.lineHighlightBackground": "#ff0000",
-    "editor.lineHighlightBorder": "#06a046",
+    // "editor.lineHighlightBorder": "#06a046",
     "mssql.resultsGridNullBackground": "#00000000",
     "mssql.resultsGridNullForeground": "#7f7f7f"
   },
