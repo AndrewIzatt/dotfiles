@@ -14,6 +14,8 @@ esac
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
 
+export SUDO_EDITOR=nvim
+
 # append to the history file, don't overwrite it
 shopt -s histappend
 
