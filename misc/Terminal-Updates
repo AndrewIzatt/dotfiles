@@ -1,0 +1,13 @@
+#!/bin/bash
+set -x #echo on
+brew analytics off
+brew update
+brew upgrade --greedy
+brew cleanup -s
+rm -rf "$(brew --cache)"
+brew missing
+brew autoremove
+brew doctor
+sudo littlesnitch profile -a "Apple Update"
+sudo softwareupdate -i -a
+sudo littlesnitch profile -a "Apple Disabled"

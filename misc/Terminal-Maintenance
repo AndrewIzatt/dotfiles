@@ -1,0 +1,164 @@
+#!/bin/bash
+clear
+PS3='Selection: '
+options=(
+"Confirm Spotlight" 
+"Enable Spotlight" 
+"Disable Spotlight"
+"Confirm FileVault" 
+"Confirm SIP" 
+"Confirm Gatekeeper"
+"Enable Gatekeeper"
+"Disable Gatekeeper"
+"Confirm OS Update"
+"Confirm Launch Programs" 
+"Clear Terminal History"
+"Clear Download History"
+"Clear macOS Logs & Cache"
+"Disable Siri" 
+"Disable AirDrop" 
+"Disable Remote Connections" 
+"Disable Time Machine" 
+"KnockKnock Scan"
+"TaskExplorer Scan"
+"List Brew Apps"
+"Uninstall Brew App"
+)
+select opt in "${options[@]}"
+do
+case $opt in
+
+"Confirm Spotlight")
+mdutil -s /
+;;
+"Enable Spotlight")
+sudo mdutil -i on /
+sudo mdutil -E /
+;;
+"Disable Spotlight")
+sudo mdutil -i off /
+sudo mdutil -E /
+;;
+"Confirm FileVault")
+fdesetup status
+;;
+"Confirm SIP")
+csrutil status
+;;
+"Confirm Gatekeeper")
+spctl --status
+;;
+"Enable Gatekeeper")
+sudo spctl --master-enable
+;;
+"Disable Gatekeeper")
+sudo spctl --master-disable
+;;
+"Confirm OS Update")
+sudo littlesnitch profile -a "Apple Update"
+sudo softwareupdate -l
+sudo littlesnitch profile -a "Apple Disabled"
+;;
+"Confirm Launch Programs")
+open ~/Library/LaunchAgents/
+open /Library/LaunchAgents/
+open /Library/LaunchDaemons/
+;;
+"Clear Terminal History")
+rm -f ~/.bash_history
+rm -f ~/.zsh_history
+;;
+"Clear Download History")
+rm ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV2
+;;
+"Clear macOS Logs & Cache")
+sudo rm -rfv /Library/Logs/*
+rm -rfv ~/Library/Containers/com.apple.mail/Data/Library/Logs/Mail/*
+sudo rm -rfv /var/audit/*
+sudo rm -rfv /private/var/audit/*
+sudo rm -rfv ~/Library/Logs/*
+sudo rm -fv /System/Library/LaunchDaemons/com.apple.periodic-*.plist
+sudo rm -rfv /var/db/receipts/*
+sudo rm -vf /Library/Receipts/InstallHistory.plist
+sudo rm -rfv /private/var/db/diagnostics/*
+sudo rm -rfv /var/db/diagnostics/*
+sudo rm -rfv /private/var/db/uuidtext/
+sudo rm -rfv /var/db/uuidtext/
+sudo rm -rfv /private/var/log/asl/*
+sudo rm -rfv /var/log/asl/*
+sudo rm -fv /var/log/asl.log # Legacy ASL (10.4)
+sudo rm -fv /var/log/asl.db
+sudo rm -fv /var/log/install.log
+sudo rm -rfv /var/log/*
+sudo rm -rfv /Library/Caches/* &>/dev/null
+sudo rm -rfv /System/Library/Caches/* &>/dev/null
+sudo rm -rfv ~/Library/Caches/* &>/dev/null
+sudo rm -rfv /var/spool/cups/c0*
+sudo rm -rfv /var/spool/cups/tmp/*
+sudo rm -rfv /var/spool/cups/cache/job.cache*
+sudo rm -rfv ~/.Trash/* &>/dev/null
+rm -rfv ~/Library/Developer/Xcode/DerivedData/* &>/dev/null
+rm -rfv ~/Library/Developer/Xcode/Archives/* &>/dev/null
+rm -rfv ~/Library/Developer/Xcode/iOS Device Logs/* &>/dev/null
+sudo dscacheutil -flushcache
+sudo killall -HUP mDNSResponder
+sudo purge
+;;
+"Disable Siri")
+defaults write com.apple.assistant.support 'Assistant Enabled' -bool false
+defaults write com.apple.assistant.backedup 'Use device speaker for TTS' -int 3
+launchctl disable "user/$UID/com.apple.assistantd"
+launchctl disable "gui/$UID/com.apple.assistantd"
+sudo launchctl disable 'system/com.apple.assistantd'
+launchctl disable "user/$UID/com.apple.Siri.agent"
+launchctl disable "gui/$UID/com.apple.Siri.agent"
+sudo launchctl disable 'system/com.apple.Siri.agent'
+defaults write com.apple.SetupAssistant 'DidSeeSiriSetup' -bool True
+defaults write com.apple.systemuiserver 'NSStatusItem Visible Siri' 0
+defaults write com.apple.Siri 'StatusMenuVisible' -bool false
+defaults write com.apple.Siri 'UserHasDeclinedEnable' -bool true
+defaults write com.apple.assistant.support 'Siri Data Sharing Opt-In Status' -int 2
+;;
+"Disable AirDrop")
+defaults write com.apple.NetworkBrowser DisableAirDrop -bool true
+;;
+"Disable Remote Connections")
+sudo systemsetup -setremotelogin off
+sudo launchctl disable 'system/com.apple.tftpd'
+sudo defaults write /Library/Preferences/com.apple.mDNSResponder.plist NoMulticastAdvertisements -bool true
+sudo launchctl disable system/com.apple.telnetd
+cupsctl --no-share-printers
+cupsctl --no-remote-any
+cupsctl --no-remote-admin
+;;
+"Disable Time Machine")
+sudo tmutil disable
+;;
+"KnockKnock Scan")
+cd /Applications
+./KnockKnock.app/Contents/MacOS/KnockKnock -whosthere -pretty > ~/Desktop/KnockKnock.txt
+rg -aFiNA 1 "VT Detection" ~/Desktop/KnockKnock.txt
+rm ~/Desktop/KnockKnock.txt
+;;
+"TaskExplorer Scan")
+cd /Applications
+sudo ./TaskExplorer.app/Contents/MacOS/TaskExplorer -pretty -explore > ~/Desktop/TaskExplorer.txt
+sed -i '' 's/VT detection\" \: \"0//g' ~/Desktop/TaskExplorer.txt 
+rg -aFiN "VT Detection" ~/Desktop/TaskExplorer.txt
+echo "Process complete. If no results, then nothing was identified as suspicious."     
+rm ~/Desktop/TaskExplorer.txt
+;;
+"List Brew Apps")
+brew list
+;;
+"Uninstall Brew App")
+Echo "Enter App Name: "
+read data
+brew uninstall --cask --zap --force $data
+brew cleanup -s
+rm -rf "$(brew --cache)"
+brew missing
+brew autoremove
+;;
+esac
+done
