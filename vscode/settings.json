@@ -48,9 +48,15 @@
   // ==========================================
   "vim.shell": "/bin/zsh",
   "vim.leader": "<space>",
+  "vim.useCtrlKeys": true,
   "vim.useSystemClipboard": true,
   "vim.smartRelativeLine": true,
   "vim.highlightedyank.enable": true,
+  "vim.highlightedyank.duration": 250,
+  "vim.incsearch": true,
+  "vim.hlsearch": true,
+  "vim.ignorecase": true,
+  "vim.smartcase": true,
 
   // ==========================================
   // 6. Vim Keybindings: Normal Mode

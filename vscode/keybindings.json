@@ -1,14 +1,14 @@
 // Place your key bindings in this file to override the defaults
 [
-    // Disables the default behavior where pressing Space selects or deselects items in list views (such as search results).
+  // Disables the default behavior where pressing Space selects or deselects items in list views (such as search results).
   {
     "key": "space",
-    "command": "-list.toggleSelection",
+    "command": "-list.toggleSelection"
   },
-    // Disables the default behavior where pressing Space expands or collapses folders in the File Explorer.
+  // Disables the default behavior where pressing Space expands or collapses folders in the File Explorer.
   {
     "key": "space",
-    "command": "-list.toggleExpand",
+    "command": "-list.toggleExpand"
   },
   // allows you to hit exit which unfocuses and closes the side bar when in the search text input box
   {
@@ -17,10 +17,10 @@
     "args": {
       "commands": [
         "workbench.action.closeSidebar",
-        "workbench.action.focusActiveEditorGroup",
-      ],
+        "workbench.action.focusActiveEditorGroup"
+      ]
     },
-    "when": "searchViewletFocus",
+    "when": "searchViewletFocus"
   },
   // Jump from File Explorer back to code without closing sidebar
   {
@@ -37,9 +37,9 @@
   {
     "key": "space e",
     "command": "workbench.view.explorer",
-    "when": "editorTextFocus && vim.mode == 'Normal'",
+    "when": "editorTextFocus && vim.mode == 'Normal'"
   },
-    // Switch focus to File Explorer when in input window and it's already open
+  // Switch focus to File Explorer when in input window and it's already open
   {
     "key": "ctrl+h",
     "command": "workbench.files.action.focusFilesExplorer",
@@ -48,95 +48,104 @@
   {
     "key": "space e",
     "command": "workbench.action.closeSidebar",
-    "when": "sideBarFocus && !inputFocus",
+    "when": "sideBarFocus && !inputFocus"
   },
-    // Create a new file while in file explorer
+  // Create a new file while in file explorer
   {
-
     "key": "a",
     "command": "explorer.newFile",
-    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
   },
-    // Create a new folder while in file explorer
+  // Create a new folder while in file explorer
   {
     "key": "f",
     "command": "explorer.newFolder",
-    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
   },
-    // Rename a file
+  // Rename a file
   {
     "key": "r",
     "command": "renameFile",
-    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
   },
-    // Cut a file
+  // Cut a file
   {
     "key": "x",
     "command": "filesExplorer.cut",
-    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
   },
-    // Copy a file
+  // Copy a file
   {
     "key": "y",
     "command": "filesExplorer.copy",
-    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
   },
   {
     "key": "p",
     "command": "filesExplorer.paste",
-    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
   },
   {
     "key": "ctrl+e",
-    "command": "workbench.action.toggleSidebarVisibility",
+    "command": "workbench.action.toggleSidebarVisibility"
   },
   {
     "key": "j",
     "command": "list.focusDown",
-    "when": "filesExplorerFocus && !inputFocus",
+    "when": "filesExplorerFocus && !inputFocus"
   },
   {
     "key": "k",
     "command": "list.focusUp",
-    "when": "filesExplorerFocus && !inputFocus",
+    "when": "filesExplorerFocus && !inputFocus"
   },
   {
     "key": "l",
     "command": "list.expand",
-    "when": "filesExplorerFocus && !inputFocus",
+    "when": "filesExplorerFocus && !inputFocus"
   },
   {
     "key": "h",
     "command": "list.collapse",
-    "when": "filesExplorerFocus && !inputFocus",
+    "when": "filesExplorerFocus && !inputFocus"
   },
   {
     "key": "enter",
     "command": "list.select",
-    "when": "filesExplorerFocus && !inputFocus && !terminalFocus",
+    "when": "filesExplorerFocus && !inputFocus && !terminalFocus"
     // "when": "filesExplorerFocus",
   },
-    // ==========================================
-    // Seamless 4-Way Directional Navigation
-    // ==========================================
-    {
-    "key": "ctrl+h",
-    "command": "workbench.action.navigateLeft",
-    "when": "(editorTextFocus && vim.mode == 'Normal') || terminalFocus || (filesExplorerFocus && !inputFocus)"
-    },
-    {
-    "key": "ctrl+j",
-    "command": "workbench.action.navigateDown",
-    "when": "(editorTextFocus && vim.mode == 'Normal') || terminalFocus || (filesExplorerFocus && !inputFocus)"
-    },
-    {
+  {
     "key": "ctrl+k",
-    "command": "workbench.action.navigateUp",
-    "when": "(editorTextFocus && vim.mode == 'Normal') || terminalFocus || (filesExplorerFocus && !inputFocus)"
-    },
-    {
-    "key": "ctrl+l",
-    "command": "workbench.action.navigateRight",
-    "when": "(editorTextFocus && vim.mode == 'Normal') || terminalFocus || (filesExplorerFocus && !inputFocus)"
-    }
+    "when": "codeActionMenuVisible",
+    "command": "selectPrevCodeAction"
+  },
+  {
+    "key": "ctrl+j",
+    "when": "codeActionMenuVisible",
+    "command": "selectNextCodeAction"
+  }
+  // ==========================================
+  // Seamless 4-Way Directional Navigation
+  // ==========================================
+  // {
+  // "key": "ctrl+h",
+  // "command": "workbench.action.navigateLeft",
+  // "when": "(editorTextFocus && vim.mode == 'Normal') || terminalFocus || (filesExplorerFocus && !inputFocus)"
+  // },
+  // {
+  // "key": "ctrl+j",
+  // "command": "workbench.action.navigateDown",
+  // "when": "(editorTextFocus && vim.mode == 'Normal') || terminalFocus || (filesExplorerFocus && !inputFocus)"
+  // },
+  // {
+  // "key": "ctrl+k",
+  // "command": "workbench.action.navigateUp",
+  // "when": "(editorTextFocus && vim.mode == 'Normal') || terminalFocus || (filesExplorerFocus && !inputFocus)"
+  // },
+  // {
+  // "key": "ctrl+l",
+  // "command": "workbench.action.navigateRight",
+  // "when": "(editorTextFocus && vim.mode == 'Normal') || terminalFocus || (filesExplorerFocus && !inputFocus)"
+  // }
 ]
