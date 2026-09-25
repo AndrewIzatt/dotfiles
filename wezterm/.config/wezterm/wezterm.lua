@@ -39,17 +39,29 @@ config.keys = {
   -- { key = "PageDown",  mods = "SHIFT|CTRL", action = act.ScrollByPage(1) },
 }
 
+-- Default theme, used before the picker has a saved selection
 -- For example, changing the color scheme:
 -- config.color_scheme = 'AdventureTime'
 -- config.color_scheme = 'Gruvbox Material (Gogh)'
 -- config.color_scheme = "Galaxy"
-config.color_scheme = 'Oxocarbon Dark (Gogh)'
+-- config.color_scheme = 'Oxocarbon Dark (Gogh)'
 -- config.color_scheme = 'Classic Dark (base16)'
 
 -- or, changing the font size and color scheme.
 -- config.font = wezterm.font("JetBrainsMono Nerd Font")
 config.font = wezterm.font("RobotoMono Nerd Font Mono")
 config.font_size = 16.0
+--
+-- Theme picker pluging
+-- Load the plugin (clone is cached locally by WezTerm)
+local theme_picker = wezterm.plugin.require(
+  "https://github.com/fa137/wezterm-theme-picker"
+)
+
+-- Wire it up: registers the hotkey, the picker key table, the events,
+-- restores the last picked theme as the startup default, and loads your
+-- favorites.
+theme_picker.apply_to_config(config)
 
 -- config.enable_kitty_keyboard = true
 
