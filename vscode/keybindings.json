@@ -28,11 +28,24 @@
     "command": "workbench.action.focusActiveEditorGroup",
     "when": "filesExplorerFocus && !inputFocus"
   },
-  {
-    "key": "ctrl+l",
-    "command": "workbench.action.focusActiveEditorGroup",
-    "when": "filesExplorerFocus && !inputFocus"
-  },
+  // Move from the editor to the active sidebar
+{
+  "key": "ctrl+h",
+  "command": "workbench.action.focusSideBar",
+  "when": "editorTextFocus && vim.mode == 'Normal'"
+},
+
+// Move from anywhere in the sidebar back to the editor
+{
+  "key": "ctrl+l",
+  "command": "workbench.action.focusActiveEditorGroup",
+  "when": "sideBarFocus"
+}
+//   {
+//     "key": "ctrl+l",
+//     "command": "workbench.action.focusActiveEditorGroup",
+//     "when": "filesExplorerFocus && !inputFocus"
+//   },
   // Open and focus the File Explorer when in input window
   {
     "key": "space e",
@@ -40,11 +53,17 @@
     "when": "editorTextFocus && vim.mode == 'Normal'"
   },
   // Switch focus to File Explorer when in input window and it's already open
-  {
-    "key": "ctrl+h",
-    "command": "workbench.files.action.focusFilesExplorer",
-    "when": "edtorTextFocus && vim.mode == 'Normal'"
-  },
+//   {
+//     "key": "ctrl+h",
+//     "command": "workbench.files.action.focusFilesExplorer",
+//     "when": "edtorTextFocus && vim.mode == 'Normal'"
+//   },
+  // Switch focus to File Explorer when in input window and it's already open
+//   {
+//     "key": "ctrl+l",
+//     "command": "workbench.files.action.focusFilesExplorer",
+//     "when": "edtorTextFocus && vim.mode == 'Normal'"
+//   },
   {
     "key": "space e",
     "command": "workbench.action.closeSidebar",
@@ -115,37 +134,54 @@
     "when": "filesExplorerFocus && !inputFocus && !terminalFocus"
     // "when": "filesExplorerFocus",
   },
-  {
-    "key": "ctrl+k",
-    "when": "codeActionMenuVisible",
-    "command": "selectPrevCodeAction"
-  },
-  {
-    "key": "ctrl+j",
-    "when": "codeActionMenuVisible",
-    "command": "selectNextCodeAction"
-  }
   // ==========================================
-  // Seamless 4-Way Directional Navigation
-  // ==========================================
-  // {
-  // "key": "ctrl+h",
-  // "command": "workbench.action.navigateLeft",
-  // "when": "(editorTextFocus && vim.mode == 'Normal') || terminalFocus || (filesExplorerFocus && !inputFocus)"
-  // },
-  // {
-  // "key": "ctrl+j",
-  // "command": "workbench.action.navigateDown",
-  // "when": "(editorTextFocus && vim.mode == 'Normal') || terminalFocus || (filesExplorerFocus && !inputFocus)"
-  // },
-  // {
-  // "key": "ctrl+k",
-  // "command": "workbench.action.navigateUp",
-  // "when": "(editorTextFocus && vim.mode == 'Normal') || terminalFocus || (filesExplorerFocus && !inputFocus)"
-  // },
-  // {
-  // "key": "ctrl+l",
-  // "command": "workbench.action.navigateRight",
-  // "when": "(editorTextFocus && vim.mode == 'Normal') || terminalFocus || (filesExplorerFocus && !inputFocus)"
-  // }
+// Ctrl+N / Ctrl+P menu navigation
+// ==========================================
+
+// IntelliSense and autocomplete suggestions
+{
+  "key": "ctrl+n",
+  "command": "selectNextSuggestion",
+  "when": "suggestWidgetVisible && textInputFocus"
+},
+{
+  "key": "ctrl+p",
+  "command": "selectPrevSuggestion",
+  "when": "suggestWidgetVisible && textInputFocus"
+},
+
+// Quick Open, Command Palette, theme picker, etc.
+{
+  "key": "ctrl+n",
+  "command": "workbench.action.quickOpenSelectNext",
+  "when": "inQuickOpen"
+},
+{
+  "key": "ctrl+p",
+  "command": "workbench.action.quickOpenSelectPrevious",
+  "when": "inQuickOpen"
+},
+// Quick Fix / Code Action menu
+{
+  "key": "ctrl+n",
+  "command": "selectNextCodeAction",
+  "when": "codeActionMenuVisible"
+},
+{
+  "key": "ctrl+p",
+  "command": "selectPrevCodeAction",
+  "when": "codeActionMenuVisible"
+},
+
+// Explorer, Search results, Problems, and other focused lists
+{
+  "key": "ctrl+n",
+  "command": "list.focusDown",
+  "when": "listFocus && !inputFocus"
+},
+{
+  "key": "ctrl+p",
+  "command": "list.focusUp",
+  "when": "listFocus && !inputFocus"
+}
 ]
