@@ -111,6 +111,12 @@ run = ['move-node-to-workspace E']
 if.app-name-regex-substring = 'Bitwarden'
 run = 'layout floating'
 
+# Ente - Float
+[[on-window-detected]]
+if.app-name-regex-substring = 'Ente'
+run = 'layout floating'
+
+# Python - Float
 [[on-window-detected]]
 if.app-name-regex-substring = 'Python'
 run = 'layout floating'
