@@ -12,10 +12,6 @@
   "editor.tabSize": 4, // Change this to 2 if you prefer narrower tabs
   "editor.detectIndentation": false,
   "editor.autoClosingBrackets": "languageDefined",
-  "launch": {
-    "configurations": [],
-    "compounds": []
-  },
   // ==========================================
   // 2. Navigation, Scrolling & Lines
   // ==========================================
@@ -24,11 +20,9 @@
   "editor.renderLineHighlight": "all",
   "editor.renderLineHighlightOnlyWhenFocus": true,
   "workbench.list.automaticKeyboardNavigation": false,
-
   // ==========================================
   // 3. Theme & Color Customizations
   // ==========================================
-  "editor.tokenColorCustomizations": {},
   "workbench.colorCustomizations": {
     // "editor.lineHighlightBackground": "#00000000",
     // "editor.lineHighlightBackground": "#ff0000",
@@ -36,13 +30,11 @@
     "mssql.resultsGridNullBackground": "#00000000",
     "mssql.resultsGridNullForeground": "#7f7f7f"
   },
-
   // ==========================================
   // 4. Git Settings
   // ==========================================
   "git.confirmSync": false,
   "git.openRepositoryInParentFolders": "never",
-
   // ==========================================
   // 5. Global Vim Configuration Flags
   // ==========================================
@@ -57,7 +49,6 @@
   "vim.hlsearch": true,
   "vim.ignorecase": true,
   "vim.smartcase": true,
-
   // ==========================================
   // 6. Vim Keybindings: Normal Mode
   // ==========================================
@@ -66,6 +57,18 @@
     {
       "before": ["Y"],
       "after": ["y", "$"]
+    }
+	    {
+      "before": ["]", "d"],
+      "commands": ["editor.action.marker.next"]
+    },
+    {
+      "before": ["[", "d"],
+      "commands": ["editor.action.marker.prev"]
+    },
+    {
+      "before": ["<leader>", "c", "a"],
+      "commands": ["editor.action.quickFix"]
     }
   ],
   // ==========================================
@@ -78,7 +81,6 @@
   //			"after": ["<Esc>"]
   //		}
   // ],
-
   // ==========================================
   // 8. Vim Keybindings: Visual & Command Line
   // ==========================================
@@ -108,17 +110,28 @@
   "vim.commandLineModeKeyBindings": [],
   "security.workspace.trust.untrustedFiles": "open",
   // ==========================================
-  // 9. Language Specific Settings
+  // 9. Language/Editor Specific Settings
   // ==========================================
   // Python
   "python.venvPath": ".",
   "python.venvFolders": [".venv"],
   "ruff.interpreter": ["${command:python.interpreterPath}"],
   // JSON & JSONC (Prettier)
+  "prettier.trailingComma": "none",
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+    "[sql]": {
+    "editor.defaultFormatter": "sqlfluff.vscode-sqlfluff",
+    "editor.insertSpaces": false,
+    "editor.tabSize": 4,
+    "editor.detectIndentation": false
+
+    // "editor.defaultFormatter": "ReneSaarsoo.sql-formatter-vsc"
+  },
+    "sqlfluff.dialect": "tsql",
+	"sqlfluff.excludeRules": ["AM04", "CP02", "LT05"]
 }
