@@ -8,10 +8,15 @@
   "workbench.secondarySideBar.defaultVisibility": "hidden",
   "editor.minimap.enabled": false,
   "editor.stickyScroll.enabled": false,
-  "editor.insertSpaces": false,
-  "editor.tabSize": 4, // Change this to 2 if you prefer narrower tabs
+  "editor.insertSpaces": true,
+  "editor.tabSize": 4,
   "editor.detectIndentation": false,
+  "editor.renderWhitespace": "all",
   "editor.autoClosingBrackets": "languageDefined",
+  "editor.guides.indentation": true,
+  //   "editor.guides.highlightActiveIndentation": true,
+  "editor.guides.bracketPairs": true,
+  "editor.guides.bracketPairsHorizontal": true,
   // ==========================================
   // 2. Navigation, Scrolling & Lines
   // ==========================================
@@ -57,8 +62,8 @@
     {
       "before": ["Y"],
       "after": ["y", "$"]
-    }
-	    {
+    },
+    {
       "before": ["]", "d"],
       "commands": ["editor.action.marker.next"]
     },
@@ -112,20 +117,39 @@
   // ==========================================
   // 9. Language/Editor Specific Settings
   // ==========================================
-  // Python
+  // Python environment / Ruff executable
   "python.venvPath": ".",
   "python.venvFolders": [".venv"],
   "ruff.interpreter": ["${command:python.interpreterPath}"],
+  // Python formatting
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4,
+    "editor.detectIndentation": true
+  },
   // JSON & JSONC (Prettier)
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "prettier.trailingComma": "none"
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.detectIndentation": true,
+    "editor.guides.bracketPairsHorizontal": false,
+    "prettier.useTabs": false,
+    "prettier.tabWidth": 2,
+    "prettier.trailingComma": "none"
   },
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "prettier.trailingComma": "none"
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.detectIndentation": true,
+    "editor.guides.bracketPairsHorizontal": false,
+    "prettier.useTabs": false,
+    "prettier.tabWidth": 2,
+    "prettier.trailingComma": "none"
   },
-    "[sql]": {
+  "[sql]": {
     "editor.defaultFormatter": "sqlfluff.vscode-sqlfluff",
     "editor.insertSpaces": false,
     "editor.tabSize": 4,
@@ -133,6 +157,6 @@
 
     // "editor.defaultFormatter": "ReneSaarsoo.sql-formatter-vsc"
   },
-    "sqlfluff.dialect": "tsql",
-	"sqlfluff.excludeRules": ["AM04", "CP02", "LT05"]
+  "sqlfluff.dialect": "tsql",
+  "sqlfluff.excludeRules": ["AM04", "CP02", "LT05"]
 }
