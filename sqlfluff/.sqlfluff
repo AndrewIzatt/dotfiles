@@ -2,7 +2,7 @@
 dialect = tsql
 max_line_length = 120
 large_file_skip_byte_limit = 0
-exclude_rules = CP02, AM04, LT02, AL01
+exclude_rules = CP02, AM04, LT02, LT05, AL01
 # CP02 = capitalisation.identifiers, AM04 = ambiguous.column_count, LT05 = ignore line length error
 
 [sqlfluff:indentation]
