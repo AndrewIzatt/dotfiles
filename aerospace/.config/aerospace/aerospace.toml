@@ -113,7 +113,7 @@ run = 'layout floating'
 
 # Ente - Float
 [[on-window-detected]]
-if.app-name-regex-substring = 'Ente'
+if.app-name-regex-substring = 'Ente Auth'
 run = 'layout floating'
 
 # Python - Float
