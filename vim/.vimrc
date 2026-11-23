@@ -12,6 +12,12 @@ colorscheme slate
 "packadd nohlsearch
 "Not currently working across installations
 
+" Set textwrap limit
+set textwidth=173
+
+" Enable automatic text wrapping
+set formatoptions+=t
+
 " Set shift width to 4 spaces.
 " >> indents by 4 spaces.
 set shiftwidth=4

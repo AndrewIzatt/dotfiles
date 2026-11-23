@@ -1,13 +1,68 @@
 #!/bin/bash
+# set -x #echo on
+# brew analytics off
+# brew update
+# brew upgrade --greedy
+# brew cleanup -s
+# rm -rf "$(brew --cache)"
+# brew missing
+# brew autoremove
+# brew doctor
+# sudo littlesnitch profile -a "Apple Update"
+# sudo softwareupdate -i -a
+
+#!/bin/bash
 set -x #echo on
+
+MAJOR_BLOCK=27   # ask before installing macOS this version or newer
+
 brew analytics off
 brew update
-brew upgrade --greedy
+brew upgrade --greedy --verbose
 brew cleanup -s
 rm -rf "$(brew --cache)"
 brew missing
 brew autoremove
 brew doctor
+
+{ set +x; } 2>/dev/null   # no more tracing from here on
+
+echo "Switching Little Snitch to 'Apple Update' profile..."
 sudo littlesnitch profile -a "Apple Update"
-sudo softwareupdate -i -a
-sudo littlesnitch profile -a "Apple Disabled"
+# Always restore the strict profile, even on error or Ctrl-C
+trap 'sudo littlesnitch profile -a "Apple Disabled"' EXIT
+
+updates=$(softwareupdate -l 2>&1)
+# Drop the "Software Update Tool" header and the blank line after it
+echo "$updates" | sed '/^Software Update Tool$/,/^$/d'
+
+install=()
+major_label=""
+label=""
+while IFS= read -r line; do
+  if [[ $line =~ ^\*[[:space:]]+Label:[[:space:]]*(.*)$ ]]; then
+    label="${BASH_REMATCH[1]}"
+  elif [[ -n $label && $line =~ Version:[[:space:]]*([0-9]+) ]]; then
+    if [[ $label == macOS* && ${BASH_REMATCH[1]} -ge $MAJOR_BLOCK ]]; then
+      major_label="$label"
+    else
+      install+=("$label")
+    fi
+    label=""
+  fi
+done <<< "$updates"
+
+if [[ -n $major_label ]]; then
+  read -r -p "Also install $major_label? (macOS $MAJOR_BLOCK+) [y/N] " answer </dev/tty
+  if [[ $answer =~ ^[Yy]$ ]]; then
+    install+=("$major_label")
+  else
+    echo "Skipping $major_label"
+  fi
+fi
+
+if (( ${#install[@]} > 0 )); then
+  sudo softwareupdate -i "${install[@]}"
+else
+  echo "No updates to install."
+fi
