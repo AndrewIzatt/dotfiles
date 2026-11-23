@@ -158,5 +158,12 @@
     // "editor.defaultFormatter": "ReneSaarsoo.sql-formatter-vsc"
   },
   "sqlfluff.dialect": "tsql",
-  "sqlfluff.excludeRules": ["AM04", "CP02", "LT05"]
+  "sqlfluff.excludeRules": ["AM04", "CP02", "LT05"],
+  "mssql.connectionGroups": [
+    {
+      "name": "ROOT",
+      "id": "ROOT"
+    }
+  ],
+  "window.newWindowProfile": "Work"
 }
